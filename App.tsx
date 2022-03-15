@@ -1,33 +1,29 @@
 import React from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
+import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeContainer from './src/containers/HomeContainer';
 
 const App = () => {
+  const Stack = createNativeStackNavigator();
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <NavigationContainer>
-      <SafeAreaView style={styles.sectionContainer}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <View>
-          <Text style={styles.sectionTitle}>Hexa Pay</Text>
-        </View>
-      </SafeAreaView>
-    </NavigationContainer>
+    <View style={styles.container}>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeContainer} options={{ headerShown: false }} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </View >
   );
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
+  container: {
     flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '700',
   },
 });
 
