@@ -1,5 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import Fonts from '../common/Fonts';
+import Colors from '../common/Colors';
 
 const HomeScreen = () => {
 
