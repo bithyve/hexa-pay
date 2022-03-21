@@ -16,7 +16,7 @@ import {
   WYRE,
   RAMP,
   SWAN,
-} from '~common/constants/wallet-service-types';
+} from '~constants/wallet-service-types';
 import PersonalNode from '~/models/interfaces/IPersonalNode';
 import {APP_STAGE} from '~/models/enums/APP_STAGE';
 import _ from 'lodash';
