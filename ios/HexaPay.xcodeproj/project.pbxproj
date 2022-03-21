@@ -11,13 +11,20 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		18BDF5A427E8838E0012747D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		18BDF5A527E8838E0012747D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		18BDF5A927E8838E0012747D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		18BDF5AA27E8838E0012747D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		18BDF5BB27E8839F0012747D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		18BDF5BC27E8839F0012747D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		18BDF5C027E8839F0012747D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		18BDF5C127E8839F0012747D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		31F345965C6DBE987B94290F /* libPods-HexaPay Dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF749E565F4375255D0A084 /* libPods-HexaPay Dev.a */; };
+		6551BD5BA0DA9D1DD320E716 /* libPods-HexaPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28844123F15F926CCB20EFF8 /* libPods-HexaPay.a */; };
 		6BEA86FEA5ADF8C2682B7AB1 /* libPods-HexaPay-HexaPayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 104CBD3385455ACA49AE1A59 /* libPods-HexaPay-HexaPayTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		957F717081B34BC28D776041 /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A8EF1F7C8124E32B48EB253 /* RobotoSlab-Regular.ttf */; };
-		9E4FD7D579FD44DD83D0EB2A /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3B86C77BCD4747870EEF54 /* RobotoSlab-Medium.ttf */; };
 		CA5E80BECAF18976CAD16044 /* libPods-HexaPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28844123F15F926CCB20EFF8 /* libPods-HexaPay.a */; };
-		CE2E671765FF476EA35F3CF6 /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D541E2D66EA2454DA77C170E /* RobotoSlab-Bold.ttf */; };
-		FB6B18AE82804F0F91F78643 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97A4C56A8ED544E2A8F2ACCD /* RobotoSlab-Black.ttf */; };
+		E7CC7571D97305D129D45DDA /* libPods-HexaPay Stage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 212988ADFAC2FF0B4B2D0F1A /* libPods-HexaPay Stage.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,7 @@
 		00E356EE1AD99517003FC87E /* HexaPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexaPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HexaPayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HexaPayTests.m; sourceTree = "<group>"; };
+		0A931E601BC29BEB0E03506C /* Pods-HexaPay Stage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay Stage.debug.xcconfig"; path = "Target Support Files/Pods-HexaPay Stage/Pods-HexaPay Stage.debug.xcconfig"; sourceTree = "<group>"; };
 		104CBD3385455ACA49AE1A59 /* libPods-HexaPay-HexaPayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HexaPay-HexaPayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* HexaPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexaPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = HexaPay/AppDelegate.h; sourceTree = "<group>"; };
@@ -41,17 +49,26 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HexaPay/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HexaPay/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = HexaPay/main.m; sourceTree = "<group>"; };
-		1E75C10538BDB4F3BBB8FD73 /* Pods-HexaPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay.release.xcconfig"; path = "Target Support Files/Pods-HexaPay/Pods-HexaPay.release.xcconfig"; sourceTree = "<group>"; };
+		16202A390EC4A93BB712F23A /* Pods-HexaPay Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay Dev.debug.xcconfig"; path = "Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev.debug.xcconfig"; sourceTree = "<group>"; };
+		18BDF5B527E8838E0012747D /* HexaPay Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HexaPay Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BDF5B627E8838E0012747D /* HexaPay Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HexaPay Dev.plist"; path = "/Users/apple/hexapay/ios/HexaPay Dev.plist"; sourceTree = "<absolute>"; };
+		18BDF5CC27E8839F0012747D /* HexaPay Stage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HexaPay Stage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BDF5CD27E8839F0012747D /* HexaPay Stage.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HexaPay Stage.plist"; path = "/Users/apple/hexapay/ios/HexaPay Stage.plist"; sourceTree = "<absolute>"; };
+		212988ADFAC2FF0B4B2D0F1A /* libPods-HexaPay Stage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HexaPay Stage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28844123F15F926CCB20EFF8 /* libPods-HexaPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HexaPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AF749E565F4375255D0A084 /* libPods-HexaPay Dev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HexaPay Dev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC4724DD31893A19E580610 /* Pods-HexaPay-HexaPayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay-HexaPayTests.debug.xcconfig"; path = "Target Support Files/Pods-HexaPay-HexaPayTests/Pods-HexaPay-HexaPayTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4A8EF1F7C8124E32B48EB253 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Regular.ttf"; path = "../src/assets/fonts/RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
-		7E3B86C77BCD4747870EEF54 /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Medium.ttf"; path = "../src/assets/fonts/RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
+		4A6EFEC81461D4D18692EA1D /* Pods-HexaPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay.debug.xcconfig"; path = "Target Support Files/Pods-HexaPay/Pods-HexaPay.debug.xcconfig"; sourceTree = "<group>"; };
+		4A8EF1F7C8124E32B48EB253 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Regular.ttf"; path = "../src/assets/fonts/RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
+		4DA7C1BE92F8CAE563EC35DF /* Pods-HexaPay Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay Dev.release.xcconfig"; path = "Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev.release.xcconfig"; sourceTree = "<group>"; };
+		63959E69F8755B874D39DC41 /* Pods-HexaPay Stage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay Stage.release.xcconfig"; path = "Target Support Files/Pods-HexaPay Stage/Pods-HexaPay Stage.release.xcconfig"; sourceTree = "<group>"; };
+		7E3B86C77BCD4747870EEF54 /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Medium.ttf"; path = "../src/assets/fonts/RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = HexaPay/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84426064A16D8491B7DBDCDA /* Pods-HexaPay-HexaPayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay-HexaPayTests.release.xcconfig"; path = "Target Support Files/Pods-HexaPay-HexaPayTests/Pods-HexaPay-HexaPayTests.release.xcconfig"; sourceTree = "<group>"; };
-		97A4C56A8ED544E2A8F2ACCD /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Black.ttf"; path = "../src/assets/fonts/RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
-		D541E2D66EA2454DA77C170E /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Bold.ttf"; path = "../src/assets/fonts/RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
+		97A4C56A8ED544E2A8F2ACCD /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Black.ttf"; path = "../src/assets/fonts/RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
+		ABE2A6D053A9BDE2D41742DA /* Pods-HexaPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay.release.xcconfig"; path = "Target Support Files/Pods-HexaPay/Pods-HexaPay.release.xcconfig"; sourceTree = "<group>"; };
+		D541E2D66EA2454DA77C170E /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Bold.ttf"; path = "../src/assets/fonts/RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F30C1794D2194749880D1481 /* Pods-HexaPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay.debug.xcconfig"; path = "Target Support Files/Pods-HexaPay/Pods-HexaPay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +85,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA5E80BECAF18976CAD16044 /* libPods-HexaPay.a in Frameworks */,
+				6551BD5BA0DA9D1DD320E716 /* libPods-HexaPay.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BDF5A627E8838E0012747D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31F345965C6DBE987B94290F /* libPods-HexaPay Dev.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BDF5BD27E8839F0012747D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7CC7571D97305D129D45DDA /* libPods-HexaPay Stage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +144,8 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				28844123F15F926CCB20EFF8 /* libPods-HexaPay.a */,
 				104CBD3385455ACA49AE1A59 /* libPods-HexaPay-HexaPayTests.a */,
+				3AF749E565F4375255D0A084 /* libPods-HexaPay Dev.a */,
+				212988ADFAC2FF0B4B2D0F1A /* libPods-HexaPay Stage.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,12 +153,15 @@
 		47111BD03A8169E662CF4623 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F30C1794D2194749880D1481 /* Pods-HexaPay.debug.xcconfig */,
-				1E75C10538BDB4F3BBB8FD73 /* Pods-HexaPay.release.xcconfig */,
 				3FC4724DD31893A19E580610 /* Pods-HexaPay-HexaPayTests.debug.xcconfig */,
 				84426064A16D8491B7DBDCDA /* Pods-HexaPay-HexaPayTests.release.xcconfig */,
+				4A6EFEC81461D4D18692EA1D /* Pods-HexaPay.debug.xcconfig */,
+				ABE2A6D053A9BDE2D41742DA /* Pods-HexaPay.release.xcconfig */,
+				16202A390EC4A93BB712F23A /* Pods-HexaPay Dev.debug.xcconfig */,
+				4DA7C1BE92F8CAE563EC35DF /* Pods-HexaPay Dev.release.xcconfig */,
+				0A931E601BC29BEB0E03506C /* Pods-HexaPay Stage.debug.xcconfig */,
+				63959E69F8755B874D39DC41 /* Pods-HexaPay Stage.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -135,7 +174,6 @@
 				4A8EF1F7C8124E32B48EB253 /* RobotoSlab-Regular.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -155,6 +193,8 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				47111BD03A8169E662CF4623 /* Pods */,
 				746D876D4548437F990AA820 /* Resources */,
+				18BDF5B627E8838E0012747D /* HexaPay Dev.plist */,
+				18BDF5CD27E8839F0012747D /* HexaPay Stage.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -166,6 +206,8 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* HexaPay.app */,
 				00E356EE1AD99517003FC87E /* HexaPayTests.xctest */,
+				18BDF5B527E8838E0012747D /* HexaPay Dev.app */,
+				18BDF5CC27E8839F0012747D /* HexaPay Stage.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,6 +258,50 @@
 			productReference = 13B07F961A680F5B00A75B9A /* HexaPay.app */;
 			productType = "com.apple.product-type.application";
 		};
+		18BDF5A027E8838E0012747D /* HexaPay Dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BDF5B227E8838E0012747D /* Build configuration list for PBXNativeTarget "HexaPay Dev" */;
+			buildPhases = (
+				012B91FBB20CBCF26FA25333 /* [CP] Check Pods Manifest.lock */,
+				18BDF5A227E8838E0012747D /* Start Packager */,
+				18BDF5A327E8838E0012747D /* Sources */,
+				18BDF5A627E8838E0012747D /* Frameworks */,
+				18BDF5A827E8838E0012747D /* Resources */,
+				18BDF5AF27E8838E0012747D /* Bundle React Native code and images */,
+				42F580214C7F9E2A7EBE24B7 /* [CP] Embed Pods Frameworks */,
+				559A6210C255389BEA47D5F0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HexaPay Dev";
+			productName = HexaPay;
+			productReference = 18BDF5B527E8838E0012747D /* HexaPay Dev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18BDF5B727E8839F0012747D /* HexaPay Stage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BDF5C927E8839F0012747D /* Build configuration list for PBXNativeTarget "HexaPay Stage" */;
+			buildPhases = (
+				C0F3B45F95B6B2EB2183D0C8 /* [CP] Check Pods Manifest.lock */,
+				18BDF5B927E8839F0012747D /* Start Packager */,
+				18BDF5BA27E8839F0012747D /* Sources */,
+				18BDF5BD27E8839F0012747D /* Frameworks */,
+				18BDF5BF27E8839F0012747D /* Resources */,
+				18BDF5C627E8839F0012747D /* Bundle React Native code and images */,
+				996AE0B55EC5E2B59051969C /* [CP] Embed Pods Frameworks */,
+				94849B1C33928048847DC43C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HexaPay Stage";
+			productName = HexaPay;
+			productReference = 18BDF5CC27E8839F0012747D /* HexaPay Stage.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -247,6 +333,8 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* HexaPay */,
+				18BDF5A027E8838E0012747D /* HexaPay Dev */,
+				18BDF5B727E8839F0012747D /* HexaPay Stage */,
 				00E356ED1AD99517003FC87E /* HexaPayTests */,
 			);
 		};
@@ -266,10 +354,24 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				FB6B18AE82804F0F91F78643 /* RobotoSlab-Black.ttf in Resources */,
-				CE2E671765FF476EA35F3CF6 /* RobotoSlab-Bold.ttf in Resources */,
-				9E4FD7D579FD44DD83D0EB2A /* RobotoSlab-Medium.ttf in Resources */,
-				957F717081B34BC28D776041 /* RobotoSlab-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BDF5A827E8838E0012747D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BDF5A927E8838E0012747D /* LaunchScreen.storyboard in Resources */,
+				18BDF5AA27E8838E0012747D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BDF5BF27E8839F0012747D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BDF5C027E8839F0012747D /* LaunchScreen.storyboard in Resources */,
+				18BDF5C127E8839F0012747D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +409,28 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
+		012B91FBB20CBCF26FA25333 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HexaPay Dev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		15AC6E4DEF9336B436AD437B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +447,72 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HexaPay/Pods-HexaPay-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		18BDF5A227E8838E0012747D /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		18BDF5AF27E8838E0012747D /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+		};
+		18BDF5B927E8839F0012747D /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		18BDF5C627E8839F0012747D /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		1E8E517504FF567E34C4F31E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -368,6 +558,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		42F580214C7F9E2A7EBE24B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4EA16211184CC712A8A4012F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,6 +590,79 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HexaPay-HexaPayTests/Pods-HexaPay-HexaPayTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		559A6210C255389BEA47D5F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94849B1C33928048847DC43C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HexaPay Stage/Pods-HexaPay Stage-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HexaPay Stage/Pods-HexaPay Stage-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HexaPay Stage/Pods-HexaPay Stage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		996AE0B55EC5E2B59051969C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HexaPay Stage/Pods-HexaPay Stage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HexaPay Stage/Pods-HexaPay Stage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HexaPay Stage/Pods-HexaPay Stage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0F3B45F95B6B2EB2183D0C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HexaPay Stage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D073BBB8C9B26527FD8FA6F5 /* [CP] Copy Pods Resources */ = {
@@ -438,6 +718,24 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BDF5A327E8838E0012747D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BDF5A427E8838E0012747D /* AppDelegate.m in Sources */,
+				18BDF5A527E8838E0012747D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BDF5BA27E8839F0012747D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BDF5BB27E8839F0012747D /* AppDelegate.m in Sources */,
+				18BDF5BC27E8839F0012747D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +803,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F30C1794D2194749880D1481 /* Pods-HexaPay.debug.xcconfig */;
+			baseConfigurationReference = 4A6EFEC81461D4D18692EA1D /* Pods-HexaPay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -531,7 +829,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E75C10538BDB4F3BBB8FD73 /* Pods-HexaPay.release.xcconfig */;
+			baseConfigurationReference = ABE2A6D053A9BDE2D41742DA /* Pods-HexaPay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -548,6 +846,106 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = HexaPay;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		18BDF5B327E8838E0012747D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16202A390EC4A93BB712F23A /* Pods-HexaPay Dev.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "HexaPay Dev.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		18BDF5B427E8838E0012747D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DA7C1BE92F8CAE563EC35DF /* Pods-HexaPay Dev.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "HexaPay Dev.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		18BDF5CA27E8839F0012747D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A931E601BC29BEB0E03506C /* Pods-HexaPay Stage.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "HexaPay Stage.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		18BDF5CB27E8839F0012747D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63959E69F8755B874D39DC41 /* Pods-HexaPay Stage.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "HexaPay Stage.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -693,6 +1091,24 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BDF5B227E8838E0012747D /* Build configuration list for PBXNativeTarget "HexaPay Dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BDF5B327E8838E0012747D /* Debug */,
+				18BDF5B427E8838E0012747D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BDF5C927E8839F0012747D /* Build configuration list for PBXNativeTarget "HexaPay Stage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BDF5CA27E8839F0012747D /* Debug */,
+				18BDF5CB27E8839F0012747D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
