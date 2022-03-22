@@ -8,8 +8,10 @@ import {
 import ActionsCards from './ActionsCards';
 
 import Colors from '../common/Colors';
-import Contacts from '../assets/svgs/contacts.svg';
+
+import { Contacts } from '../assets/svgs/contacts.svg';
 import Fonts from '../common/Fonts';
+import BackDrop from '../common/BackDrop';
 
 /* get the height & width of the user's device */
 const windowWidth = Dimensions.get('window').width;
@@ -21,10 +23,11 @@ const HomeScreen = () => {
   return (
     <ScrollView>
       <SafeAreaView style={styles.sectionContainer}>
-        <StatusBar backgroundColor={Colors.blue2} barStyle="light-content" />
+        <StatusBar backgroundColor={Colors.blue} barStyle="light-content" />
         <View>
           {/* <Text style={styles.sectionTitle} onPress={toggleColorMode} color={useColorModeValue("light.blue", "dark.black")} >{colorMode}</Text> */}
           <View style={styles.blueScrollView}>
+            {/* <BackDrop /> */}
             <View style={styles.userContainer}>
               <View style={styles.userImage}>
                 {/* <Contacts height={10}> */}
@@ -77,6 +80,7 @@ const HomeScreen = () => {
                 <ActionsCards />
                 <ActionsCards />
               </View>
+              {/* </View> */}
             </View>
           </View>
         </View>

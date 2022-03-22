@@ -23,15 +23,13 @@ export default function ActionsCards() {
 const styles = StyleSheet.create({
   cardContainer: {
     alignItems: 'center',
-    justifyContent: 'center',
+    paddingHorizontal: wp('3%'),
+    // paddingBottom: hp('22%'),
   },
   card: {
-    width: wp('29%'),
-    height: hp('30'),
+    width: wp('26%'),
+    height: hp('19%'),
     backgroundColor: '#FFD885',
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
     borderRadius: 12,
   },
 });
