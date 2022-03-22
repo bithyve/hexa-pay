@@ -1,6 +1,6 @@
-import { extendTheme } from 'native-base';
+import {extendTheme} from 'native-base';
 
-export const customTheme = extendTheme({
+export const HexaTheme = extendTheme({
   fonts: {
     RobotoSlabBold: 'RobotoSlab-Bold',
     RobotoSlabMedium: 'RobotoSlab-Medium',
