@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+  <g id="broadcast" transform="translate(-39 -738)">
+    <circle id="Ellipse_1949" data-name="Ellipse 1949" cx="15.5" cy="15.5" r="15.5" transform="translate(39 738)" fill="#35a853"/>
+    <g id="Antenna_Broadcast_News_Television_Newscast" data-name="Antenna Broadcast News Television Newscast" transform="translate(37.5 739.5)">
+      <path id="Path_23862" data-name="Path 23862" d="M29.866,25.683a2.183,2.183,0,1,0-2.351,2.174v3.389H25.668a.168.168,0,1,0,0,.336H29.7a.168.168,0,1,0,0-.336H27.851V27.857a2.184,2.184,0,0,0,2.015-2.174Zm-4.03,0a1.847,1.847,0,1,1,1.847,1.847A1.849,1.849,0,0,1,25.836,25.683Z" transform="translate(-10.627 -10.627)" fill="#fafafa" stroke="#fafafa" stroke-width="1"/>
+      <path id="Path_23863" data-name="Path 23863" d="M22.369,15.5A4.875,4.875,0,0,0,17.5,20.369a.168.168,0,0,0,.336,0,4.534,4.534,0,1,1,9.067,0,.168.168,0,0,0,.336,0A4.875,4.875,0,0,0,22.369,15.5Z" transform="translate(-5.313 -5.313)" fill="#fafafa" stroke="#fafafa" stroke-width="1"/>
+      <path id="Path_23864" data-name="Path 23864" d="M17.056,7.5A7.564,7.564,0,0,0,9.5,15.056a.168.168,0,0,0,.336,0,7.22,7.22,0,1,1,14.44,0,.168.168,0,0,0,.336,0A7.564,7.564,0,0,0,17.056,7.5Z" fill="#fafafa" stroke="#fafafa" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

@@ -20,6 +20,7 @@ export const HexaTheme = extendTheme({
       optionsCard: '#FFD885',
       optionsCardIcon: '#FABC05',
       optionsCardBorder: '#FABC0533',
+      lightGrey: '#F0F0F0',
     },
     dark: {
       black: '#000000',
