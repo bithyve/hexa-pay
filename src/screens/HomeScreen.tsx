@@ -1,3 +1,23 @@
+import React, {Fragment} from 'react';
+import TestingSVG from 'assets/images/beardo.svg';
+import {SafeAreaView, StyleSheet, View, Dimensions, StatusBar, ViewBase} from 'react-native';
+import Backdrop from '~components/Backdrop';
+const {height} = Dimensions.get('window');
+import ProfileCard from '~components/ProfileCard';
+import QrScanner from '~components/QrScanner';
+
+const HomeScreen = () => {
+  return (
+    <Fragment>
+      <Backdrop height={height * 0.7} />
+      <ProfileCard />
+      <QrScanner />
+    </Fragment>
+  );
+};
+
+export default HomeScreen;
+
 // import React from 'react';
 // import { SafeAreaView, StyleSheet, View, Dimensions, StatusBar, ViewBase } from 'react-native';
 // import { Input, ScrollView, Text, useColorMode, useColorModeValue } from 'native-base';
@@ -158,19 +178,3 @@
 //     // justifyContent: 'space-evenly',
 //   },
 // });
-import React, {Fragment} from 'react';
-import {Dimensions} from 'react-native';
-import TestingSVG from 'assets/images/beardo.svg';
-import Backdrop from '~components/Backdrop';
-const {height} = Dimensions.get('window');
-
-const HomeScreen = () => {
-  return (
-    <Fragment>
-      <Backdrop height={height * 0.7} />
-      <TestingSVG />
-    </Fragment>
-  );
-};
-
-export default HomeScreen;
