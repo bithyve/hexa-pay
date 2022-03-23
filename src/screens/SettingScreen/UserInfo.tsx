@@ -1,6 +1,5 @@
-import {Avatar, Button, Text, VStack} from 'native-base';
+import {Avatar, Button, Text, VStack, Heading} from 'native-base';
 import React from 'react';
-import {Heading} from 'native-base';
 
 const UserInfo = () => {
   return (
@@ -14,16 +13,18 @@ const UserInfo = () => {
         borderColor={'white'}
         borderWidth={'2'}
       />
-      <Heading size={'sm'} marginTop={5}>
+      <Heading size={'xs'} marginTop={5} fontFamily={'bold'}>
         Tony Stark
       </Heading>
-      <Text fontSize={12}>Personal Profile</Text>
+      <Text fontSize={'xs'} fontFamily={'mono'}>
+        Personal Profile
+      </Text>
       <Button
         bg={'light.optionsCard'}
         margin={3}
         marginTop={5}
         borderRadius={10}
-        _text={{fontSize: 12}}>
+        _text={{fontSize: 11}}>
         Edit Profile
       </Button>
     </VStack>

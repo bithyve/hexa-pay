@@ -1,6 +1,5 @@
-import {View} from 'react-native';
 import React from 'react';
-import {Heading, HStack, Text, VStack} from 'native-base';
+import {HStack, Text, VStack} from 'native-base';
 import Sheild from 'assets/images/backup2.svg';
 
 const BackupStatus = () => {
@@ -8,10 +7,10 @@ const BackupStatus = () => {
     <HStack padding={'4'} borderRadius={15} alignItems={'center'} marginX={'7'} marginBottom={'12'}>
       <Sheild />
       <VStack marginLeft={'5'}>
-        <Heading fontSize={14} color={'white'}>
+        <Text fontSize={'sm'} color={'white'}>
           No backup created
-        </Heading>
-        <Text fontSize={12} color={'white'}>
+        </Text>
+        <Text fontSize={'xs'} fontFamily={'mono'} color={'white'}>
           Your wallet is currently not backed up
         </Text>
       </VStack>

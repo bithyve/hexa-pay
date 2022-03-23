@@ -16,7 +16,7 @@ const WalletBackup = () => {
     );
   return (
     <VStack marginX={'7'} marginTop={'7'}>
-      <Heading fontSize={14} paddingBottom={5}>
+      <Heading fontSize={'sm'} paddingBottom={5}>
         Wallet Backup
       </Heading>
       <TouchableOpacity onPress={goToWalletBackup} activeOpacity={0.8}>
@@ -29,8 +29,10 @@ const WalletBackup = () => {
           <HStack alignItems={'center'}>
             <Sheild />
             <VStack marginLeft={'5'}>
-              <Heading fontSize={14}>No backup created</Heading>
-              <Text fontSize={12}>See your backup options</Text>
+              <Text fontSize={'sm'}>No backup created</Text>
+              <Text fontSize={'xs'} fontFamily={'mono'}>
+                See your backup options
+              </Text>
             </VStack>
           </HStack>
           <RightArrow />

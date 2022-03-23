@@ -26,16 +26,22 @@ const BackupModes = () => {
   return (
     <Fragment>
       <Wrapper>
-        <Heading fontSize={12}>No backup created</Heading>
-        <Text fontSize={12}>Your wallet is currently not backed up</Text>
+        <Heading fontSize={'xs'}>No backup created</Heading>
+        <Text fontSize={'xs'} fontFamily={'mono'}>
+          Your wallet is currently not backed up
+        </Text>
       </Wrapper>
       <Wrapper>
-        <Heading fontSize={12}>Write down 12 words</Heading>
-        <Text fontSize={12}>Write down the Seed phrase and keep it safe</Text>
+        <Heading fontSize={'xs'}>Write down 12 words</Heading>
+        <Text fontSize={'xs'} fontFamily={'mono'}>
+          Write down the Seed phrase and keep it safe
+        </Text>
       </Wrapper>
       <Wrapper>
-        <Heading fontSize={12}>Hexa Vault</Heading>
-        <Text fontSize={12}>Connect and backup with Hexa Vault</Text>
+        <Heading fontSize={'xs'}>Hexa Vault</Heading>
+        <Text fontSize={'xs'} fontFamily={'mono'}>
+          Connect and backup with Hexa Vault
+        </Text>
       </Wrapper>
     </Fragment>
   );
