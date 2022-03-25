@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+  <g id="bitcoin" transform="translate(-152 -693)">
+    <circle id="Ellipse_1949" data-name="Ellipse 1949" cx="15.5" cy="15.5" r="15.5" transform="translate(152 693)" fill="#fabc05"/>
+    <path id="Path_23759" data-name="Path 23759" d="M68.627,46.481a2.888,2.888,0,0,0-1.4-4.388V40.964a.964.964,0,0,0-1.927,0v.964H63.373v-.964a.964.964,0,0,0-1.927,0v.964h-.482a.964.964,0,1,0,0,1.927h.482v5.782h-.482a.964.964,0,1,0,0,1.927h.482v.964a.964.964,0,0,0,1.927,0v-.964H65.3v.964a.964.964,0,0,0,1.927,0v-1a2.888,2.888,0,0,0,1.4-5.043Zm-5.254-2.626h2.891a.964.964,0,0,1,0,1.927H63.373Zm3.373,5.782H63.373V47.71h3.373a.964.964,0,1,1,0,1.927Zm0,0" transform="translate(102.719 661.754)" fill="#fafafa"/>
+    <g id="Ellipse_1959" data-name="Ellipse 1959" transform="translate(153.5 694.5)" fill="none" stroke="#fafafa" stroke-width="0.6">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="13.7" fill="none"/>
+    </g>
+  </g>
+</svg>

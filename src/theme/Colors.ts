@@ -11,5 +11,7 @@ const Colors = {
   blue: '#006CB4',
   blue2: '#4286F5',
   green: '#70C1B3',
+  yellowButton: '#FFD885',
+  darkText: '#505050'
 };
 export default Colors;
