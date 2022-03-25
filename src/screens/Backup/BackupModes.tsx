@@ -1,7 +1,8 @@
-import {Dimensions} from 'react-native';
-import React, {Fragment} from 'react';
+import {Dimensions, TouchableOpacity} from 'react-native';
+import React, {Fragment, useCallback} from 'react';
 import {Box, Text, Heading, HStack, VStack} from 'native-base';
 import RightArrow from 'assets/images/rightArrowDark.svg';
+import {CommonActions, useNavigation} from '@react-navigation/native';
 
 const {height, width} = Dimensions.get('window');
 
@@ -23,6 +24,11 @@ const Wrapper: React.FunctionComponent<{children: Element[]}> = ({children}) => 
   );
 };
 const BackupModes = () => {
+  const navigation = useNavigation();
+  const goToVaultSecure = useCallback(
+    () => navigation.dispatch(CommonActions.navigate({name: 'Secure Vault'})),
+    []
+  );
   return (
     <Fragment>
       <Wrapper>
@@ -37,12 +43,14 @@ const BackupModes = () => {
           Write down the Seed phrase and keep it safe
         </Text>
       </Wrapper>
-      <Wrapper>
-        <Heading fontSize={'xs'}>Hexa Vault</Heading>
-        <Text fontSize={'xs'} fontFamily={'mono'}>
-          Connect and backup with Hexa Vault
-        </Text>
-      </Wrapper>
+      <TouchableOpacity onPress={goToVaultSecure}>
+        <Wrapper>
+          <Heading fontSize={'xs'}>Hexa Vault</Heading>
+          <Text fontSize={'xs'} fontFamily={'mono'}>
+            Connect and backup with Hexa Vault
+          </Text>
+        </Wrapper>
+      </TouchableOpacity>
     </Fragment>
   );
 };
