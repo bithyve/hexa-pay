@@ -1,7 +1,8 @@
-import {Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {Heading, HStack, Text, VStack} from 'native-base';
 import Open from 'assets/images/open.svg';
+import QRCode from 'react-native-qrcode-svg';
 const SecureKeyDesciption = () => {
   return (
     <VStack
@@ -17,7 +18,7 @@ const SecureKeyDesciption = () => {
         </Text>
       </VStack>
       <VStack>
-        <Image source={require('assets/images/qrcode.png')} />
+        <QRCode value={'qrvalue'} size={250} />
       </VStack>
       <VStack>
         <Text fontSize={'xs'} fontFamily={'mono'}>
