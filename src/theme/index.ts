@@ -65,6 +65,7 @@ export const HexaTheme = extendTheme({
     light: {
       blue: '#4286F5',
       lightBlue: '#0053D966',
+      searchbar: '#F4F4F4',
       white: '#FFFFFF',
       white1: '#0053D966',
       red: '#EA4335',
