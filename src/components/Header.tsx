@@ -17,6 +17,6 @@ export default Header;
 const styles = StyleSheet.create({
   container: {
     paddingTop: height * 0.12,
-    padding: '10%',
+    paddingHorizontal: '10%',
   },
 });

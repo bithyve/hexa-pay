@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+  <g id="recieve" transform="translate(-152 -286)">
+    <circle id="Ellipse_1949" data-name="Ellipse 1949" cx="15.5" cy="15.5" r="15.5" transform="translate(152 286)" fill="#fabc05"/>
+    <g id="Ellipse_1959" data-name="Ellipse 1959" transform="translate(153.5 287.5)" fill="none" stroke="#fafafa" stroke-width="0.6">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="13.7" fill="none"/>
+    </g>
+    <g id="arrow-down-2" transform="translate(162.442 295.115)">
+      <path id="Path" d="M1.555,6.093,4.139,8.708,4.175.9A.909.909,0,1,1,5.992.913l-.035,7.8,2.611-2.58A.909.909,0,0,1,9.847,7.425L5.562,11.669a.746.746,0,0,1-1.055-.006L.263,7.374A.91.91,0,0,1,1.555,6.093Z" transform="translate(0 0)" fill="#fafafa"/>
+    </g>
+  </g>
+</svg>
