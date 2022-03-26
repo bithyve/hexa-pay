@@ -14,7 +14,7 @@ Pod install inside the IOS folder if you are using Mac:
 
 ### Start development in your emulators:
 
-Android: ```npx react-native run-android```
+Android: ```npx react-native run-android``` or ```yarn android```
 
-Ios: ```npx react-native run-ios```
+Ios: ```npx react-native run-ios``` or ```yarn ios```
 
