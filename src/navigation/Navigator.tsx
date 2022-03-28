@@ -19,7 +19,7 @@ const Navigator = () => {
 
   return (
     <NavigationContainer theme={defaultTheme}>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
         <Stack.Screen name="SettingStack" component={SettingsStack} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="AddContact" component={AddContactScreen} />
