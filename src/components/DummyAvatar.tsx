@@ -1,5 +1,5 @@
 import {StyleSheet, Text, View, Dimensions, FlatList} from 'react-native';
-import {HStack, Avatar, VStack} from 'native-base';
+import {Avatar, VStack} from 'native-base';
 import React from 'react';
 const {height, width} = Dimensions.get('window');
 import Colors from '~theme/Colors';
@@ -32,10 +32,10 @@ const DATA = [
   },
 ];
 
-const Item = ({name, uri}) => (
+const Item = ({name, uri}: any) => (
   <View style={{flexDirection: 'row', marginBottom: '5%'}}>
     <VStack>
-      <Avatar size={'39'} bg="indigo.500" source={uri} borderColor={'white'} borderWidth={'1'} />
+      <Avatar size={'39'} bg="indigo.500" source={{uri}} borderColor={'white'} borderWidth={'1'} />
       <Text
         numberOfLines={1}
         style={{marginTop: 10, fontSize: 11, width: '80%', color: Colors.white}}>
@@ -46,7 +46,7 @@ const Item = ({name, uri}) => (
 );
 
 function DummyAvatar() {
-  const renderItem = ({item, uri}) => <Item name={item.name} />;
+  const renderItem = ({item}: any) => <Item name={item.name} uri={item.uri} />;
   return (
     <View style={{flexDirection: 'row', marginLeft: '20%', marginRight: '2%', marginTop: '39%'}}>
       <FlatList

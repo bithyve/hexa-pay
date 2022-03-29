@@ -1,8 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Contacts from '../assets/svgs/contacts.svg';
 import {Dimensions} from 'react-native';
-const {height, width} = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 import Fonts from '../theme/Fonts';
 import Colors from '../theme/Colors';
 import {Avatar} from 'native-base';

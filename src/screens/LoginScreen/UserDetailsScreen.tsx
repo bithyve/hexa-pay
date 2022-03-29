@@ -1,12 +1,10 @@
 import {StyleSheet, Text, View, Dimensions, TouchableOpacity} from 'react-native';
 import React, {Fragment} from 'react';
 import Backdrop from '~components/Backdrop';
-import {Avatar, HStack, Stack, VStack, Input} from 'native-base';
+import {Stack, VStack, Input} from 'native-base';
 const {height, width} = Dimensions.get('window');
-import Next from '../../assets/svgs/next.svg';
+import Next from 'assets/images/next.svg';
 import Colors from '~theme/Colors';
-import {HexaTheme} from '~theme';
-import Fonts from '~theme/Fonts';
 
 function UserNameInput() {
   const uploadPictureHandler = () => {

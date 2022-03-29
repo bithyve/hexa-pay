@@ -4,16 +4,16 @@ import Backdrop from '~components/Backdrop';
 const {height, width} = Dimensions.get('window');
 import ProfileCard from '~components/ProfileCard';
 import QrScanner from '~components/QrScanner';
-import More from 'assets/svgs/more.svg';
+import More from 'assets/images/more.svg';
 import {HStack, ScrollView, Stack, VStack, Box, Heading} from 'native-base';
 import WalletDetails from '~components/WalletDetails';
 import DummyAvatar from '~components/DummyAvatar';
-import Gift from 'assets/svgs/gift.svg';
-import Contacts from 'assets/svgs/contacts.svg';
-import Group from 'assets/svgs/group.svg';
-import Bitcoin from 'assets/svgs/bitcoin.svg';
-import Broadcast from 'assets/svgs/broadcast.svg';
-import Payments from 'assets/svgs/payments.svg';
+import Gift from 'assets/images/gift.svg';
+import Contacts from 'assets/images/contacts.svg';
+import Group from 'assets/images/group.svg';
+import Bitcoin from 'assets/images/bitcoin.svg';
+import Broadcast from 'assets/images/broadcast.svg';
+import Payments from 'assets/images/payments.svg';
 
 const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
   return (

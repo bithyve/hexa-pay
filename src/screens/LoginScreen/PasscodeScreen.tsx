@@ -4,8 +4,8 @@ import {VStack, Stack, HStack, Input, FormControl} from 'native-base';
 import Backdrop from '~components/Backdrop';
 const {height, width} = Dimensions.get('window');
 import Colors from '~theme/Colors';
-import Switch from '../../assets/svgs/switch.svg';
-import Next from '../../assets/svgs/next.svg';
+import Switch from 'assets/images/switch.svg';
+import Next from 'assets/images/next.svg';
 
 export default function PasscodeScreen() {
   return (

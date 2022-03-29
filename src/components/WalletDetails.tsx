@@ -1,9 +1,8 @@
 import {StyleSheet, Text} from 'react-native';
 import React from 'react';
-import Wallet from '../assets/svgs/wallet.svg';
-import Dollar from '../assets/svgs/icon_dollar.svg';
+import Wallet from 'assets/images/wallet.svg';
+import Dollar from 'assets/images/icon_dollar.svg';
 import {Dimensions} from 'react-native';
-import Fonts from '~theme/Fonts';
 import Colors from '~theme/Colors';
 import {Stack} from 'native-base';
 const {height, width} = Dimensions.get('window');
@@ -20,7 +19,6 @@ const WalletDetails = () => {
 
 const styles = StyleSheet.create({
   container: {
-    // flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: height * 0.17,
@@ -30,7 +28,6 @@ const styles = StyleSheet.create({
     marginRight: width * 0.2,
   },
   balance: {
-    // fontFamily: Fonts.RobotoSlabMedium,
     color: Colors.white,
     fontSize: 34,
   },
