@@ -6,7 +6,7 @@ import Fonts from '~theme/Fonts';
 import {HexaTheme} from '~theme';
 const {height, width} = Dimensions.get('window');
 
-function YellowButton({logo, text, onPress}) {
+function PrimaryButton({logo, text, onPress}) {
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
       <View>
@@ -17,13 +17,13 @@ function YellowButton({logo, text, onPress}) {
   );
 }
 
-export default YellowButton;
+export default PrimaryButton;
 
 const styles = StyleSheet.create({
   container: {
     height: height * 0.15,
     width: width * 0.25,
-    backgroundColor: Colors.yellowButton,
+    backgroundColor: Colors.primaryButton,
     borderRadius: 12,
   },
   buttonText: {
