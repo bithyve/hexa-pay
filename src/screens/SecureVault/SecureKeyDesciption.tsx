@@ -18,7 +18,15 @@ const SecureKeyDesciption = () => {
         </Text>
       </VStack>
       <VStack>
-        <QRCode value={'qrvalue'} size={250} />
+        <QRCode
+          value={JSON.stringify({
+            mnemonic: 'glory riot miracle nest place almost day unknown apple light width illegal',
+            walletName: 'Hexa Pay',
+            walletId: '1B196DB28E802B4333B02A7EEF623',
+            type: 'SECURE_WITH_HEXA',
+          })}
+          size={250}
+        />
       </VStack>
       <VStack>
         <Text fontSize={'xs'} fontFamily={'mono'}>
