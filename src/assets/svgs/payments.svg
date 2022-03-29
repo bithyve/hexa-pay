@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+  <g id="payments" transform="translate(-265 -693)">
+    <circle id="Ellipse_1949" data-name="Ellipse 1949" cx="15.5" cy="15.5" r="15.5" transform="translate(265 693)" fill="#fabc05"/>
+    <g id="Group_38117" data-name="Group 38117" transform="translate(11087.102 19284.086)">
+      <rect id="Rectangle_7232" data-name="Rectangle 7232" width="13.242" height="8.828" rx="1" transform="translate(-10813.223 -18580)" fill="#fafafa"/>
+      <rect id="Rectangle_7233" data-name="Rectangle 7233" width="13.242" height="1.124" transform="translate(-10813.223 -18578.529)" fill="#fabc05"/>
+      <rect id="Rectangle_7234" data-name="Rectangle 7234" width="2.943" height="1.236" rx="0.618" transform="translate(-10811.751 -18574.115)" fill="#fabc05"/>
+    </g>
+    <g id="Ellipse_1961" data-name="Ellipse 1961" transform="translate(266.5 694.5)" fill="none" stroke="#fafafa" stroke-width="0.6">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="13.7" fill="none"/>
+    </g>
+  </g>
+</svg>

@@ -1,19 +1,31 @@
 import React, {Fragment} from 'react';
-import {StyleSheet, Dimensions, TouchableOpacity} from 'react-native';
+import TestingSVG from 'assets/images/beardo.svg';
+import {
+  SafeAreaView,
+  StyleSheet,
+  View,
+  Dimensions,
+  StatusBar,
+  ViewBase,
+  TouchableOpacity,
+} from 'react-native';
 import Backdrop from '~components/Backdrop';
 const {height, width} = Dimensions.get('window');
 import ProfileCard from '~components/ProfileCard';
 import QrScanner from '~components/QrScanner';
-import More from 'assets/svgs/more.svg';
+import More from '../assets/svgs/more.svg';
 import {HStack, ScrollView, Stack, VStack, Box, Heading} from 'native-base';
 import WalletDetails from '~components/WalletDetails';
 import DummyAvatar from '~components/DummyAvatar';
-import Gift from 'assets/svgs/gift.svg';
-import Contacts from 'assets/svgs/contacts.svg';
-import Group from 'assets/svgs/group.svg';
-import Bitcoin from 'assets/svgs/bitcoin.svg';
-import Broadcast from 'assets/svgs/broadcast.svg';
-import Payments from 'assets/svgs/payments.svg';
+import PrimaryButton from '~components/PrimaryButton';
+import Gift from '../assets/svgs/gift.svg';
+import UserDetailsScreen from './LoginScreen/UserDetailsScreen';
+import PasscodeScreen from './LoginScreen/PasscodeScreen';
+import Contacts from '../assets/svgs/contacts.svg';
+import Group from '../assets/svgs/group.svg';
+import Bitcoin from '../assets/svgs/bitcoin.svg';
+import Broadcast from '../assets/svgs/broadcast.svg';
+import Payments from '../assets/svgs/payments.svg';
 
 const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
   return (
