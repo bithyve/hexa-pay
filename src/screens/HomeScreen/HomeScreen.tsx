@@ -7,13 +7,14 @@ import QrScanner from '~components/QrScanner';
 import More from 'assets/images/more.svg';
 import {HStack, ScrollView, Stack, VStack, Box, Heading} from 'native-base';
 import WalletDetails from '~components/WalletDetails';
-import DummyAvatar from '~components/DummyAvatar';
+import Contacts from '~components/Contacts';
 import Gift from 'assets/images/gift.svg';
-import Contacts from 'assets/images/contacts.svg';
+import Contact from 'assets/images/contacts.svg';
 import Group from 'assets/images/group.svg';
 import Bitcoin from 'assets/images/bitcoin.svg';
 import Broadcast from 'assets/images/broadcast.svg';
 import Payments from 'assets/images/payments.svg';
+
 
 const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
   return (
@@ -24,8 +25,8 @@ const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
       marginBottom={'0'}
       alignItems="flex-end"
       flexDirection={'row'}
-      height={height * 0.16}
-      width={width * 0.25}>
+      height={height * 0.15}
+      width={width * 0.26}>
       <HStack margin={'3'}>
         <VStack>{children}</VStack>
       </HStack>
@@ -36,64 +37,62 @@ const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
 const HomeScreen = () => {
   return (
     <Fragment>
-      <ScrollView>
-        <Backdrop height={height * 0.7} />
-        <Stack style={styles.container}>
-          <HStack style={styles.hStack}>
-            <ProfileCard />
-            <QrScanner />
+      <Backdrop height={height * 0.69} />
+      <Stack style={styles.container}>
+        <HStack style={styles.hStack}>
+          <ProfileCard />
+          <QrScanner />
+        </HStack>
+        <HStack style={styles.walletDetails}>
+          <WalletDetails />
+        </HStack>
+        <HStack style={styles.avatarContainer}>
+          <Contacts />
+          <More style={styles.moreButton} />
+        </HStack>
+        <Stack style={styles.buttonStack}>
+          <HStack style={styles.buttonHstack1} space={6}>
+            <Wrapper>
+              <TouchableOpacity>
+                <Gift style={styles.iconStyle} />
+                <Heading fontSize={14}>Gift and Tips</Heading>
+              </TouchableOpacity>
+            </Wrapper>
+            <Wrapper>
+              <TouchableOpacity>
+                <Contact style={styles.iconStyle} />
+                <Heading fontSize={14}>Add New Contact</Heading>
+              </TouchableOpacity>
+            </Wrapper>
+            <Wrapper>
+              <TouchableOpacity>
+                <Group style={styles.iconStyle} />
+                <Heading fontSize={14}>Create Group</Heading>
+              </TouchableOpacity>
+            </Wrapper>
           </HStack>
-          <HStack style={styles.walletDetails}>
-            <WalletDetails />
+          <HStack style={styles.buttonHStack2} space={6}>
+            <Wrapper>
+              <TouchableOpacity>
+                <Broadcast style={styles.iconStyle} />
+                <Heading fontSize={14}>Broadcast Message</Heading>
+              </TouchableOpacity>
+            </Wrapper>
+            <Wrapper>
+              <TouchableOpacity>
+                <Bitcoin style={styles.iconStyle} />
+                <Heading fontSize={14}>Buy Bitcoin</Heading>
+              </TouchableOpacity>
+            </Wrapper>
+            <Wrapper>
+              <TouchableOpacity>
+                <Payments style={styles.iconStyle} />
+                <Heading fontSize={14}>Pay Merchants</Heading>
+              </TouchableOpacity>
+            </Wrapper>
           </HStack>
-          <HStack style={styles.avatarContainer}>
-            <DummyAvatar />
-            <More style={styles.moreButton} />
-          </HStack>
-          <Stack style={styles.buttonStack}>
-            <HStack style={styles.buttonHstack1} space={6}>
-              <Wrapper>
-                <TouchableOpacity>
-                  <Gift style={styles.iconStyle} />
-                  <Heading fontSize={14}>Gift and Tips</Heading>
-                </TouchableOpacity>
-              </Wrapper>
-              <Wrapper>
-                <TouchableOpacity>
-                  <Contacts style={styles.iconStyle} />
-                  <Heading fontSize={14}>Add New Contact</Heading>
-                </TouchableOpacity>
-              </Wrapper>
-              <Wrapper>
-                <TouchableOpacity>
-                  <Group style={styles.iconStyle} />
-                  <Heading fontSize={14}>Create Group</Heading>
-                </TouchableOpacity>
-              </Wrapper>
-            </HStack>
-            <HStack style={styles.buttonHStack2} space={6}>
-              <Wrapper>
-                <TouchableOpacity>
-                  <Broadcast style={styles.iconStyle} />
-                  <Heading fontSize={14}>Broadcast Message</Heading>
-                </TouchableOpacity>
-              </Wrapper>
-              <Wrapper>
-                <TouchableOpacity>
-                  <Bitcoin style={styles.iconStyle} />
-                  <Heading fontSize={14}>Buy Bitcoin</Heading>
-                </TouchableOpacity>
-              </Wrapper>
-              <Wrapper>
-                <TouchableOpacity>
-                  <Payments style={styles.iconStyle} />
-                  <Heading fontSize={14}>Pay Merchants</Heading>
-                </TouchableOpacity>
-              </Wrapper>
-            </HStack>
-          </Stack>
         </Stack>
-      </ScrollView>
+      </Stack>
     </Fragment>
   );
 };
@@ -118,7 +117,7 @@ const styles = StyleSheet.create({
   },
   moreButton: {
     marginTop: height * 0.155,
-    marginRight: '18%',
+    marginRight: '22s%',
   },
   buttonHstack1: {
     marginBottom: 6,
@@ -129,11 +128,12 @@ const styles = StyleSheet.create({
   },
   buttonStack: {
     alignItems: 'center',
-    margin: 28,
+    margin: 25,
     justifyContent: 'space-evenly',
+    marginTop: height * 0.009,
   },
   iconStyle: {
-    marginBottom: '25%',
+    marginBottom: '17%',
     paddingHorizontal: '10%',
   },
 });
