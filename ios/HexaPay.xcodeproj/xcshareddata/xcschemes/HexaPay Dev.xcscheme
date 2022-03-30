@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "18BDF5A027E8838E0012747D"
-               BuildableName = "HexaPay Dev.app"
+               BuildableName = "HexaPay Dev"
                BlueprintName = "HexaPay Dev"
                ReferencedContainer = "container:HexaPay.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18BDF5A027E8838E0012747D"
-            BuildableName = "HexaPay Dev.app"
+            BuildableName = "HexaPay Dev"
             BlueprintName = "HexaPay Dev"
             ReferencedContainer = "container:HexaPay.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18BDF5A027E8838E0012747D"
-            BuildableName = "HexaPay Dev.app"
+            BuildableName = "HexaPay Dev"
             BlueprintName = "HexaPay Dev"
             ReferencedContainer = "container:HexaPay.xcodeproj">
          </BuildableReference>
