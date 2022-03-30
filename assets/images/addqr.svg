@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+  <g id="addqr" transform="translate(-39 -286)">
+    <circle id="Ellipse_1949" data-name="Ellipse 1949" cx="15.5" cy="15.5" r="15.5" transform="translate(39 286)" fill="#fabc05"/>
+    <g id="Ellipse_1957" data-name="Ellipse 1957" transform="translate(40.5 287.5)" fill="none" stroke="#fafafa" stroke-width="0.6">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="13.7" fill="none"/>
+    </g>
+    <g id="qrcode" transform="translate(48.19 294.719)">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M10.217,12.678V5.937h2.4v6.742Zm-1.009,0H0V3.429h9.2v9.249h0ZM1.323,11.357h6.57v-6.6H1.323Zm1.79-1.8v-3H6.1v3ZM9.207,3.428V1.207H0V0H12.618V3.428Z" fill="#fafafa"/>
+    </g>
+  </g>
+</svg>

@@ -11,20 +11,20 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		18BDF5A427E8838E0012747D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		18BDF5A527E8838E0012747D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		18BDF5A927E8838E0012747D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		18BDF5AA27E8838E0012747D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		18BDF5BB27E8839F0012747D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		18BDF5BC27E8839F0012747D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		18BDF5C027E8839F0012747D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		18BDF5C127E8839F0012747D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		31F345965C6DBE987B94290F /* libPods-HexaPay Dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF749E565F4375255D0A084 /* libPods-HexaPay Dev.a */; };
-		6551BD5BA0DA9D1DD320E716 /* libPods-HexaPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28844123F15F926CCB20EFF8 /* libPods-HexaPay.a */; };
+		18E1FB3D27EAF98D00B0407E /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E1FB3427EAF98C00B0407E /* RobotoSlab-Light.ttf */; };
+		18E1FB3E27EAF98D00B0407E /* RobotoSlab-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E1FB3527EAF98C00B0407E /* RobotoSlab-ExtraLight.ttf */; };
+		18E1FB3F27EAF98D00B0407E /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E1FB3627EAF98C00B0407E /* RobotoSlab-Regular.ttf */; };
+		18E1FB4027EAF98D00B0407E /* RobotoSlab-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E1FB3727EAF98C00B0407E /* RobotoSlab-ExtraBold.ttf */; };
+		18E1FB4127EAF98D00B0407E /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E1FB3827EAF98C00B0407E /* RobotoSlab-Medium.ttf */; };
+		18E1FB4227EAF98D00B0407E /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E1FB3927EAF98C00B0407E /* RobotoSlab-Black.ttf */; };
+		18E1FB4327EAF98D00B0407E /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E1FB3A27EAF98C00B0407E /* RobotoSlab-Bold.ttf */; };
+		18E1FB4427EAF98D00B0407E /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E1FB3B27EAF98D00B0407E /* RobotoSlab-SemiBold.ttf */; };
+		18E1FB4527EAF98D00B0407E /* RobotoSlab-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E1FB3C27EAF98D00B0407E /* RobotoSlab-Thin.ttf */; };
 		6BEA86FEA5ADF8C2682B7AB1 /* libPods-HexaPay-HexaPayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 104CBD3385455ACA49AE1A59 /* libPods-HexaPay-HexaPayTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B3270BB6A3AB6E2DB48A22EE /* libPods-HexaPay Stage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C12064B8AABE97C1AC26012 /* libPods-HexaPay Stage.a */; };
 		CA5E80BECAF18976CAD16044 /* libPods-HexaPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28844123F15F926CCB20EFF8 /* libPods-HexaPay.a */; };
-		E7CC7571D97305D129D45DDA /* libPods-HexaPay Stage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 212988ADFAC2FF0B4B2D0F1A /* libPods-HexaPay Stage.a */; };
+		D5576C6283BBF07CE242D229 /* libPods-HexaPay Dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AF749E565F4375255D0A084 /* libPods-HexaPay Dev.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,25 +49,26 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HexaPay/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HexaPay/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = HexaPay/main.m; sourceTree = "<group>"; };
-		16202A390EC4A93BB712F23A /* Pods-HexaPay Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay Dev.debug.xcconfig"; path = "Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev.debug.xcconfig"; sourceTree = "<group>"; };
-		18BDF5B527E8838E0012747D /* HexaPay Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HexaPay Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		18BDF5B627E8838E0012747D /* HexaPay Dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HexaPay Dev.plist"; path = "/Users/apple/hexapay/ios/HexaPay Dev.plist"; sourceTree = "<absolute>"; };
-		18BDF5CC27E8839F0012747D /* HexaPay Stage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HexaPay Stage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		18BDF5CD27E8839F0012747D /* HexaPay Stage.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HexaPay Stage.plist"; path = "/Users/apple/hexapay/ios/HexaPay Stage.plist"; sourceTree = "<absolute>"; };
-		212988ADFAC2FF0B4B2D0F1A /* libPods-HexaPay Stage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HexaPay Stage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E1FB3427EAF98C00B0407E /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoSlab-Light.ttf"; path = "../assets/fonts/RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
+		18E1FB3527EAF98C00B0407E /* RobotoSlab-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoSlab-ExtraLight.ttf"; path = "../assets/fonts/RobotoSlab-ExtraLight.ttf"; sourceTree = "<group>"; };
+		18E1FB3627EAF98C00B0407E /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoSlab-Regular.ttf"; path = "../assets/fonts/RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
+		18E1FB3727EAF98C00B0407E /* RobotoSlab-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoSlab-ExtraBold.ttf"; path = "../assets/fonts/RobotoSlab-ExtraBold.ttf"; sourceTree = "<group>"; };
+		18E1FB3827EAF98C00B0407E /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoSlab-Medium.ttf"; path = "../assets/fonts/RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
+		18E1FB3927EAF98C00B0407E /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoSlab-Black.ttf"; path = "../assets/fonts/RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
+		18E1FB3A27EAF98C00B0407E /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoSlab-Bold.ttf"; path = "../assets/fonts/RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
+		18E1FB3B27EAF98D00B0407E /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoSlab-SemiBold.ttf"; path = "../assets/fonts/RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
+		18E1FB3C27EAF98D00B0407E /* RobotoSlab-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoSlab-Thin.ttf"; path = "../assets/fonts/RobotoSlab-Thin.ttf"; sourceTree = "<group>"; };
 		28844123F15F926CCB20EFF8 /* libPods-HexaPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HexaPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29798589E90C26AE73F5102F /* Pods-HexaPay Stage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay Stage.release.xcconfig"; path = "Target Support Files/Pods-HexaPay Stage/Pods-HexaPay Stage.release.xcconfig"; sourceTree = "<group>"; };
+		2C12064B8AABE97C1AC26012 /* libPods-HexaPay Stage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HexaPay Stage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF749E565F4375255D0A084 /* libPods-HexaPay Dev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HexaPay Dev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC4724DD31893A19E580610 /* Pods-HexaPay-HexaPayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay-HexaPayTests.debug.xcconfig"; path = "Target Support Files/Pods-HexaPay-HexaPayTests/Pods-HexaPay-HexaPayTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4A6EFEC81461D4D18692EA1D /* Pods-HexaPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay.debug.xcconfig"; path = "Target Support Files/Pods-HexaPay/Pods-HexaPay.debug.xcconfig"; sourceTree = "<group>"; };
-		4A8EF1F7C8124E32B48EB253 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Regular.ttf"; path = "../src/assets/fonts/RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
-		4DA7C1BE92F8CAE563EC35DF /* Pods-HexaPay Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay Dev.release.xcconfig"; path = "Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev.release.xcconfig"; sourceTree = "<group>"; };
-		63959E69F8755B874D39DC41 /* Pods-HexaPay Stage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay Stage.release.xcconfig"; path = "Target Support Files/Pods-HexaPay Stage/Pods-HexaPay Stage.release.xcconfig"; sourceTree = "<group>"; };
-		7E3B86C77BCD4747870EEF54 /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Medium.ttf"; path = "../src/assets/fonts/RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
+		78C4F34334D811881D31CC83 /* Pods-HexaPay Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay Dev.release.xcconfig"; path = "Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = HexaPay/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84426064A16D8491B7DBDCDA /* Pods-HexaPay-HexaPayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay-HexaPayTests.release.xcconfig"; path = "Target Support Files/Pods-HexaPay-HexaPayTests/Pods-HexaPay-HexaPayTests.release.xcconfig"; sourceTree = "<group>"; };
-		97A4C56A8ED544E2A8F2ACCD /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Black.ttf"; path = "../src/assets/fonts/RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
-		ABE2A6D053A9BDE2D41742DA /* Pods-HexaPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay.release.xcconfig"; path = "Target Support Files/Pods-HexaPay/Pods-HexaPay.release.xcconfig"; sourceTree = "<group>"; };
-		D541E2D66EA2454DA77C170E /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Bold.ttf"; path = "../src/assets/fonts/RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
+		8CC59CB13F29D1E237147C4B /* Pods-HexaPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay.debug.xcconfig"; path = "Target Support Files/Pods-HexaPay/Pods-HexaPay.debug.xcconfig"; sourceTree = "<group>"; };
+		AD303EE8752109B19B56E61C /* Pods-HexaPay Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay Dev.debug.xcconfig"; path = "Target Support Files/Pods-HexaPay Dev/Pods-HexaPay Dev.debug.xcconfig"; sourceTree = "<group>"; };
+		DDA07CF6DDDC71DC6139CD44 /* Pods-HexaPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HexaPay.release.xcconfig"; path = "Target Support Files/Pods-HexaPay/Pods-HexaPay.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -85,7 +86,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA5E80BECAF18976CAD16044 /* libPods-HexaPay.a in Frameworks */,
-				6551BD5BA0DA9D1DD320E716 /* libPods-HexaPay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31F345965C6DBE987B94290F /* libPods-HexaPay Dev.a in Frameworks */,
+				D5576C6283BBF07CE242D229 /* libPods-HexaPay Dev.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7CC7571D97305D129D45DDA /* libPods-HexaPay Stage.a in Frameworks */,
+				B3270BB6A3AB6E2DB48A22EE /* libPods-HexaPay Stage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +145,7 @@
 				28844123F15F926CCB20EFF8 /* libPods-HexaPay.a */,
 				104CBD3385455ACA49AE1A59 /* libPods-HexaPay-HexaPayTests.a */,
 				3AF749E565F4375255D0A084 /* libPods-HexaPay Dev.a */,
-				212988ADFAC2FF0B4B2D0F1A /* libPods-HexaPay Stage.a */,
+				2C12064B8AABE97C1AC26012 /* libPods-HexaPay Stage.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			children = (
 				3FC4724DD31893A19E580610 /* Pods-HexaPay-HexaPayTests.debug.xcconfig */,
 				84426064A16D8491B7DBDCDA /* Pods-HexaPay-HexaPayTests.release.xcconfig */,
-				4A6EFEC81461D4D18692EA1D /* Pods-HexaPay.debug.xcconfig */,
-				ABE2A6D053A9BDE2D41742DA /* Pods-HexaPay.release.xcconfig */,
-				16202A390EC4A93BB712F23A /* Pods-HexaPay Dev.debug.xcconfig */,
-				4DA7C1BE92F8CAE563EC35DF /* Pods-HexaPay Dev.release.xcconfig */,
 				0A931E601BC29BEB0E03506C /* Pods-HexaPay Stage.debug.xcconfig */,
-				63959E69F8755B874D39DC41 /* Pods-HexaPay Stage.release.xcconfig */,
+				8CC59CB13F29D1E237147C4B /* Pods-HexaPay.debug.xcconfig */,
+				DDA07CF6DDDC71DC6139CD44 /* Pods-HexaPay.release.xcconfig */,
+				AD303EE8752109B19B56E61C /* Pods-HexaPay Dev.debug.xcconfig */,
+				78C4F34334D811881D31CC83 /* Pods-HexaPay Dev.release.xcconfig */,
+				29798589E90C26AE73F5102F /* Pods-HexaPay Stage.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -168,10 +168,6 @@
 		746D876D4548437F990AA820 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				97A4C56A8ED544E2A8F2ACCD /* RobotoSlab-Black.ttf */,
-				D541E2D66EA2454DA77C170E /* RobotoSlab-Bold.ttf */,
-				7E3B86C77BCD4747870EEF54 /* RobotoSlab-Medium.ttf */,
-				4A8EF1F7C8124E32B48EB253 /* RobotoSlab-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -186,6 +182,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				18E1FB3927EAF98C00B0407E /* RobotoSlab-Black.ttf */,
+				18E1FB3A27EAF98C00B0407E /* RobotoSlab-Bold.ttf */,
+				18E1FB3727EAF98C00B0407E /* RobotoSlab-ExtraBold.ttf */,
+				18E1FB3527EAF98C00B0407E /* RobotoSlab-ExtraLight.ttf */,
+				18E1FB3427EAF98C00B0407E /* RobotoSlab-Light.ttf */,
+				18E1FB3827EAF98C00B0407E /* RobotoSlab-Medium.ttf */,
+				18E1FB3627EAF98C00B0407E /* RobotoSlab-Regular.ttf */,
+				18E1FB3B27EAF98D00B0407E /* RobotoSlab-SemiBold.ttf */,
+				18E1FB3C27EAF98D00B0407E /* RobotoSlab-Thin.ttf */,
 				13B07FAE1A68108700A75B9A /* HexaPay */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* HexaPayTests */,
@@ -193,8 +198,6 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				47111BD03A8169E662CF4623 /* Pods */,
 				746D876D4548437F990AA820 /* Resources */,
-				18BDF5B627E8838E0012747D /* HexaPay Dev.plist */,
-				18BDF5CD27E8839F0012747D /* HexaPay Stage.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -206,8 +209,6 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* HexaPay.app */,
 				00E356EE1AD99517003FC87E /* HexaPayTests.xctest */,
-				18BDF5B527E8838E0012747D /* HexaPay Dev.app */,
-				18BDF5CC27E8839F0012747D /* HexaPay Stage.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,7 +267,6 @@
 				18BDF5A227E8838E0012747D /* Start Packager */,
 				18BDF5A327E8838E0012747D /* Sources */,
 				18BDF5A627E8838E0012747D /* Frameworks */,
-				18BDF5A827E8838E0012747D /* Resources */,
 				18BDF5AF27E8838E0012747D /* Bundle React Native code and images */,
 				42F580214C7F9E2A7EBE24B7 /* [CP] Embed Pods Frameworks */,
 				559A6210C255389BEA47D5F0 /* [CP] Copy Pods Resources */,
@@ -277,7 +277,6 @@
 			);
 			name = "HexaPay Dev";
 			productName = HexaPay;
-			productReference = 18BDF5B527E8838E0012747D /* HexaPay Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 		18BDF5B727E8839F0012747D /* HexaPay Stage */ = {
@@ -288,7 +287,6 @@
 				18BDF5B927E8839F0012747D /* Start Packager */,
 				18BDF5BA27E8839F0012747D /* Sources */,
 				18BDF5BD27E8839F0012747D /* Frameworks */,
-				18BDF5BF27E8839F0012747D /* Resources */,
 				18BDF5C627E8839F0012747D /* Bundle React Native code and images */,
 				996AE0B55EC5E2B59051969C /* [CP] Embed Pods Frameworks */,
 				94849B1C33928048847DC43C /* [CP] Copy Pods Resources */,
@@ -299,7 +297,6 @@
 			);
 			name = "HexaPay Stage";
 			productName = HexaPay;
-			productReference = 18BDF5CC27E8839F0012747D /* HexaPay Stage.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -352,26 +349,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E1FB3D27EAF98D00B0407E /* RobotoSlab-Light.ttf in Resources */,
+				18E1FB3E27EAF98D00B0407E /* RobotoSlab-ExtraLight.ttf in Resources */,
+				18E1FB3F27EAF98D00B0407E /* RobotoSlab-Regular.ttf in Resources */,
+				18E1FB4027EAF98D00B0407E /* RobotoSlab-ExtraBold.ttf in Resources */,
+				18E1FB4127EAF98D00B0407E /* RobotoSlab-Medium.ttf in Resources */,
+				18E1FB4227EAF98D00B0407E /* RobotoSlab-Black.ttf in Resources */,
+				18E1FB4327EAF98D00B0407E /* RobotoSlab-Bold.ttf in Resources */,
+				18E1FB4427EAF98D00B0407E /* RobotoSlab-SemiBold.ttf in Resources */,
+				18E1FB4527EAF98D00B0407E /* RobotoSlab-Thin.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		18BDF5A827E8838E0012747D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				18BDF5A927E8838E0012747D /* LaunchScreen.storyboard in Resources */,
-				18BDF5AA27E8838E0012747D /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		18BDF5BF27E8839F0012747D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				18BDF5C027E8839F0012747D /* LaunchScreen.storyboard in Resources */,
-				18BDF5C127E8839F0012747D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,8 +713,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18BDF5A427E8838E0012747D /* AppDelegate.m in Sources */,
-				18BDF5A527E8838E0012747D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,8 +720,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18BDF5BB27E8839F0012747D /* AppDelegate.m in Sources */,
-				18BDF5BC27E8839F0012747D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,23 +787,25 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A6EFEC81461D4D18692EA1D /* Pods-HexaPay.debug.xcconfig */;
+			baseConfigurationReference = 8CC59CB13F29D1E237147C4B /* Pods-HexaPay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5TCB759QL;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HexaPay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.hexawallet.pay.dev;
 				PRODUCT_NAME = HexaPay;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -829,22 +815,24 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABE2A6D053A9BDE2D41742DA /* Pods-HexaPay.release.xcconfig */;
+			baseConfigurationReference = DDA07CF6DDDC71DC6139CD44 /* Pods-HexaPay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5TCB759QL;
 				INFOPLIST_FILE = HexaPay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.hexawallet.pay.dev;
 				PRODUCT_NAME = HexaPay;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -853,7 +841,7 @@
 		};
 		18BDF5B327E8838E0012747D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16202A390EC4A93BB712F23A /* Pods-HexaPay Dev.debug.xcconfig */;
+			baseConfigurationReference = AD303EE8752109B19B56E61C /* Pods-HexaPay Dev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -879,7 +867,7 @@
 		};
 		18BDF5B427E8838E0012747D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DA7C1BE92F8CAE563EC35DF /* Pods-HexaPay Dev.release.xcconfig */;
+			baseConfigurationReference = 78C4F34334D811881D31CC83 /* Pods-HexaPay Dev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -929,7 +917,7 @@
 		};
 		18BDF5CB27E8839F0012747D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63959E69F8755B874D39DC41 /* Pods-HexaPay Stage.release.xcconfig */;
+			baseConfigurationReference = 29798589E90C26AE73F5102F /* Pods-HexaPay Stage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

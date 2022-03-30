@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.hexapay">
+  package="io.hexawallet.pay">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
