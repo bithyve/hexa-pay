@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="more" transform="translate(-313 -424)">
+    <circle id="Oval" cx="20" cy="20" r="20" transform="translate(313 424)" fill="#fff" opacity="0.97"/>
+    <path id="icon_arrow" d="M5.564,11.716.17,6.385a.569.569,0,0,1,0-.812L5.564.243a.849.849,0,0,1,1.19,0,.826.826,0,0,1,0,1.176L2.14,5.98l4.614,4.559a.826.826,0,0,1,0,1.177.849.849,0,0,1-1.19,0" transform="translate(327 449) rotate(-90)" fill="#4286f5"/>
+    <circle id="Oval-2" data-name="Oval" cx="18" cy="18" r="18" transform="translate(315 426)" fill="none" stroke="#4286f5" stroke-width="0.8"/>
+  </g>
+</svg>

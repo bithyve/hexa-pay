@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37.468" height="23" viewBox="0 0 37.468 23">
+  <g id="switch" transform="translate(0)">
+    <rect id="switchbase" width="37.468" height="23" rx="11.5" transform="translate(0)" fill="#fff" opacity="0.5"/>
+    <circle id="switch-2" data-name="switch" cx="10.387" cy="10.387" r="10.387" transform="translate(1.581 1.113)" fill="#f9fbff" opacity="0.996"/>
+  </g>
+</svg>

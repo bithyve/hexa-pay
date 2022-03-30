@@ -9,6 +9,9 @@ const Colors = {
   skyBlue: '#006DB42E',
   darkBlue: '#006DB4',
   blue: '#006CB4',
+  blue2: '#4286F5',
   green: '#70C1B3',
+  primaryButton: '#FFD885',
+  darkText: '#505050',
 };
 export default Colors;

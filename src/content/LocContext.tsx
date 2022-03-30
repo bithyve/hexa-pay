@@ -1,5 +1,5 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import React, { createContext, useState } from 'react';
+import {getString, setItem} from '~storage/';
+import React, {createContext, useState} from 'react';
 import RNLocalize from 'react-native-localize';
 import en from './language/en.json';
 import LocalizedContent from 'react-localization';
@@ -7,7 +7,7 @@ import LocalizedContent from 'react-localization';
 const DEFAULT_LANGUAGE = 'en';
 const APP_LANGUAGE = 'appLanguage';
 
-const languages = { en };
+const languages = {en};
 export const translations = new LocalizedContent(languages);
 
 export const LocalizationContext = createContext({
@@ -18,21 +18,21 @@ export const LocalizationContext = createContext({
   initializeAppLanguage: () => {},
 });
 
-export const LocalizationProvider = ({ children }: { children: JSX.Element }) => {
+export const LocalizationProvider = ({children}: {children: JSX.Element}) => {
   const [appLanguage, setAppLanguage] = useState(DEFAULT_LANGUAGE);
 
   const setLanguage = (language: string) => {
     translations.setLanguage(language);
     setAppLanguage(language);
-    AsyncStorage.setItem(APP_LANGUAGE, language);
+    setItem(APP_LANGUAGE, language);
   };
 
   const formatString = (param: any) => {
     return translations.formatString(param);
   };
 
-  const initializeAppLanguage = async () => {
-    const currentLanguage = await AsyncStorage.getItem(APP_LANGUAGE);
+  const initializeAppLanguage = () => {
+    const currentLanguage = getString(APP_LANGUAGE);
     if (currentLanguage) {
       setLanguage(currentLanguage);
     } else {
@@ -57,8 +57,7 @@ export const LocalizationProvider = ({ children }: { children: JSX.Element }) =>
         initializeAppLanguage,
         formatString,
         setAppLanguage: setLanguage,
-      }}
-    >
+      }}>
       {children}
     </LocalizationContext.Provider>
   );

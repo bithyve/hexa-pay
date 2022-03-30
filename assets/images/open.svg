@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+  <g id="open_" data-name="open " transform="translate(-39 -634)">
+    <circle id="Ellipse_1949" data-name="Ellipse 1949" cx="15.5" cy="15.5" r="15.5" transform="translate(39 634)" fill="#fabc05"/>
+    <g id="Ellipse_1957" data-name="Ellipse 1957" transform="translate(40.5 635.5)" fill="none" stroke="#fafafa" stroke-width="0.6">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="13.7" fill="none"/>
+    </g>
+    <g id="sign-in" transform="translate(47.626 642.979)">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M8.84,13.043a1.2,1.2,0,1,1,0-2.4h1.806V2.4H8.84A1.2,1.2,0,0,1,7.971.339,1.2,1.2,0,0,1,8.84,0h3a1.2,1.2,0,0,1,1.2,1.2V11.844a1.2,1.2,0,0,1-1.2,1.2Zm-3.7-2.771A1.088,1.088,0,0,1,4.392,8.4l.7-.665H4.633a5.416,5.416,0,0,1-4.422-2.3A1.1,1.1,0,0,1,.5,3.874a1.085,1.085,0,0,1,1.476.3,3.252,3.252,0,0,0,2.66,1.391h.484L4.45,4.891A1.089,1.089,0,0,1,5.992,3.354l2.53,2.539a1.087,1.087,0,0,1-.01,1.548l-2.6,2.521a1.088,1.088,0,0,1-.76.309Z" transform="translate(0 0)" fill="#fafafa"/>
+    </g>
+  </g>
+</svg>

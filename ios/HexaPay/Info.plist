@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>HexaPay</string>
+	<string>Hexa Pay</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -36,7 +36,19 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>RobotoSlab-Black.ttf</string>
+		<string>RobotoSlab-Bold.ttf</string>
+		<string>RobotoSlab-Medium.ttf</string>
+		<string>RobotoSlab-Regular.ttf</string>
+		<string>RobotoSlab-ExtraBold.ttf</string>
+		<string>RobotoSlab-ExtraLight.ttf</string>
+		<string>RobotoSlab-Light.ttf</string>
+		<string>RobotoSlab-SemiBold.ttf</string>
+		<string>RobotoSlab-Thin.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -46,17 +58,8 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>RobotoSlab-Black.ttf</string>
-		<string>RobotoSlab-Bold.ttf</string>
-		<string>RobotoSlab-Medium.ttf</string>
-		<string>RobotoSlab-Regular.ttf</string>
-	</array>
 </dict>
 </plist>
