@@ -1,4 +1,4 @@
-package com.hexapay;
+package io.hexawallet.pay;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;
