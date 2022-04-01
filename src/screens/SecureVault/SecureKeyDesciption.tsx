@@ -1,9 +1,52 @@
 import {StyleSheet, TouchableOpacity} from 'react-native';
-import React from 'react';
-import {Heading, HStack, Text, VStack} from 'native-base';
+import React, {useContext, useEffect, useState} from 'react';
+import {Heading, HStack, Spinner, Text, useToast, VStack} from 'native-base';
 import Open from 'assets/images/open.svg';
 import QRCode from 'react-native-qrcode-svg';
+import {useNavigation} from '@react-navigation/native';
+import MockContext from '~contexts/MockContext';
 const SecureKeyDesciption = () => {
+  const STATUS = [
+    'Waiting for keeper to connect...',
+    'Connected to Keeper',
+    'Backing up keys...',
+    'Secured with Keeper!',
+  ];
+  const [statusText, setStatus] = useState('Waiting for keeper to connect...');
+  const toast = useToast();
+  const navigation = useNavigation();
+  const {setSecured} = useContext(MockContext.MockContext);
+  const updateText = (text: string, interval: number, index: number) => {
+    setTimeout(() => {
+      setStatus(text);
+      if (index === 3) {
+        toast.show({
+          title: 'Secured with Keeper!',
+          status: 'success',
+          placement: 'top',
+          width: '58%',
+          borderRadius: 20,
+          isClosable: false,
+        });
+      }
+    }, interval);
+  };
+  useEffect(() => {
+    STATUS.forEach((text, index) => {
+      let delay = 5000;
+      if (index) {
+        delay = delay + index * 1000;
+      }
+      updateText(text, delay, index);
+    });
+
+    const timer = setTimeout(() => {
+      navigation.goBack();
+      setSecured(true);
+    }, 9000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <VStack
       marginY={'20'}
@@ -12,10 +55,7 @@ const SecureKeyDesciption = () => {
       justifyContent={'space-between'}
       flex={1}>
       <VStack>
-        <Heading fontSize={'sm'}>Login to Bitcoin with Hexa Keeper</Heading>
-        <Text fontSize={'xs'} fontFamily={'mono'}>
-          Lorem ipsum dolor sit amet, consectetur
-        </Text>
+        <Heading fontSize={'sm'}>Bitcoin Login with Keeper</Heading>
       </VStack>
       <VStack>
         <QRCode
@@ -30,18 +70,21 @@ const SecureKeyDesciption = () => {
       </VStack>
       <VStack>
         <Text fontSize={'xs'} fontFamily={'mono'}>
-          Lorem ipsum dolor sit amet, consectetur
+          Scan QR with your Keeper App to secure your keys
         </Text>
-        <Text fontSize={'xs'} fontFamily={'mono'}>
-          Lorem ipsum dolor sit amet, consectetur
-        </Text>
+        <HStack alignItems={'center'}>
+          {statusText !== STATUS[3] && <Spinner color={'light.blue'} padding={'4'} />}
+          <Text fontSize={'xs'} fontFamily={'mono'}>
+            {statusText}
+          </Text>
+        </HStack>
       </VStack>
       <VStack>
         <TouchableOpacity style={styles.button}>
           <HStack alignItems={'center'}>
             <Open />
             <Heading fontSize={'xs'} paddingX={'3'}>
-              Open in Hexa Keeper
+              Open with Keeper
             </Heading>
           </HStack>
         </TouchableOpacity>

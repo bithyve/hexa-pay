@@ -1,10 +1,11 @@
 import Sheild from 'assets/images/backup.svg';
 import RightArrow from 'assets/images/rightArrow.svg';
-import React from 'react';
+import React, {useContext} from 'react';
 import {Text, Heading, HStack, VStack} from 'native-base';
 import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {CommonActions} from '@react-navigation/native';
+import MockContext from '~contexts/MockContext';
 
 const WalletBackup = () => {
   const navigation = useNavigation();
@@ -14,6 +15,7 @@ const WalletBackup = () => {
         name: 'Backup',
       })
     );
+  const {securedWithKeeper} = useContext(MockContext.MockContext);
   return (
     <VStack marginX={'7'} marginTop={'7'}>
       <Heading fontSize={'sm'} paddingBottom={5}>
@@ -29,9 +31,11 @@ const WalletBackup = () => {
           <HStack alignItems={'center'}>
             <Sheild />
             <VStack marginLeft={'5'}>
-              <Text fontSize={'sm'}>No backup created</Text>
+              <Text fontSize={'sm'}>
+                {securedWithKeeper ? 'Secured with Keeper' : `No backup created`}
+              </Text>
               <Text fontSize={'xs'} fontFamily={'mono'}>
-                See your backup options
+                {securedWithKeeper ? 'See other backup options' : 'See your backup options'}
               </Text>
             </VStack>
           </HStack>
