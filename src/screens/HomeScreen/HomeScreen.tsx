@@ -14,7 +14,9 @@ import Group from 'assets/images/group.svg';
 import Bitcoin from 'assets/images/bitcoin.svg';
 import Broadcast from 'assets/images/broadcast.svg';
 import Payments from 'assets/images/payments.svg';
-
+import Navigator from '~navigation/Navigator';
+import {useNavigation} from '@react-navigation/native';
+import {CommonActions} from '@react-navigation/native';
 
 const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
   return (
@@ -35,13 +37,18 @@ const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
 };
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+  const goToQrScreen = () => navigation.dispatch(CommonActions.navigate({name: 'QrScanner'}));
+
   return (
     <Fragment>
       <Backdrop height={height * 0.69} />
       <Stack style={styles.container}>
         <HStack style={styles.hStack}>
           <ProfileCard />
-          <QrScanner />
+          <TouchableOpacity onPress={goToQrScreen}>
+            <QrScanner />
+          </TouchableOpacity>
         </HStack>
         <HStack style={styles.walletDetails}>
           <WalletDetails />

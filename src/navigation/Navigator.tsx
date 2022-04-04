@@ -6,6 +6,7 @@ import BackupScreen from '~screens/Backup/BackupScreen';
 import AddContactScreen from '~screens/HomeScreen/AddContactScreen';
 import ViewTransactionsScreen from '~screens/HomeScreen/ViewTransactionsScreen';
 import SettingsStack from './SettingsStack';
+import QRScreen from '~screens/QRScreen/QRScreen';
 
 const defaultTheme = {
   ...DefaultTheme,
@@ -25,6 +26,7 @@ const Navigator = () => {
         <Stack.Screen name="AddContact" component={AddContactScreen} />
         <Stack.Screen name="ViewTransactions" component={ViewTransactionsScreen} />
         <Stack.Screen name="Backup" component={BackupScreen} />
+        <Stack.Screen name="QrScanner" component={QRScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
