@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: height * 0.17,
+    marginTop: height * 0.15,
     marginLeft: width * 0.09,
   },
   wallet: {
