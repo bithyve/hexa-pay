@@ -35,7 +35,6 @@ const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
 
 const HomeScreen = () => {
   const navigation = useNavigation();
-  const goToQrScreen = () => navigation.dispatch(CommonActions.navigate({name: 'QrScanner'}));
 
   return (
     <Fragment>
@@ -43,7 +42,6 @@ const HomeScreen = () => {
       <Stack style={styles.container}>
         <HStack style={styles.hStack}>
           <ProfileCard />
-          <TouchableOpacity onPress={goToQrScreen}></TouchableOpacity>
         </HStack>
         <HStack style={styles.walletDetails}>
           <WalletDetails />
