@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Dimensions, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Dimensions, TouchableOpacity, Image} from 'react-native';
 import React, {Fragment} from 'react';
 import Backdrop from '~components/Backdrop';
 import {Stack, VStack, Input, HStack, Box} from 'native-base';
@@ -25,7 +25,7 @@ function UserNameInput() {
           <Text style={styles.infoText}>This information is public</Text>
         </VStack>
         <TouchableOpacity onPress={uploadPictureHandler} style={styles.uploadPictureButton}>
-          <Upload style={styles.uploadIcon} />
+          <Upload />
           <Text style={styles.buttonText}>Upload</Text>
         </TouchableOpacity>
         <View>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: Colors.white,
     fontSize: 16,
-    marginTop: '40%',
+    marginTop: '18%',
     // fontFamily: HexaTheme.fonts.RobotoSlabBlack,
   },
   nextButton: {
@@ -93,7 +93,8 @@ const styles = StyleSheet.create({
     marginLeft: width * 0.8,
   },
   uploadIcon: {
-    height: 100,
-    width: 100,
+    height: 35,
+    width: 55,
+    backgroundColor: '#ffffff',
   },
 });
