@@ -1,12 +1,17 @@
 import {StyleSheet, Text, View, Dimensions, TouchableOpacity} from 'react-native';
 import React, {Fragment} from 'react';
 import Backdrop from '~components/Backdrop';
-import {Stack, VStack, Input} from 'native-base';
+import {Stack, VStack, Input, HStack, Box} from 'native-base';
 const {height, width} = Dimensions.get('window');
 import Next from 'assets/images/next.svg';
 import Colors from '~theme/Colors';
+import Upload from '../../../assets/images/upload.svg';
+import {useNavigation} from '@react-navigation/native';
+import {CommonActions} from '@react-navigation/native';
 
 function UserNameInput() {
+  const navigation = useNavigation();
+  const goToHomeScreen = () => navigation.dispatch(CommonActions.navigate({name: 'Home'}));
   const uploadPictureHandler = () => {
     console.log('upload button clicked');
   };
@@ -20,6 +25,7 @@ function UserNameInput() {
           <Text style={styles.infoText}>This information is public</Text>
         </VStack>
         <TouchableOpacity onPress={uploadPictureHandler} style={styles.uploadPictureButton}>
+          <Upload style={styles.uploadIcon} />
           <Text style={styles.buttonText}>Upload</Text>
         </TouchableOpacity>
         <View>
@@ -33,7 +39,7 @@ function UserNameInput() {
             marginTop={width * 0.1}
           />
         </View>
-        <TouchableOpacity style={styles.nextButton}>
+        <TouchableOpacity style={styles.nextButton} onPress={goToHomeScreen}>
           <Next />
         </TouchableOpacity>
       </Stack>
@@ -46,6 +52,8 @@ export default UserNameInput;
 const styles = StyleSheet.create({
   stackContainer: {
     flexDirection: 'column',
+    justifyContent: 'flex-end',
+    alignItems: 'stretch',
   },
   textContainer: {
     marginHorizontal: width * 0.1,
@@ -65,6 +73,7 @@ const styles = StyleSheet.create({
   uploadPictureButton: {
     width: 100,
     height: 100,
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 100,
@@ -80,12 +89,11 @@ const styles = StyleSheet.create({
     // fontFamily: HexaTheme.fonts.RobotoSlabBlack,
   },
   nextButton: {
-    marginTop: height * 0.3,
+    marginTop: height * 0.23,
     marginLeft: width * 0.8,
   },
-  textInput: {
-    height: '20%',
-    marginTop: height * 0.05,
-    marginLeft: width * 0.1,
+  uploadIcon: {
+    height: 100,
+    width: 100,
   },
 });

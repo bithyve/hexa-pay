@@ -6,8 +6,12 @@ import Fonts from '../theme/Fonts';
 import Colors from '../theme/Colors';
 import {Avatar} from 'native-base';
 import QrScanner from '~components/QrScanner';
+import {useNavigation} from '@react-navigation/native';
+import {CommonActions} from '@react-navigation/native';
 
 const ProfileCard = () => {
+  const navigation = useNavigation();
+  const goToQrScreen = () => navigation.dispatch(CommonActions.navigate({name: 'QrScanner'}));
   return (
     <View style={styles.cardContainer}>
       <TouchableOpacity>
@@ -26,7 +30,7 @@ const ProfileCard = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.QrLogo}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={goToQrScreen}>
           <QrScanner />
         </TouchableOpacity>
       </View>

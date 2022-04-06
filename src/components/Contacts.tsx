@@ -60,7 +60,7 @@ const Item = ({name, uri}: any) => (
           width: '80%',
           color: Colors.white,
           marginLeft: width * 0.035,
-          fontFamily: 'bold',
+          // fontFamily: 'bold',
         }}>
         {name}
       </Text>
