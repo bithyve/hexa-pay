@@ -3,7 +3,6 @@ import {StyleSheet, Dimensions, TouchableOpacity} from 'react-native';
 import Backdrop from '~components/Backdrop';
 const {height, width} = Dimensions.get('window');
 import ProfileCard from '~components/ProfileCard';
-import More from 'assets/images/more.svg';
 import {HStack, ScrollView, Stack, VStack, Box, Heading} from 'native-base';
 import WalletDetails from '~components/WalletDetails';
 import Contacts from '~components/Contacts';
@@ -13,7 +12,6 @@ import Group from 'assets/images/group.svg';
 import Bitcoin from 'assets/images/bitcoin.svg';
 import Broadcast from 'assets/images/broadcast.svg';
 import Payments from 'assets/images/payments.svg';
-import Navigator from '~navigation/Navigator';
 import {useNavigation} from '@react-navigation/native';
 import {CommonActions} from '@react-navigation/native';
 
