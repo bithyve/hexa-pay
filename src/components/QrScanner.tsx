@@ -1,14 +1,19 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Scaner from 'assets/images/scan.svg';
 import {Dimensions} from 'react-native';
+import {CommonActions, useNavigation} from '@react-navigation/native';
 const {height, width} = Dimensions.get('window');
 
 function QrScanner() {
+  const navigation = useNavigation();
+  const openScanner = () => {
+    navigation.dispatch(CommonActions.navigate({name: 'Scanner'}));
+  };
   return (
-    <View style={styles.scanner}>
+    <TouchableOpacity style={styles.scanner} onPress={openScanner}>
       <Scaner />
-    </View>
+    </TouchableOpacity>
   );
 }
 
