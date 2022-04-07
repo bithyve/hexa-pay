@@ -4,16 +4,24 @@ import LanguageIcon from 'assets/images/laguageCurrency.svg';
 import BroadcastIcon from 'assets/images/broadcast.svg';
 import PasscodeIcon from 'assets/images/security.svg';
 import React from 'react';
-import {Heading, HStack, VStack, Switch, Text} from 'native-base';
+import {Heading, HStack, VStack, Switch, Text, useColorMode} from 'native-base';
 import {FlatList} from 'react-native';
 
 const WalletSettings = () => {
+  const {toggleColorMode, colorMode} = useColorMode();
+
   const settings = [
     {
       name: 'Dark Mode',
       icon: <DarkModeIcon />,
       callback: null,
-      rightIcon: <Switch style={{left: '50%'}} />,
+      rightIcon: (
+        <Switch
+          style={{left: '50%'}}
+          onChange={toggleColorMode}
+          trackColor={{true: 'rgba(160,90,220,1)'}}
+        />
+      ),
     },
     {
       name: 'Passcode and Face ID',
@@ -37,7 +45,7 @@ const WalletSettings = () => {
   const keyExtractor = (item: any) => item.name;
   return (
     <VStack margin={'7'}>
-      <Heading fontSize={'sm'} paddingBottom={5}>
+      <Heading fontSize={'sm'} paddingBottom={5} color={`${colorMode}.text`}>
         Wallet Settings
       </Heading>
       <FlatList
@@ -53,7 +61,7 @@ const WalletSettings = () => {
               <HStack alignItems={'center'}>
                 {item.icon}
                 <VStack alignItems={'center'}>
-                  <Text fontSize={'sm'} marginLeft={4}>
+                  <Text fontSize={'sm'} marginLeft={4} color={`${colorMode}.text`}>
                     {item.name}
                   </Text>
                 </VStack>

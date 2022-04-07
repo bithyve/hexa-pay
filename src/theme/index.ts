@@ -1,4 +1,5 @@
 import {extendTheme} from 'native-base';
+import Colors from './Colors';
 
 export const HexaTheme = extendTheme({
   fontConfig: {
@@ -63,22 +64,22 @@ export const HexaTheme = extendTheme({
   },
   colors: {
     light: {
-      blue: '#4286F5',
-      lightBlue: '#0053D966',
-      searchbar: '#F4F4F4',
-      white: '#FFFFFF',
-      white1: '#0053D966',
-      red: '#EA4335',
-      lightRed: '#F58E6F',
-      black: '#000000',
-      greyText: '#505050',
-      optionsCard: '#FFD885',
-      optionsCardIcon: '#FABC05',
-      optionsCardBorder: '#FABC0533',
-      lightGrey: '#F0F0F0',
+      primary: Colors.blue,
+      secondary: Colors.yellow,
+      card: Colors.dullWhite,
+      background: Colors.white,
+      text: Colors.grey,
+      success: Colors.green,
+      error: Colors.red,
     },
     dark: {
-      black: '#000000',
+      primary: Colors.purple,
+      secondary: Colors.lightPurple,
+      card: Colors.lighterBlack,
+      background: Colors.lightBlack,
+      text: Colors.dullWhite,
+      success: Colors.green,
+      error: Colors.red,
     },
   },
   config: {
