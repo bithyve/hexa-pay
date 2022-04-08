@@ -1,7 +1,7 @@
 import {Dimensions, View, StyleSheet} from 'react-native';
 import React, {Fragment} from 'react';
 import {Box, Text, Heading, HStack, VStack} from 'native-base';
-import RightArrow from 'assets/images/rightArrowDark.svg';
+import { RFValue } from 'react-native-responsive-fontsize'
 import Send from 'assets/images/send.svg';
 import Recieve from 'assets/images/recieve.svg';
 import Transactions from 'assets/images/transactions.svg';
@@ -11,17 +11,18 @@ const {height, width} = Dimensions.get('window');
 const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
   return (
     <Box
-      bgColor={'light.optionsCard'}
-      rounded="lg"
-      margin={'4'}
-      alignItems="flex-end"
-      flexDirection={'row'}
-      height={height * 0.15}
-      width = {width * 0.26}>
-      <HStack margin={'3'}>
-        <VStack>{children}</VStack>
-      </HStack>
-    </Box>
+    bgColor={'light.optionsCard'}
+    rounded="lg"
+    margin={'4'}
+    marginBottom={'0'}
+    alignItems="flex-end"
+    flexDirection={'row'}
+    height={height * 0.16}
+    width = {width * 0.255}>
+    <HStack margin={'2.5'}>
+      <VStack>{children}</VStack>
+    </HStack>
+  </Box>
   );
 };
 const BitcoinTransactions = () => {
@@ -30,15 +31,15 @@ const BitcoinTransactions = () => {
         <Fragment>
       <Wrapper>
       <Send style = {styles.iconStyle}/>
-        <Heading fontSize={14}>Send Bitcoin</Heading>
+        <Heading fontSize= {RFValue(12)}>Send Bitcoin</Heading>
       </Wrapper>
       <Wrapper>
       <Recieve style = {styles.iconStyle}/>
-        <Heading fontSize={14}>Receive Bitcoin</Heading>
+        <Heading fontSize= {RFValue(12)}>Receive Bitcoin</Heading>
       </Wrapper>
       <Wrapper>
       <Transactions style = {styles.iconStyle}/>
-        <Heading fontSize={14}>View all transactions</Heading>
+        <Heading fontSize= {RFValue(12)}>View all transactions</Heading>
       </Wrapper>
     </Fragment>
     </View>

@@ -1,6 +1,7 @@
 import {Dimensions, View, StyleSheet} from 'react-native';
 import React, {Fragment} from 'react';
 import {Box, Text, Heading, HStack, VStack} from 'native-base';
+import { RFValue } from 'react-native-responsive-fontsize'
 import RightArrow from 'assets/images/rightArrowDark.svg';
 import AddQR from 'assets/images/addqr.svg';
 import NearBy from 'assets/images/nearby.svg';
@@ -17,8 +18,8 @@ const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
     marginBottom={'0'}
     alignItems="flex-end"
     flexDirection={'row'}
-    height={height * 0.15}
-    width = {width * 0.26}>
+    height={height * 0.16}
+    width = {width * 0.25}>
     <HStack margin={'3'}>
       <VStack>{children}</VStack>
     </HStack>
@@ -31,15 +32,15 @@ const AccessContacts = () => {
         <Fragment>
       <Wrapper>
         <AddQR style = {styles.iconStyle}/>
-        <Heading fontSize={14}>Add with QR</Heading>
+        <Heading fontSize= {RFValue(12)}>Add with QR</Heading>
       </Wrapper>
       <Wrapper>
           <NearBy style = {styles.iconStyle}/>
-        <Heading fontSize={14}>Find Nearby</Heading>
+        <Heading fontSize= {RFValue(12)}>Find Nearby</Heading>
       </Wrapper>
       <Wrapper>
           <Invite style = {styles.iconStyle}/>
-        <Heading fontSize={14}>Invite to Hexa Pay</Heading>
+        <Heading fontSize= {RFValue(12)}>Invite to Hexa Pay</Heading>
       </Wrapper>
     </Fragment>
     </View>

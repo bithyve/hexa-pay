@@ -7,23 +7,23 @@ const {height, width} = Dimensions.get('window');
 
 const Wrapper: React.FunctionComponent<{children: Element[]}> = ({children}) => {
     return (
-      <Box
-        rounded="lg"
-        margin={'5'}
-        marginBottom={'0'}
-        alignItems="flex-end"
-        flexDirection={'row'}
-        height={height * 0.1}>
-        <HStack alignItems="center" justifyContent={'space-between'}>
-            <VStack>{children}</VStack>
-        </HStack>
-      </Box>
+       <Box
+       marginRight={'5'}
+       marginLeft={'5'}
+       alignItems="flex-end"
+       flexDirection={'row'}
+       height={height * 0.052}
+       width={width * 0.82}>
+       <HStack alignItems="center" justifyContent={'space-between'}>
+           <VStack>{children}</VStack>
+       </HStack>
+     </Box>
     );
   };
 
 const ViewAmount = () => {
   return (
-    <HStack padding={'4'} marginBottom={'8'}>
+    <HStack padding={'3'} marginBottom={'5'} marginTop={'12'}>
         <Wrapper>
         <View style = {{ flexDirection: 'row'}}>
             <Group style = {styles.icon}/>
