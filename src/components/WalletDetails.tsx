@@ -1,4 +1,5 @@
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {Text} from 'native-base';
 import React from 'react';
 import Wallet from 'assets/images/wallet.svg';
 import Dollar from 'assets/images/icon_dollar.svg';

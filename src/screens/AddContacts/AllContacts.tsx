@@ -1,6 +1,6 @@
-import {Dimensions, View, FlatList} from 'react-native';
+import {Dimensions, FlatList} from 'react-native';
 import React, {Fragment} from 'react';
-import {Box, Text, Heading, HStack, VStack, Avatar} from 'native-base';
+import {Box, Text, Heading, HStack, VStack, Avatar, View} from 'native-base';
 import RightArrow from 'assets/images/rightArrowDark.svg';
 
 const {height, width} = Dimensions.get('window');

@@ -1,5 +1,6 @@
-import {Dimensions, StyleSheet, View} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import React, {Fragment} from 'react';
+import {View} from 'native-base';
 import Backdrop from '~components/Backdrop';
 import Header from '~components/Header';
 import TransactionsHeader from '~screens/ViewTransactions/TransactionsHeader';
@@ -14,11 +15,11 @@ const ViewTransactionsScreen = () => {
   return (
     <Fragment>
       <Backdrop height={height * 0.4} />
-        <View style = {styles.headerStyle}>
+      <View style={styles.headerStyle}>
         <Header />
-      <TransactionsHeader />
-        </View>
-      <ViewAmount/>
+        <TransactionsHeader />
+      </View>
+      <ViewAmount />
       <BitcoinTransactions />
       <ViewTransactionsButton />
       <ViewRecentTransactions />
@@ -29,7 +30,7 @@ const ViewTransactionsScreen = () => {
 export default ViewTransactionsScreen;
 
 const styles = StyleSheet.create({
-    headerStyle: {
-     flexDirection:'row',
-    },
-  });
+  headerStyle: {
+    flexDirection: 'row',
+  },
+});

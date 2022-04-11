@@ -1,13 +1,5 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  Dimensions,
-  FlatList,
-  Touchable,
-  TouchableOpacity,
-} from 'react-native';
-import {Avatar, VStack} from 'native-base';
+import {StyleSheet, Dimensions, FlatList, Touchable, TouchableOpacity} from 'react-native';
+import {Avatar, VStack, View, Text} from 'native-base';
 import React from 'react';
 const {height, width} = Dimensions.get('window');
 import Colors from '~theme/Colors';

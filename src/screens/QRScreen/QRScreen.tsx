@@ -1,4 +1,5 @@
-import {StyleSheet, Text, View, Dimensions} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
+import {View, Text} from 'native-base';
 import React, {useState, useEffect, Fragment} from 'react';
 import {
   Camera,

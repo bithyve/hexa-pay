@@ -1,7 +1,7 @@
-import {StyleSheet, View, Dimensions, TouchableOpacity, Image} from 'react-native';
+import {StyleSheet, Dimensions, TouchableOpacity, Image} from 'react-native';
 import React, {Fragment} from 'react';
 import Backdrop from '~components/Backdrop';
-import {Stack, VStack, Input, HStack, Box, Text} from 'native-base';
+import {Stack, VStack, Input, HStack, Box, Text, View} from 'native-base';
 const {height, width} = Dimensions.get('window');
 import Next from 'assets/images/next.svg';
 import Colors from '~theme/Colors';

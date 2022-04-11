@@ -1,4 +1,5 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet} from 'react-native';
+import {View} from 'native-base';
 import React from 'react';
 import Scaner from 'assets/images/scan.svg';
 import {Dimensions} from 'react-native';
