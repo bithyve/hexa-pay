@@ -50,7 +50,7 @@
 		<string>RobotoSlab-Thin.ttf</string>
 	</array>
 	<key>NSContactsUsageDescription</key>
-	<string>Contacts required</string>
+	<string>Your contact details are stored locally and not on the server. It is used when you send a request from the wallet to another wallet</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
