@@ -1,9 +1,13 @@
 import {StyleSheet, Text, View, SafeAreaView} from 'react-native';
-import React from 'react';
+import React, {useContext} from 'react';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const common = translations['common'];
 
 export default function ActionsCards() {
   return (

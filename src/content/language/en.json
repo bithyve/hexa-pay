@@ -61,18 +61,16 @@
     "BroadcstMessage": "You sent a Broadcast Message"
   },
   "contact": {
-    "Add": {
-      "QR": "add With QR",
-      "Nearby": "Find Nearby",
-      "Invite": "Invite to Hexa Pay"
-    }
+    "QR": "add With QR",
+    "Nearby": "Find Nearby",
+    "Invite": "Invite to Hexa Pay"
   },
-  "Secure": {
+  "secure": {
     "SecureWith": "Secure with Hexa Keeper",
     "BitcoinLogin": "Login to Bitcoin using HExa Keepeer",
     "OpenHexaKeeper": "Open In Hexa Keeper"
   },
-  "Login": {
+  "login": {
     "AddNamePicture": "Add your Name and Picture",
     "InfoPublic": "This information is Public",
     "Passcode": "Create Passcode",

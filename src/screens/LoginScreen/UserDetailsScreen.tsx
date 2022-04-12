@@ -1,10 +1,15 @@
 import {StyleSheet, Text, View, Dimensions, TouchableOpacity} from 'react-native';
-import React, {Fragment} from 'react';
+import React, {Fragment, useContext} from 'react';
 import Backdrop from '~components/Backdrop';
 import {Stack, VStack, Input} from 'native-base';
 const {height, width} = Dimensions.get('window');
 import Next from 'assets/images/next.svg';
 import Colors from '~theme/Colors';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const strings = translations['backup'];
+const common = translations['common'];
 
 function UserNameInput() {
   const uploadPictureHandler = () => {

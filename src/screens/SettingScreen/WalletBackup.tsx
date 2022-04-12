@@ -6,6 +6,10 @@ import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {CommonActions} from '@react-navigation/native';
 import MockContext from '~contexts/MockContext';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const common = translations['common'];
 
 const WalletBackup = () => {
   const navigation = useNavigation();

@@ -1,5 +1,9 @@
 import {Avatar, Button, Text, VStack, Heading} from 'native-base';
-import React from 'react';
+import React, {useContext} from 'react';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const common = translations['common'];
 
 const UserInfo = () => {
   return (

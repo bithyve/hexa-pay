@@ -5,6 +5,11 @@ import Open from 'assets/images/open.svg';
 import QRCode from 'react-native-qrcode-svg';
 import {useNavigation} from '@react-navigation/native';
 import MockContext from '~contexts/MockContext';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const common = translations['common'];
+
 const SecureKeyDesciption = () => {
   const STATUS = [
     'Waiting for keeper to connect...',

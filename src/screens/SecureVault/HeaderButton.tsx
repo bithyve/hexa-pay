@@ -1,6 +1,10 @@
 import {StyleSheet, TouchableOpacity} from 'react-native';
-import React from 'react';
+import React, {useContext} from 'react';
 import {Text} from 'native-base';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const common = translations['common'];
 
 const styles = StyleSheet.create({
   button: {

@@ -3,9 +3,13 @@ import DarkModeIcon from 'assets/images/darkmode.svg';
 import LanguageIcon from 'assets/images/laguageCurrency.svg';
 import BroadcastIcon from 'assets/images/broadcast.svg';
 import PasscodeIcon from 'assets/images/security.svg';
-import React from 'react';
+import React, {useContext} from 'react';
 import {Heading, HStack, VStack, Switch, Text} from 'native-base';
 import {FlatList} from 'react-native';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const common = translations['common'];
 
 const WalletSettings = () => {
   const settings = [

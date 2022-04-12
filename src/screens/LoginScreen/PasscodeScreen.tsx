@@ -1,12 +1,16 @@
 import {StyleSheet, Text, View, Dimensions, TextInput, TouchableOpacity} from 'react-native';
-import React, {Fragment} from 'react';
+import React, {Fragment, useContext} from 'react';
 import {VStack, Stack, HStack, Input, FormControl} from 'native-base';
 import Backdrop from '~components/Backdrop';
 const {height, width} = Dimensions.get('window');
 import Colors from '~theme/Colors';
 import Switch from 'assets/images/switch.svg';
 import Next from 'assets/images/next.svg';
+import {LocalizationContext} from '~content/LocContext';
 
+const {translations} = useContext(LocalizationContext);
+const strings = translations['login'];
+const common = translations['common'];
 export default function PasscodeScreen() {
   return (
     <Fragment>

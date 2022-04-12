@@ -1,11 +1,16 @@
 import {VStack} from 'native-base';
-import React, {Fragment} from 'react';
+import React, {Fragment, useContext} from 'react';
 import {Dimensions} from 'react-native';
 import Backdrop from '~components/Backdrop';
 import Header from '~components/Header';
 import UserInfo from './UserInfo';
 import WalletBackup from './WalletBackup';
 import WalletSettings from './WalletSetting';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const common = translations['common'];
+
 const {height} = Dimensions.get('window');
 
 const SettingScreen = () => {

@@ -1,9 +1,13 @@
 import {Dimensions} from 'react-native';
-import React, {Fragment} from 'react';
+import React, {Fragment, useContext} from 'react';
 import Backdrop from '~components/Backdrop';
 import Header from '~components/Header';
 import HeaderButton from './HeaderButton';
 import SecureKeyDesciption from './SecureKeyDesciption';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const common = translations['common'];
 
 const {height} = Dimensions.get('window');
 

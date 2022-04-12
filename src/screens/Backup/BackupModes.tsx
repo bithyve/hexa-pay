@@ -7,6 +7,11 @@ import Words from 'assets/images/words.svg';
 import Backup from 'assets/images/backup3.svg';
 import {CommonActions, useNavigation} from '@react-navigation/native';
 import MockContext from '~contexts/MockContext';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const strings = translations['backup'];
+const common = translations['common'];
 
 const {height, width} = Dimensions.get('window');
 

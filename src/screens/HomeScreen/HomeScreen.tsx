@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useContext} from 'react';
 import {StyleSheet, Dimensions, TouchableOpacity} from 'react-native';
 import Backdrop from '~components/Backdrop';
 const {height, width} = Dimensions.get('window');
@@ -14,6 +14,10 @@ import Group from 'assets/images/group.svg';
 import Bitcoin from 'assets/images/bitcoin.svg';
 import Broadcast from 'assets/images/broadcast.svg';
 import Payments from 'assets/images/payments.svg';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const common = translations['common'];
 
 const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
   return (

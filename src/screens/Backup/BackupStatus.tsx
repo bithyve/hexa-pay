@@ -2,6 +2,11 @@ import React, {useContext} from 'react';
 import {HStack, Text, VStack} from 'native-base';
 import Sheild from 'assets/images/backup2.svg';
 import MockContext from '~contexts/MockContext';
+import {LocalizationContext} from '~content/LocContext';
+
+const {translations} = useContext(LocalizationContext);
+const strings = translations['backup'];
+const common = translations['common'];
 
 const BackupStatus = () => {
   const {securedWithKeeper} = useContext(MockContext.MockContext);
