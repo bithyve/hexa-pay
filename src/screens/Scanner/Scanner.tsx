@@ -6,9 +6,6 @@ import {useIsForeground} from '~hooks/useIsForeground';
 const {height} = Dimensions.get('window');
 import {LocalizationContext} from '~content/LocContext';
 
-const {translations} = useContext(LocalizationContext);
-const common = translations['common'];
-
 const NoModule = () => {
   return (
     <VStack height={height} justifyContent={'center'} padding={'8'} background={'black'}>

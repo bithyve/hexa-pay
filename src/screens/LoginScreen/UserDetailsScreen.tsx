@@ -7,22 +7,22 @@ import Next from 'assets/images/next.svg';
 import Colors from '~theme/Colors';
 import {LocalizationContext} from '~content/LocContext';
 
-const {translations} = useContext(LocalizationContext);
-const strings = translations['backup'];
-const common = translations['common'];
-
 function UserNameInput() {
   const uploadPictureHandler = () => {
     console.log('upload button clicked');
   };
+
+  const {translations} = useContext(LocalizationContext);
+  const strings = translations['backup'];
+  const common = translations['common'];
 
   return (
     <Fragment>
       <Backdrop height={height} />
       <Stack style={styles.stackContainer}>
         <VStack style={styles.textContainer}>
-          <Text style={styles.addNameText}>Add your Name & Picture</Text>
-          <Text style={styles.infoText}>This information is public</Text>
+          <Text style={styles.addNameText}>{strings.AddNamePicture}</Text>
+          <Text style={styles.infoText}>{strings.InfoPublic}</Text>
         </VStack>
         <TouchableOpacity onPress={uploadPictureHandler} style={styles.uploadPictureButton}>
           <Text style={styles.buttonText}>Upload</Text>

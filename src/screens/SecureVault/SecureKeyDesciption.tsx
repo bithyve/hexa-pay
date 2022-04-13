@@ -7,10 +7,11 @@ import {useNavigation} from '@react-navigation/native';
 import MockContext from '~contexts/MockContext';
 import {LocalizationContext} from '~content/LocContext';
 
-const {translations} = useContext(LocalizationContext);
-const common = translations['common'];
-
 const SecureKeyDesciption = () => {
+  const {translations} = useContext(LocalizationContext);
+  const strings = translations['secure'];
+  const common = translations['common'];
+
   const STATUS = [
     'Waiting for keeper to connect...',
     'Connected to Keeper',
@@ -60,7 +61,7 @@ const SecureKeyDesciption = () => {
       justifyContent={'space-between'}
       flex={1}>
       <VStack>
-        <Heading fontSize={'sm'}>Bitcoin Login with Keeper</Heading>
+        <Heading fontSize={'sm'}>{strings.BitcoinLoginWithKeeper}</Heading>
       </VStack>
       <VStack>
         <QRCode
@@ -75,7 +76,7 @@ const SecureKeyDesciption = () => {
       </VStack>
       <VStack>
         <Text fontSize={'xs'} fontFamily={'mono'}>
-          Scan QR with your Keeper App to secure your keys
+          {strings.SecureKeys}
         </Text>
         <HStack alignItems={'center'}>
           {statusText !== STATUS[3] && <Spinner color={'light.blue'} padding={'4'} />}
@@ -89,7 +90,7 @@ const SecureKeyDesciption = () => {
           <HStack alignItems={'center'}>
             <Open />
             <Heading fontSize={'xs'} paddingX={'3'}>
-              Open with Keeper
+              {strings.OpenHexaKeeper}
             </Heading>
           </HStack>
         </TouchableOpacity>

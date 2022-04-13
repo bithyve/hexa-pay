@@ -2,10 +2,6 @@ import {View, Dimensions, TouchableOpacity, StyleSheet} from 'react-native';
 import React, {useContext} from 'react';
 import {Heading, HStack, Text, VStack, Input, Icon, Box, Button} from 'native-base';
 import Settings from 'assets/images/settings.svg';
-import {LocalizationContext} from '~content/LocContext';
-
-const {translations} = useContext(LocalizationContext);
-const common = translations['common'];
 
 const {height, width} = Dimensions.get('window');
 

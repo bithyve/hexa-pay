@@ -8,10 +8,11 @@ import {CommonActions} from '@react-navigation/native';
 import MockContext from '~contexts/MockContext';
 import {LocalizationContext} from '~content/LocContext';
 
-const {translations} = useContext(LocalizationContext);
-const common = translations['common'];
-
 const WalletBackup = () => {
+  const {translations} = useContext(LocalizationContext);
+  const strings = translations['backup'];
+  const common = translations['common'];
+
   const navigation = useNavigation();
   const goToWalletBackup = () =>
     navigation.dispatch(
@@ -23,7 +24,7 @@ const WalletBackup = () => {
   return (
     <VStack marginX={'7'} marginTop={'7'}>
       <Heading fontSize={'sm'} paddingBottom={5}>
-        Wallet Backup
+        {strings.WalletBackup}
       </Heading>
       <TouchableOpacity onPress={goToWalletBackup} activeOpacity={0.8}>
         <HStack

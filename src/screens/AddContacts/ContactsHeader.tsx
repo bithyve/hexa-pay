@@ -4,13 +4,11 @@ import {Heading, HStack, Text, VStack, Input, Icon, Box, Button} from 'native-ba
 import Sheild from 'assets/images/backup2.svg';
 import {LocalizationContext} from '~content/LocContext';
 
-const {translations} = useContext(LocalizationContext);
-const strings = translations['contact'];
-const common = translations['common'];
-
 const {height, width} = Dimensions.get('window');
 
 const ContactsHeader = () => {
+  const {translations} = useContext(LocalizationContext);
+  const common = translations['common'];
   return (
     <View style={styles.container}>
       <Heading fontSize={16} color={'light.white'}>
@@ -24,7 +22,7 @@ const ContactsHeader = () => {
         width={78}
         borderColor={'light.white'}
         _text={{fontSize: 12, fontWeight: 'bold', color: 'light.white'}}>
-        Cancel
+        {common.cancel}
       </Button>
     </View>
   );

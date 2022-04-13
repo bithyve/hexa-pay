@@ -8,17 +8,17 @@ import Switch from 'assets/images/switch.svg';
 import Next from 'assets/images/next.svg';
 import {LocalizationContext} from '~content/LocContext';
 
-const {translations} = useContext(LocalizationContext);
-const strings = translations['login'];
-const common = translations['common'];
 export default function PasscodeScreen() {
+  const {translations} = useContext(LocalizationContext);
+  const strings = translations['login'];
+  const common = translations['common'];
   return (
     <Fragment>
       <Backdrop height={height} />
       <Stack style={styles.stackContainer}>
         <VStack style={styles.textContainer}>
-          <Text style={styles.createPasscodeText}>Create Passcode</Text>
-          <Text style={styles.fundText}>to ptotect your funds</Text>
+          <Text style={styles.createPasscodeText}>{strings.Passcode}</Text>
+          <Text style={styles.fundText}>{strings.ProtectFunds}</Text>
         </VStack>
         <View>
           <Input
@@ -32,7 +32,7 @@ export default function PasscodeScreen() {
         </View>
         <HStack style={styles.bottomContainer}>
           <TouchableOpacity>
-            <Text style={styles.faceIdText}>Use Face ID</Text>
+            <Text style={styles.faceIdText}>{strings.FaceID}</Text>
           </TouchableOpacity>
           <Switch />
         </HStack>

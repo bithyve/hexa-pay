@@ -3,8 +3,7 @@ import React, {useContext} from 'react';
 import {Text} from 'native-base';
 import {LocalizationContext} from '~content/LocContext';
 
-const {translations} = useContext(LocalizationContext);
-const common = translations['common'];
+
 
 const styles = StyleSheet.create({
   button: {
@@ -17,12 +16,14 @@ const styles = StyleSheet.create({
 });
 
 const HeaderButton = (
+  const {translations} = useContext(LocalizationContext);
+const common = translations['common'];
   <TouchableOpacity
     key={'Done'}
     style={styles.button}
     onPress={() => console.log('button pressed')}
     activeOpacity={0.8}>
-    <Text color={'#FAFAFA'}>Done</Text>
+    <Text color={'#FAFAFA'}>{common.done}</Text>
   </TouchableOpacity>
 );
 

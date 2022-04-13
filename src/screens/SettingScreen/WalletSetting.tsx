@@ -7,11 +7,12 @@ import React, {useContext} from 'react';
 import {Heading, HStack, VStack, Switch, Text} from 'native-base';
 import {FlatList} from 'react-native';
 import {LocalizationContext} from '~content/LocContext';
-
-const {translations} = useContext(LocalizationContext);
-const common = translations['common'];
+import LocalizedStrings from 'react-localization';
 
 const WalletSettings = () => {
+  const {translations} = useContext(LocalizationContext);
+  const strings = translations['backup'];
+  const common = translations['common'];
   const settings = [
     {
       name: 'Dark Mode',
@@ -42,7 +43,7 @@ const WalletSettings = () => {
   return (
     <VStack margin={'7'}>
       <Heading fontSize={'sm'} paddingBottom={5}>
-        Wallet Settings
+        {strings.WalletBackup}
       </Heading>
       <FlatList
         data={settings}

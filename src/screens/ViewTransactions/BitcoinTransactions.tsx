@@ -7,9 +7,6 @@ import Recieve from 'assets/images/recieve.svg';
 import Transactions from 'assets/images/transactions.svg';
 import {LocalizationContext} from '~content/LocContext';
 
-const {translations} = useContext(LocalizationContext);
-const common = translations['common'];
-
 const {height, width} = Dimensions.get('window');
 
 const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
@@ -29,20 +26,25 @@ const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
   );
 };
 const BitcoinTransactions = () => {
+  const {translations} = useContext(LocalizationContext);
+
+  const strings = translations['wallet'];
+  const common = translations['common'];
+
   return (
     <View style={{flexDirection: 'row'}}>
       <Fragment>
         <Wrapper>
           <Send style={styles.iconStyle} />
-          <Heading fontSize={14}>Send Bitcoin</Heading>
+          <Heading fontSize={14}>{strings.SendBitcoin}</Heading>
         </Wrapper>
         <Wrapper>
           <Recieve style={styles.iconStyle} />
-          <Heading fontSize={14}>Receive Bitcoin</Heading>
+          <Heading fontSize={14}>{strings.ReceiveBitcoin}</Heading>
         </Wrapper>
         <Wrapper>
           <Transactions style={styles.iconStyle} />
-          <Heading fontSize={14}>View all transactions</Heading>
+          <Heading fontSize={14}>{strings.ViewAllTransactions}</Heading>
         </Wrapper>
       </Fragment>
     </View>

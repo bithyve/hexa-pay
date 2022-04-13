@@ -7,12 +7,6 @@ import ViewAmount from '~screens/ViewTransactions/ViewAmount';
 import ViewTransactionsButton from '~screens/ViewTransactions/ViewTransactionsButton';
 import BitcoinTransactions from '~screens/ViewTransactions/BitcoinTransactions';
 import ViewRecentTransactions from '~screens/ViewTransactions/ViewRecentTransactions';
-import {LocalizationContext} from '~content/LocContext';
-
-const {translations} = useContext(LocalizationContext);
-const strings = translations['wallet'];
-const common = translations['common'];
-
 const {height} = Dimensions.get('window');
 
 const ViewTransactionsScreen = () => {

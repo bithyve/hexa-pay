@@ -6,11 +6,6 @@ import NewContacts from '~screens/AddContacts/NewContacts';
 import AccessContacts from '~screens/AddContacts/AcessContacts';
 import ContactsHeader from '~screens/AddContacts/ContactsHeader';
 import AllContacts from '~screens/AddContacts/AllContacts';
-import {LocalizationContext} from '~content/LocContext';
-
-const {translations} = useContext(LocalizationContext);
-const strings = translations['contact'];
-const common = translations['common'];
 
 const {height} = Dimensions.get('window');
 

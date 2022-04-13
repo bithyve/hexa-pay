@@ -2,11 +2,6 @@ import {View, Dimensions, StyleSheet} from 'react-native';
 import React, {useContext} from 'react';
 import {Heading, HStack, Text, VStack, Input, Icon, Box} from 'native-base';
 import Search from 'assets/images/search.svg';
-import {LocalizationContext} from '~content/LocContext';
-
-const {translations} = useContext(LocalizationContext);
-const strings = translations['contact'];
-const common = translations['common'];
 
 const {height, width} = Dimensions.get('window');
 

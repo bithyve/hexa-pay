@@ -16,9 +16,6 @@ import Broadcast from 'assets/images/broadcast.svg';
 import Payments from 'assets/images/payments.svg';
 import {LocalizationContext} from '~content/LocContext';
 
-const {translations} = useContext(LocalizationContext);
-const common = translations['common'];
-
 const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
   return (
     <Box
@@ -38,6 +35,9 @@ const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
 };
 
 const HomeScreen = () => {
+  const {translations} = useContext(LocalizationContext);
+  const strings = translations['home'];
+  const common = translations['common'];
   return (
     <Fragment>
       <ScrollView>
@@ -59,19 +59,19 @@ const HomeScreen = () => {
               <Wrapper>
                 <TouchableOpacity>
                   <Gift style={styles.iconStyle} />
-                  <Heading fontSize={14}>Gift and Tips</Heading>
+                  <Heading fontSize={14}>{strings.GiftsAndTips}</Heading>
                 </TouchableOpacity>
               </Wrapper>
               <Wrapper>
                 <TouchableOpacity>
                   <Contacts style={styles.iconStyle} />
-                  <Heading fontSize={14}>Add New Contact</Heading>
+                  <Heading fontSize={14}>{strings.AddNewContact}</Heading>
                 </TouchableOpacity>
               </Wrapper>
               <Wrapper>
                 <TouchableOpacity>
                   <Group style={styles.iconStyle} />
-                  <Heading fontSize={14}>Create Group</Heading>
+                  <Heading fontSize={14}>{strings.CreateGroup}</Heading>
                 </TouchableOpacity>
               </Wrapper>
             </HStack>
@@ -79,19 +79,19 @@ const HomeScreen = () => {
               <Wrapper>
                 <TouchableOpacity>
                   <Broadcast style={styles.iconStyle} />
-                  <Heading fontSize={14}>Broadcast Message</Heading>
+                  <Heading fontSize={14}>{strings.BroadcastMessage}</Heading>
                 </TouchableOpacity>
               </Wrapper>
               <Wrapper>
                 <TouchableOpacity>
                   <Bitcoin style={styles.iconStyle} />
-                  <Heading fontSize={14}>Buy Bitcoin</Heading>
+                  <Heading fontSize={14}>{strings.BuyBitcoin}</Heading>
                 </TouchableOpacity>
               </Wrapper>
               <Wrapper>
                 <TouchableOpacity>
                   <Payments style={styles.iconStyle} />
-                  <Heading fontSize={14}>Pay Merchants</Heading>
+                  <Heading fontSize={14}>{strings.PayMerchants}</Heading>
                 </TouchableOpacity>
               </Wrapper>
             </HStack>

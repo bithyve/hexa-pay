@@ -4,10 +4,6 @@ import {Box, Text, Heading, HStack, VStack, Avatar} from 'native-base';
 import RightArrow from 'assets/images/rightArrowDark.svg';
 import {LocalizationContext} from '~content/LocContext';
 
-const {translations} = useContext(LocalizationContext);
-const strings = translations['contact'];
-const common = translations['common'];
-
 const {height, width} = Dimensions.get('window');
 
 const DATA = [

@@ -6,10 +6,6 @@ import Header from '~components/Header';
 import UserInfo from './UserInfo';
 import WalletBackup from './WalletBackup';
 import WalletSettings from './WalletSetting';
-import {LocalizationContext} from '~content/LocContext';
-
-const {translations} = useContext(LocalizationContext);
-const common = translations['common'];
 
 const {height} = Dimensions.get('window');
 
