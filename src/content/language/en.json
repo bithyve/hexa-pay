@@ -23,19 +23,28 @@
     "address": "Address",
     "manually": "Manually",
     "wallet": "Wallet",
-    "transactioons": "Transactions",
+    "transactions": "Transactions",
     "view": "View",
     "all": "all",
     "sent": "sent",
     "message": "message",
     "gift": "Gift",
     "cancel": "Cancel",
-    "upload": "Upload"
+    "upload": "Upload",
+    "done": "Done"
+  },
+  "home": {
+    "GiftsAndTips": "Gifts and Tips",
+    "AddNewContact": "Add New Contact",
+    "CreateGroup": "Create Group",
+    "BroadcastMessage": "Broadcast Message",
+    "BuyBitcoin": "Buy Bitcoin",
+    "PayMerchants": "Pay Merchants"
   },
   "backup": {
     "WalletBackup": "Wallet Backup",
     "SecureWithHexaKeeper": "Secure With Hexa Keeper",
-    "WalletSettings": "Wallet Settings",
+    "WalletBackupWalletBackup": "Wallet Settings",
     "PasscodeAndFaceID": "Passcode and Face ID",
     "LanguageAndCurrency": "Language and Currency",
     "BroadcastPreferences": "Broadcast Preferences",
@@ -44,13 +53,16 @@
     "WritwDown": "Write down 12 words",
     "SeedPhrase": "Write down the Seed phrase and keep it safe",
     "Valut": "Hexa Vault",
-    "ConnectBAckup": "Connect and backup your Hexa Vault"
+    "ConnectBackup": "Connect and backup your Hexa Vault",
+    "WalletNotBackedUp": "Your wallet is currently not backed up",
+    "WalletBckedUp": "Your wallet is backed up with Keeper"
   },
   "wallet": {
     "AvailableToSpend": "AvailableToSpend",
     "SendBitcoin": "Send Bitcoin",
     "RecieveBitcoin": "Recieve Bitcoin",
-    "ViewAllTransactions": "View All Transactions"
+    "ViewAllTransactions": "View All Transactions",
+    "ViewAll": "View All"
   },
   "chat": {
     "Sent": "sent a freind request",
@@ -63,12 +75,17 @@
   "contact": {
     "QR": "add With QR",
     "Nearby": "Find Nearby",
-    "Invite": "Invite to Hexa Pay"
+    "Invite": "Invite to Hexa Pay",
+    "AddwithQR": "Add with QR",
+    "FindNearby": "Find Nearby",
+    "InvitetoHexaPay": "Invite to Hexa Pay"
   },
   "secure": {
     "SecureWith": "Secure with Hexa Keeper",
-    "BitcoinLogin": "Login to Bitcoin using HExa Keepeer",
-    "OpenHexaKeeper": "Open In Hexa Keeper"
+    "BitcoinLoginUsingKeeper": "Login to Bitcoin using Hexa Keepeer",
+    "OpenHexaKeeper": "Open In Hexa Keeper",
+    "SecureKeys": "Scan QR with your Keeper App to secure your keys",
+    "BitcoinLoginWithKeeper": "Bitcoin Login with Keeper"
   },
   "login": {
     "AddNamePicture": "Add your Name and Picture",
@@ -76,5 +93,9 @@
     "Passcode": "Create Passcode",
     "ProtectFunds": "To protect your funds",
     "FaceID": "Use Face ID"
+  },
+  "userInfo": {
+    "PersonalProfile": "Personal Profile",
+    "EditProfile": "Edit Profile"
   }
 }
