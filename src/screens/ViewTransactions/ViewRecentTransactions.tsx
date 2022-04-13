@@ -4,15 +4,15 @@ import {Heading, HStack, Text, VStack, Input, Icon, Box} from 'native-base';
 import Sheild from 'assets/images/backup2.svg';
 import {LocalizationContext} from '~content/LocContext';
 
-const {translations} = useContext(LocalizationContext);
-const common = translations['common'];
-
 const {height, width} = Dimensions.get('window');
 
 const ViewRecentTransactions = () => {
+  const {translations} = useContext(LocalizationContext);
+  const common = translations['common'];
+
   return (
     <HStack padding={'4'} marginBottom={'8'}>
-      <Text> Transactions </Text>
+      <Text>{common.transactions}</Text>
     </HStack>
   );
 };
