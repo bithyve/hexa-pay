@@ -1,18 +1,23 @@
-import {StyleSheet, Text, View, Dimensions, TouchableOpacity} from 'react-native';
-import React, {Fragment, useContext} from 'react';
+import { StyleSheet, Dimensions, TouchableOpacity, Image } from 'react-native';
+import React, { Fragment, useContext } from 'react';
 import Backdrop from '~components/Backdrop';
-import {Stack, VStack, Input} from 'native-base';
-const {height, width} = Dimensions.get('window');
+import { Stack, VStack, Input, HStack, Box, Text, View } from 'native-base';
+const { height, width } = Dimensions.get('window');
 import Next from 'assets/images/next.svg';
 import Colors from '~theme/Colors';
-import {LocalizationContext} from '~content/LocContext';
+import { LocalizationContext } from '~content/LocContext';
+import Upload from '../../../assets/images/upload.svg';
+import { useNavigation } from '@react-navigation/native';
+import { CommonActions } from '@react-navigation/native';
 
 function UserNameInput() {
+  const navigation = useNavigation();
+  const goToHomeScreen = () => navigation.dispatch(CommonActions.navigate({ name: 'Home' }));
   const uploadPictureHandler = () => {
     console.log('upload button clicked');
   };
 
-  const {translations} = useContext(LocalizationContext);
+  const { translations } = useContext(LocalizationContext);
   const strings = translations['backup'];
   const common = translations['common'];
 
@@ -25,6 +30,7 @@ function UserNameInput() {
           <Text style={styles.infoText}>{strings.InfoPublic}</Text>
         </VStack>
         <TouchableOpacity onPress={uploadPictureHandler} style={styles.uploadPictureButton}>
+          <Upload />
           <Text style={styles.buttonText}>Upload</Text>
         </TouchableOpacity>
         <View>
@@ -38,7 +44,7 @@ function UserNameInput() {
             marginTop={width * 0.1}
           />
         </View>
-        <TouchableOpacity style={styles.nextButton}>
+        <TouchableOpacity style={styles.nextButton} onPress={goToHomeScreen}>
           <Next />
         </TouchableOpacity>
       </Stack>
@@ -51,6 +57,8 @@ export default UserNameInput;
 const styles = StyleSheet.create({
   stackContainer: {
     flexDirection: 'column',
+    justifyContent: 'flex-end',
+    alignItems: 'stretch',
   },
   textContainer: {
     marginHorizontal: width * 0.1,
@@ -70,6 +78,7 @@ const styles = StyleSheet.create({
   uploadPictureButton: {
     width: 100,
     height: 100,
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 100,
@@ -81,16 +90,16 @@ const styles = StyleSheet.create({
   buttonText: {
     color: Colors.white,
     fontSize: 16,
-    marginTop: '40%',
+    marginTop: '18%',
     // fontFamily: HexaTheme.fonts.RobotoSlabBlack,
   },
   nextButton: {
-    marginTop: height * 0.3,
+    marginTop: height * 0.23,
     marginLeft: width * 0.8,
   },
-  textInput: {
-    height: '20%',
-    marginTop: height * 0.05,
-    marginLeft: width * 0.1,
+  uploadIcon: {
+    height: 35,
+    width: 55,
+    backgroundColor: '#ffffff',
   },
 });

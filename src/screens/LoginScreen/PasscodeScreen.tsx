@@ -1,17 +1,23 @@
-import {StyleSheet, Text, View, Dimensions, TextInput, TouchableOpacity} from 'react-native';
-import React, {Fragment, useContext} from 'react';
-import {VStack, Stack, HStack, Input, FormControl} from 'native-base';
+import { StyleSheet, Dimensions, TextInput, TouchableOpacity } from 'react-native';
+import React, { Fragment, useContext } from 'react';
+import { VStack, Stack, Text, HStack, Input, FormControl, View } from 'native-base';
 import Backdrop from '~components/Backdrop';
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 import Colors from '~theme/Colors';
 import Switch from 'assets/images/switch.svg';
 import Next from 'assets/images/next.svg';
-import {LocalizationContext} from '~content/LocContext';
+import { LocalizationContext } from '~content/LocContext';
+import { useNavigation } from '@react-navigation/native';
+import { CommonActions } from '@react-navigation/native';
+
 
 export default function PasscodeScreen() {
-  const {translations} = useContext(LocalizationContext);
+  const navigation = useNavigation();
+  const { translations } = useContext(LocalizationContext);
   const strings = translations['login'];
   const common = translations['common'];
+  const goToUserDetailsScreen = () =>
+    navigation.dispatch(CommonActions.navigate({ name: 'UserDetailsScreen' }));
   return (
     <Fragment>
       <Backdrop height={height} />
@@ -36,7 +42,7 @@ export default function PasscodeScreen() {
           </TouchableOpacity>
           <Switch />
         </HStack>
-        <TouchableOpacity style={styles.nextButton}>
+        <TouchableOpacity style={styles.nextButton} onPress={goToUserDetailsScreen}>
           <Next />
         </TouchableOpacity>
       </Stack>
@@ -47,6 +53,8 @@ export default function PasscodeScreen() {
 const styles = StyleSheet.create({
   stackContainer: {
     flexDirection: 'column',
+    justifyContent: 'flex-end',
+    alignItems: 'stretch',
   },
   textContainer: {
     marginHorizontal: width * 0.1,
@@ -73,7 +81,7 @@ const styles = StyleSheet.create({
     marginRight: width * 0.3,
   },
   nextButton: {
-    marginTop: height * 0.38,
+    marginTop: height * 0.31,
     marginLeft: width * 0.8,
   },
 });

@@ -1,9 +1,10 @@
-import {View, Dimensions, TouchableOpacity, StyleSheet} from 'react-native';
-import React, {useContext} from 'react';
-import {Heading, HStack, Text, VStack, Input, Icon, Box, Button} from 'native-base';
+import { Dimensions, TouchableOpacity, StyleSheet } from 'react-native';
+import React from 'react';
+import { View } from 'native-base';
+import { Heading, HStack, Text, VStack, Input, Icon, Box, Button } from 'native-base';
 import Settings from 'assets/images/settings.svg';
 
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 
 const TransactionsHeader = () => {
   return (

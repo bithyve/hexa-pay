@@ -1,10 +1,10 @@
-import {Dimensions, View, FlatList} from 'react-native';
-import React, {Fragment, useContext} from 'react';
-import {Box, Text, Heading, HStack, VStack, Avatar} from 'native-base';
+import { Dimensions, FlatList } from 'react-native';
+import React, { Fragment } from 'react';
+import { Box, Text, Heading, HStack, VStack, Avatar, View } from 'native-base';
 import RightArrow from 'assets/images/rightArrowDark.svg';
-import {LocalizationContext} from '~content/LocContext';
+import { LocalizationContext } from '~content/LocContext';
 
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 
 const DATA = [
   {
@@ -21,8 +21,8 @@ const DATA = [
   },
 ];
 //type interface after the feature is implemented
-const Item = ({name}: any) => (
-  <View style={{flexDirection: 'row', marginBottom: '5%'}}>
+const Item = ({ name }: any) => (
+  <View style={{ flexDirection: 'row', marginBottom: '5%' }}>
     <Avatar
       size={'45'}
       bg="indigo.500"
@@ -32,17 +32,17 @@ const Item = ({name}: any) => (
       borderColor={'white'}
       borderWidth={'2'}
     />
-    <Text numberOfLines={1} style={{marginTop: 10, fontSize: 16, marginLeft: 15, width: '78%'}}>
+    <Text numberOfLines={1} style={{ marginTop: 10, fontSize: 16, marginLeft: 15, width: '78%' }}>
       {name}
     </Text>
   </View>
 );
 
 const AllContacts = () => {
-  const renderItem = ({item}: any) => <Item name={item.name} />;
+  const renderItem = ({ item }: any) => <Item name={item.name} />;
 
   return (
-    <View style={{flexDirection: 'row', marginHorizontal: '5%', marginTop: '10%'}}>
+    <View style={{ flexDirection: 'row', marginHorizontal: '5%', marginTop: '10%' }}>
       <FlatList data={DATA} renderItem={renderItem} keyExtractor={(item) => item.id} />
     </View>
   );

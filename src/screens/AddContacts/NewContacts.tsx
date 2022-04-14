@@ -1,11 +1,11 @@
-import {View, Dimensions, StyleSheet} from 'react-native';
-import React, {useContext} from 'react';
-import {Heading, HStack, Text, VStack, Input, Icon, Box} from 'native-base';
+import { Dimensions, StyleSheet } from 'react-native';
+import React from 'react';
+import { Heading, HStack, Text, VStack, Input, Icon, Box, View } from 'native-base';
 import Search from 'assets/images/search.svg';
 
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 
-const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
+const Wrapper: React.FunctionComponent<{ children: Element }> = ({ children }) => {
   return (
     <Box
       bgColor={'light.searchbar:alpha.30'}
