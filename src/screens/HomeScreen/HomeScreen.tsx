@@ -1,9 +1,8 @@
-import React, {Fragment} from 'react';
-import {StyleSheet, Dimensions, TouchableOpacity} from 'react-native';
+import React, { Fragment, useContext } from 'react';
+import { StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import Backdrop from '~components/Backdrop';
-const {height, width} = Dimensions.get('window');
 import ProfileCard from '~components/ProfileCard';
-import {HStack, ScrollView, Stack, VStack, Box, Heading} from 'native-base';
+import { HStack, ScrollView, Stack, VStack, Box, Heading } from 'native-base';
 import WalletDetails from '~components/WalletDetails';
 import Contacts from '~components/Contacts';
 import Gift from 'assets/images/gift.svg';
@@ -12,10 +11,13 @@ import Group from 'assets/images/group.svg';
 import Bitcoin from 'assets/images/bitcoin.svg';
 import Broadcast from 'assets/images/broadcast.svg';
 import Payments from 'assets/images/payments.svg';
-import {useNavigation} from '@react-navigation/native';
-import {CommonActions} from '@react-navigation/native';
+import { LocalizationContext } from '~content/LocContext';
+import { useNavigation } from '@react-navigation/native';
+import { CommonActions } from '@react-navigation/native';
 
-const Wrapper: React.FunctionComponent<{children: Element}> = ({children}) => {
+const { height, width } = Dimensions.get('window');
+
+const Wrapper: React.FunctionComponent<{ children: Element }> = ({ children }) => {
   return (
     <Box
       bgColor={'light.optionsCard'}

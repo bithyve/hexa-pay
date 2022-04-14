@@ -1,25 +1,30 @@
-import {StyleSheet, Dimensions, TextInput, TouchableOpacity} from 'react-native';
-import React, {Fragment} from 'react';
-import {VStack, Stack, Text, HStack, Input, FormControl, View} from 'native-base';
+import { StyleSheet, Dimensions, TextInput, TouchableOpacity } from 'react-native';
+import React, { Fragment, useContext } from 'react';
+import { VStack, Stack, Text, HStack, Input, FormControl, View } from 'native-base';
 import Backdrop from '~components/Backdrop';
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 import Colors from '~theme/Colors';
 import Switch from 'assets/images/switch.svg';
 import Next from 'assets/images/next.svg';
-import {useNavigation} from '@react-navigation/native';
-import {CommonActions} from '@react-navigation/native';
+import { LocalizationContext } from '~content/LocContext';
+import { useNavigation } from '@react-navigation/native';
+import { CommonActions } from '@react-navigation/native';
+
 
 export default function PasscodeScreen() {
   const navigation = useNavigation();
+  const { translations } = useContext(LocalizationContext);
+  const strings = translations['login'];
+  const common = translations['common'];
   const goToUserDetailsScreen = () =>
-    navigation.dispatch(CommonActions.navigate({name: 'UserDetailsScreen'}));
+    navigation.dispatch(CommonActions.navigate({ name: 'UserDetailsScreen' }));
   return (
     <Fragment>
       <Backdrop height={height} />
       <Stack style={styles.stackContainer}>
         <VStack style={styles.textContainer}>
-          <Text style={styles.createPasscodeText}>Create Passcode</Text>
-          <Text style={styles.fundText}>to ptotect your funds</Text>
+          <Text style={styles.createPasscodeText}>{strings.Passcode}</Text>
+          <Text style={styles.fundText}>{strings.ProtectFunds}</Text>
         </VStack>
         <View>
           <Input
@@ -33,7 +38,7 @@ export default function PasscodeScreen() {
         </View>
         <HStack style={styles.bottomContainer}>
           <TouchableOpacity>
-            <Text style={styles.faceIdText}>Use Face ID</Text>
+            <Text style={styles.faceIdText}>{strings.FaceID}</Text>
           </TouchableOpacity>
           <Switch />
         </HStack>

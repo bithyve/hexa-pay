@@ -1,9 +1,10 @@
 import {Dimensions, StyleSheet} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import {Camera, CameraDevice, useCameraDevices} from 'react-native-vision-camera';
 import {Text, VStack} from 'native-base';
 import {useIsForeground} from '~hooks/useIsForeground';
 const {height} = Dimensions.get('window');
+import {LocalizationContext} from '~content/LocContext';
 
 const NoModule = () => {
   return (

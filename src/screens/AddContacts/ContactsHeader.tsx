@@ -1,11 +1,14 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import React from 'react';
-import {Heading, HStack, Text, VStack, Input, Icon, Box, Button, View} from 'native-base';
+import { Heading, HStack, Text, VStack, Input, Icon, Box, Button, View } from 'native-base';
 import Sheild from 'assets/images/backup2.svg';
+import { LocalizationContext } from '~content/LocContext';
 
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 
 const ContactsHeader = () => {
+  const { translations } = useContext(LocalizationContext);
+  const common = translations['common'];
   return (
     <View style={styles.container}>
       <Heading fontSize={16} color={'light.white'}>
@@ -18,8 +21,8 @@ const ContactsHeader = () => {
         height={10}
         width={78}
         borderColor={'light.white'}
-        _text={{fontSize: 12, fontWeight: 'bold', color: 'light.white'}}>
-        Cancel
+        _text={{ fontSize: 12, fontWeight: 'bold', color: 'light.white' }}>
+        {common.cancel}
       </Button>
     </View>
   );

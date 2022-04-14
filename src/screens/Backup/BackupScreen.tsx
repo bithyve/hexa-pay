@@ -1,5 +1,5 @@
 import {Dimensions, StyleSheet} from 'react-native';
-import React, {Fragment} from 'react';
+import React, {Fragment, useContext} from 'react';
 import Backdrop from '~components/Backdrop';
 import Header from '~components/Header';
 import BackupStatus from './BackupStatus';

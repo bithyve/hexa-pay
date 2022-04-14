@@ -1,11 +1,11 @@
-import {Dimensions, StyleSheet} from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import React from 'react';
-import {Heading, HStack, Text, VStack, Input, Icon, Box, View} from 'native-base';
+import { Heading, HStack, Text, VStack, Input, Icon, Box, View } from 'native-base';
 import Group from 'assets/images/Group 38015.svg';
 
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 
-const Wrapper: React.FunctionComponent<{children: Element[]}> = ({children}) => {
+const Wrapper: React.FunctionComponent<{ children: Element[] }> = ({ children }) => {
   return (
     <Box
       rounded="lg"
@@ -25,7 +25,7 @@ const ViewAmount = () => {
   return (
     <HStack padding={'4'} marginBottom={'8'}>
       <Wrapper>
-        <View style={{flexDirection: 'row'}}>
+        <View style={{ flexDirection: 'row' }}>
           <Group style={styles.icon} />
           <Heading
             size={'sm'}

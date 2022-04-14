@@ -1,7 +1,12 @@
 import {Avatar, Button, Text, VStack, Heading} from 'native-base';
-import React from 'react';
+import React, {useContext} from 'react';
+import LocalizedStrings from 'react-localization';
+import {LocalizationContext} from '~content/LocContext';
 
 const UserInfo = () => {
+  const {translations} = useContext(LocalizationContext);
+  const strings = translations['userInfo'];
+  const common = translations['common'];
   return (
     <VStack alignItems={'center'}>
       <Avatar
@@ -17,7 +22,7 @@ const UserInfo = () => {
         Tony Stark
       </Heading>
       <Text fontSize={'xs'} fontFamily={'mono'}>
-        Personal Profile
+        {strings.PersonalProfile}
       </Text>
       <Button
         colorScheme={'light.optionsCard'}
@@ -25,7 +30,7 @@ const UserInfo = () => {
         marginTop={5}
         borderRadius={10}
         _text={{fontSize: 11}}>
-        Edit Profile
+        {strings.EditProfile}
       </Button>
     </VStack>
   );

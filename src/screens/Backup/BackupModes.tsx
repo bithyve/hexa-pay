@@ -7,6 +7,7 @@ import Words from 'assets/images/words.svg';
 import Backup from 'assets/images/backup3.svg';
 import {CommonActions, useNavigation} from '@react-navigation/native';
 import MockContext from '~contexts/MockContext';
+import {LocalizationContext} from '~content/LocContext';
 
 const {height, width} = Dimensions.get('window');
 
@@ -38,6 +39,10 @@ const BackupModes = () => {
   );
   const {securedWithKeeper} = useContext(MockContext.MockContext);
 
+  const {translations} = useContext(LocalizationContext);
+  const strings = translations['backup'];
+  const common = translations['common'];
+
   return (
     <Fragment>
       <Wrapper bgColor={'light.200'}>
@@ -46,7 +51,7 @@ const BackupModes = () => {
         </VStack>
         <Heading fontSize={'xs'}>No backup created</Heading>
         <Text fontSize={'xs'} fontFamily={'mono'}>
-          Your wallet is currently not backed up
+          {strings.WalletNotBackedUp}
         </Text>
       </Wrapper>
       <Wrapper bgColor={'light.200'}>
@@ -55,7 +60,7 @@ const BackupModes = () => {
         </VStack>
         <Heading fontSize={'xs'}>Write down 12 words</Heading>
         <Text fontSize={'xs'} fontFamily={'mono'}>
-          Write down the Seed phrase and keep it safe
+          {strings.SeedPhrase}
         </Text>
       </Wrapper>
       <TouchableOpacity onPress={goToVaultSecure}>
@@ -65,7 +70,7 @@ const BackupModes = () => {
           </VStack>
           <Heading fontSize={'xs'}>Secure with Keeper</Heading>
           <Text fontSize={'xs'} fontFamily={'mono'}>
-            Connect and backup with Keeper
+            {strings.ConnectBackup}
           </Text>
         </Wrapper>
       </TouchableOpacity>

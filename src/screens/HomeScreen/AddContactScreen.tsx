@@ -1,6 +1,6 @@
-import {Dimensions, StyleSheet} from 'react-native';
-import {View} from 'native-base';
-import React, {Fragment} from 'react';
+import { Dimensions, StyleSheet } from 'react-native';
+import { View } from 'native-base';
+import React, { Fragment } from 'react';
 import Backdrop from '~components/Backdrop';
 import Header from '~components/Header';
 import NewContacts from '~screens/AddContacts/NewContacts';
@@ -8,7 +8,7 @@ import AccessContacts from '~screens/AddContacts/AcessContacts';
 import ContactsHeader from '~screens/AddContacts/ContactsHeader';
 import AllContacts from '~screens/AddContacts/AllContacts';
 
-const {height} = Dimensions.get('window');
+const { height } = Dimensions.get('window');
 
 const AddContactScreen = () => {
   return (

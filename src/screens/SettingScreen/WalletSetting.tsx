@@ -3,11 +3,16 @@ import DarkModeIcon from 'assets/images/darkmode.svg';
 import LanguageIcon from 'assets/images/laguageCurrency.svg';
 import BroadcastIcon from 'assets/images/broadcast.svg';
 import PasscodeIcon from 'assets/images/security.svg';
-import React from 'react';
+import React, {useContext} from 'react';
 import {Heading, HStack, VStack, Switch, Text} from 'native-base';
 import {FlatList} from 'react-native';
+import {LocalizationContext} from '~content/LocContext';
+import LocalizedStrings from 'react-localization';
 
 const WalletSettings = () => {
+  const {translations} = useContext(LocalizationContext);
+  const strings = translations['backup'];
+  const common = translations['common'];
   const settings = [
     {
       name: 'Dark Mode',
@@ -38,7 +43,7 @@ const WalletSettings = () => {
   return (
     <VStack margin={'7'}>
       <Heading fontSize={'sm'} paddingBottom={5}>
-        Wallet Settings
+        {strings.WalletBackup}
       </Heading>
       <FlatList
         data={settings}

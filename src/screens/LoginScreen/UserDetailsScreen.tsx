@@ -1,28 +1,33 @@
-import {StyleSheet, Dimensions, TouchableOpacity, Image} from 'react-native';
-import React, {Fragment} from 'react';
+import { StyleSheet, Dimensions, TouchableOpacity, Image } from 'react-native';
+import React, { Fragment, useContext } from 'react';
 import Backdrop from '~components/Backdrop';
-import {Stack, VStack, Input, HStack, Box, Text, View} from 'native-base';
-const {height, width} = Dimensions.get('window');
+import { Stack, VStack, Input, HStack, Box, Text, View } from 'native-base';
+const { height, width } = Dimensions.get('window');
 import Next from 'assets/images/next.svg';
 import Colors from '~theme/Colors';
+import { LocalizationContext } from '~content/LocContext';
 import Upload from '../../../assets/images/upload.svg';
-import {useNavigation} from '@react-navigation/native';
-import {CommonActions} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+import { CommonActions } from '@react-navigation/native';
 
 function UserNameInput() {
   const navigation = useNavigation();
-  const goToHomeScreen = () => navigation.dispatch(CommonActions.navigate({name: 'Home'}));
+  const goToHomeScreen = () => navigation.dispatch(CommonActions.navigate({ name: 'Home' }));
   const uploadPictureHandler = () => {
     console.log('upload button clicked');
   };
+
+  const { translations } = useContext(LocalizationContext);
+  const strings = translations['backup'];
+  const common = translations['common'];
 
   return (
     <Fragment>
       <Backdrop height={height} />
       <Stack style={styles.stackContainer}>
         <VStack style={styles.textContainer}>
-          <Text style={styles.addNameText}>Add your Name & Picture</Text>
-          <Text style={styles.infoText}>This information is public</Text>
+          <Text style={styles.addNameText}>{strings.AddNamePicture}</Text>
+          <Text style={styles.infoText}>{strings.InfoPublic}</Text>
         </VStack>
         <TouchableOpacity onPress={uploadPictureHandler} style={styles.uploadPictureButton}>
           <Upload />
