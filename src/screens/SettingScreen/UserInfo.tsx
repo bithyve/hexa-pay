@@ -20,7 +20,7 @@ const UserInfo = () => {
         Personal Profile
       </Text>
       <Button
-        bg={'light.optionsCard'}
+        colorScheme={'light.optionsCard'}
         margin={3}
         marginTop={5}
         borderRadius={10}

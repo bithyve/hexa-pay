@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+  <g id="words" transform="translate(-39 -474)">
+    <circle id="Ellipse_1949" data-name="Ellipse 1949" cx="15.5" cy="15.5" r="15.5" transform="translate(39 474)" fill="currentColor"/>
+    <g id="Ellipse_1957" data-name="Ellipse 1957" transform="translate(40.5 475.5)" fill="none" stroke="#fafafa" stroke-width="0.6">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="13.7" fill="none"/>
+    </g>
+    <g id="file" transform="translate(49.138 482.947)">
+      <path id="Shape" d="M1.65,13.105A1.65,1.65,0,0,1,0,11.448V1.657A1.655,1.655,0,0,1,1.65,0H5.776V3.3a1.65,1.65,0,0,0,1.65,1.65h3.3v6.505a1.651,1.651,0,0,1-1.65,1.65ZM7.426,3.3V.06L10.666,3.3Z" transform="translate(0)" fill="#fafafa"/>
+    </g>
+  </g>
+</svg>

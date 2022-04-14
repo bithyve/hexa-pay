@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+  <g id="lock" transform="translate(-39 -634)">
+    <circle id="Ellipse_1949" data-name="Ellipse 1949" cx="15.5" cy="15.5" r="15.5" transform="translate(39 634)" fill="currentColor"/>
+    <g id="Ellipse_1957" data-name="Ellipse 1957" transform="translate(40.5 635.5)" fill="none" stroke="#fafafa" stroke-width="0.6">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="13.7" fill="none"/>
+    </g>
+    <g id="lock-2" data-name="lock" transform="translate(49.421 642.979)">
+      <path id="Shape" d="M8.563,13.043l-.1,0H1.693l-.1,0a1.6,1.6,0,0,1-1.07-.411A1.6,1.6,0,0,1,0,11.513V6.179a1.511,1.511,0,0,1,1.016-1.4V4.064a4.064,4.064,0,1,1,8.127,0v.718a1.511,1.511,0,0,1,1.016,1.4v5.334a1.6,1.6,0,0,1-1.6,1.527ZM5.08,2.032a2.022,2.022,0,0,0-1.436.6,2.049,2.049,0,0,0-.6,1.436v.594H7.112V4.064A2.035,2.035,0,0,0,5.08,2.032Z" transform="translate(0 0)" fill="#fafafa"/>
+    </g>
+  </g>
+</svg>

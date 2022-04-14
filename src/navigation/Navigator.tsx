@@ -9,6 +9,7 @@ import SettingsStack from './SettingsStack';
 import QRScreen from '~screens/QRScreen/QRScreen';
 import PasscodeScreen from '~screens/LoginScreen/PasscodeScreen';
 import UserDetailsScreen from '~screens/LoginScreen/UserDetailsScreen';
+import Scanner from '~screens/Scanner/Scanner';
 
 const defaultTheme = {
   ...DefaultTheme,
@@ -31,6 +32,7 @@ const Navigator = () => {
         <Stack.Screen name="ViewTransactions" component={ViewTransactionsScreen} />
         <Stack.Screen name="Backup" component={BackupScreen} />
         <Stack.Screen name="QrScanner" component={QRScreen} />
+        <Stack.Screen name="Scanner" component={Scanner} />
       </Stack.Navigator>
     </NavigationContainer>
   );

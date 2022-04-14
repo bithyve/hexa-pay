@@ -10,7 +10,7 @@ const Header = ({title, rightIcons}: {title?: string; rightIcons?: any[]}) => {
       <HStack>
         <GoBack />
         {title ? (
-          <Heading color={'#FAFAFA'} fontSize={'sm'} paddingLeft={'10'} noOfLines={2} maxW={'40'}>
+          <Heading color={'#FAFAFA'} fontSize={'sm'} paddingLeft={'10'} noOfLines={2} maxW={'80'}>
             {title}
           </Heading>
         ) : null}

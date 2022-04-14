@@ -11,7 +11,7 @@ const SecureVault = () => {
   return (
     <Fragment>
       <Backdrop height={height * 0.2} />
-      <Header title={'Secure with Hexa Keeper'} rightIcons={[HeaderButton]} />
+      <Header title={'Secure with Keeper'} rightIcons={[HeaderButton]} />
       <SecureKeyDesciption />
     </Fragment>
   );

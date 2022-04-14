@@ -1,17 +1,21 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {HStack, Text, VStack} from 'native-base';
 import Sheild from 'assets/images/backup2.svg';
+import MockContext from '~contexts/MockContext';
 
 const BackupStatus = () => {
+  const {securedWithKeeper} = useContext(MockContext.MockContext);
   return (
     <HStack padding={'4'} borderRadius={15} alignItems={'center'} marginX={'7'} marginBottom={'12'}>
       <Sheild />
       <VStack marginLeft={'5'}>
         <Text fontSize={'sm'} color={'white'}>
-          No backup created
+          {securedWithKeeper ? 'Backed up with Keeper' : 'No backup created'}
         </Text>
         <Text fontSize={'xs'} fontFamily={'mono'} color={'white'}>
-          Your wallet is currently not backed up
+          {securedWithKeeper
+            ? 'Your wallet is backed up with Keeper'
+            : 'Your wallet is currently not backed up'}
         </Text>
       </VStack>
     </HStack>
