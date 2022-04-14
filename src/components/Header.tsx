@@ -1,6 +1,6 @@
-import {Dimensions, StyleSheet, View} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import React from 'react';
-import {Heading, HStack} from 'native-base';
+import {Heading, HStack, View} from 'native-base';
 import GoBack from './GoBack';
 const {height} = Dimensions.get('window');
 

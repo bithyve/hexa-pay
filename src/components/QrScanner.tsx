@@ -1,3 +1,4 @@
+import {View} from 'native-base';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Scaner from 'assets/images/scan.svg';

@@ -1,4 +1,5 @@
-import {Dimensions, StyleSheet, View} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
+import {View} from 'native-base';
 import React, {Fragment} from 'react';
 import Backdrop from '~components/Backdrop';
 import Header from '~components/Header';
@@ -13,9 +14,9 @@ const AddContactScreen = () => {
   return (
     <Fragment>
       <Backdrop height={height * 0.4} />
-      <View style = {styles.headerStyle}>
-      <Header />
-      <ContactsHeader/>
+      <View style={styles.headerStyle}>
+        <Header />
+        <ContactsHeader />
       </View>
       <NewContacts />
       <AccessContacts />
@@ -28,7 +29,6 @@ export default AddContactScreen;
 
 const styles = StyleSheet.create({
   headerStyle: {
-   flexDirection:'row',
+    flexDirection: 'row',
   },
 });
-
