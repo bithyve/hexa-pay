@@ -1,7 +1,7 @@
 import React from 'react';
-import {LocalizationProvider} from './content/LocContext';
+import {LocalizationProvider} from '~content/LocContext';
 import {NativeBaseProvider} from 'native-base';
-import {HexaTheme} from './theme';
+import {HexaTheme} from 'src/theme';
 
 export default function Providers({children}: {children: JSX.Element}) {
   return (

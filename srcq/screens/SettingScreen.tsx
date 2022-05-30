@@ -1,6 +1,6 @@
 import React from 'react';
 import {Dimensions} from 'react-native';
-import Backdrop from '../components/Backdrop';
+import Backdrop from '~components/Backdrop';
 const {height} = Dimensions.get('window');
 
 const SettingScreen = () => {
