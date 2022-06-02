@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 0.1 * width,
     right: 0,
-    top: 0,
+    top: height > 720 ? 25 : 15,
     flexDirection: 'row',
   },
   paginationDots: {
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4385F6',
   },
   buttonConatiner: {
-    top: -0.05 * height,
+    top: height > 720 ? -25 : -20,
     borderWidth: 3,
     marginLeft: 'auto',
     padding: 2,
