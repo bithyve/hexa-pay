@@ -8,7 +8,7 @@ import {
   useFrameProcessor,
 } from 'react-native-vision-camera';
 const {height, width} = Dimensions.get('window');
-import QrAdbobeScreen from '../../../assets/images/qrdemoscreen.png';
+import QrAdbobeScreen from '../../../assets/images/addqr.svg';
 
 export default function QRScreen() {
   const [cameraPermission, setCameraPermission] = useState(false);
@@ -37,17 +37,21 @@ export default function QRScreen() {
     );
   }
 
-  if (device == null) {
-    return (
-      <View>
-        <QrAdbobeScreen />
-        <Text style={styles.camera}>Activity Indiacator</Text>
-      </View>
-    );
-  }
+  // if (device == null) {
+  //   return (
+  //     <View>
+  //       <QrAdbobeScreen />
+  //       <Text style={styles.camera}>Activity Indiacator</Text>
+  //     </View>
+  //   );
+  // }
 
-  return (
-    device != null &&
+  return device == null ? (
+    <View>
+      <QrAdbobeScreen />
+      <Text style={styles.camera}>Activity Indiacator</Text>
+    </View>
+  ) : (
     cameraPermission && (
       <Fragment>
         <QrAdbobeScreen />

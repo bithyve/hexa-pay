@@ -10,6 +10,20 @@ import QRScreen from '~screens/QRScreen/QRScreen';
 import PasscodeScreen from '~screens/LoginScreen/PasscodeScreen';
 import UserDetailsScreen from '~screens/LoginScreen/UserDetailsScreen';
 import Scanner from '~screens/Scanner/Scanner';
+import Slider from '~screens/IntroScreen/Slider';
+
+export type RootStackParamList = {
+  Home: {prevS: string | null};
+  IntroScreens: undefined;
+  PasscodeScreen: undefined;
+  UserDetailsScreen: undefined;
+  SettingStack: undefined;
+  AddContact: undefined;
+  ViewTransactions: undefined;
+  Backup: undefined;
+  QrScanner: undefined;
+  Scanner: undefined;
+};
 
 const defaultTheme = {
   ...DefaultTheme,
@@ -24,6 +38,7 @@ const Navigator = () => {
   return (
     <NavigationContainer theme={defaultTheme}>
       <Stack.Navigator screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
+        <Stack.Screen name="IntroScreens" component={Slider} />
         <Stack.Screen name="PasscodeScreen" component={PasscodeScreen} />
         <Stack.Screen name="UserDetailsScreen" component={UserDetailsScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />

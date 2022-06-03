@@ -5,7 +5,7 @@ import {Stack, VStack, Input, HStack, Box, Text, View} from 'native-base';
 const {height, width} = Dimensions.get('window');
 import Next from 'assets/images/next.svg';
 import Colors from '~theme/Colors';
-import Upload from '../../../assets/images/upload.svg';
+import Upload from '../../../assets/images/send.svg';
 import {useNavigation} from '@react-navigation/native';
 import {CommonActions} from '@react-navigation/native';
 
