@@ -69,7 +69,7 @@ const Slider: React.FC<NativeStackScreenProps<RootStackParamList, 'IntroScreens'
       )}
       <Pressable
         style={{position: 'absolute', top: 0.042 * height, left: 0.88 * width}}
-        onPress={() => navigation.dispatch(StackActions.replace('Home', {prevS: null}))}>
+        onPress={() => navigation.dispatch(StackActions.replace('PasscodeScr', {prevS: null}))}>
         <Text color={'white'}>Skip</Text>
       </Pressable>
       <Box style={styles.boxContainer} _dark={{bg: 'blueGray.900'}} _light={{bg: 'blueGray.50'}}>
@@ -91,7 +91,7 @@ const Slider: React.FC<NativeStackScreenProps<RootStackParamList, 'IntroScreens'
             <Button
               style={styles.buttonStyle}
               onPress={() => {
-                navigation.dispatch(StackActions.replace('Home', {prevS: null}));
+                navigation.dispatch(StackActions.replace('PasscodeScr', {prevS: null}));
               }}>
               <RightArrow width={25} height={25} style={{marginLeft: 5}} fill={'#fff'} />
             </Button>

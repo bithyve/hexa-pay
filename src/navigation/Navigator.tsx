@@ -11,6 +11,8 @@ import PasscodeScreen from '~screens/LoginScreen/PasscodeScreen';
 import UserDetailsScreen from '~screens/LoginScreen/UserDetailsScreen';
 import Scanner from '~screens/Scanner/Scanner';
 import Slider from '~screens/IntroScreen/Slider';
+import PasscodeScr from '~screens/LoginScreen/PasscodeScr';
+import UserDetailScr from '~screens/LoginScreen/UserDetailScr';
 
 export type RootStackParamList = {
   Home: {prevS: string | null};
@@ -39,7 +41,8 @@ const Navigator = () => {
     <NavigationContainer theme={defaultTheme}>
       <Stack.Navigator screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
         <Stack.Screen name="IntroScreens" component={Slider} />
-        <Stack.Screen name="PasscodeScreen" component={PasscodeScreen} />
+        <Stack.Screen name="PasscodeScr" component={PasscodeScr} />
+        <Stack.Screen name="UserDetailScr" component={UserDetailScr} />
         <Stack.Screen name="UserDetailsScreen" component={UserDetailsScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="SettingStack" component={SettingsStack} />
