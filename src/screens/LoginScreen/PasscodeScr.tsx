@@ -21,6 +21,9 @@ import {useNavigation} from '@react-navigation/native';
 import {CommonActions} from '@react-navigation/native';
 import {RootStackParamList} from '../../navigation/Navigator';
 import {StackActions} from '@react-navigation/native';
+import Upload from '../../../assets/images/send.svg';
+import RightArrow from '../../../assets/images/icon_arrow_right.svg';
+import {color} from 'react-native-reanimated';
 
 export default function PasscodeScreen() {
   const [name, setName] = useState('');
@@ -28,11 +31,16 @@ export default function PasscodeScreen() {
   const navigation = useNavigation();
   const goToUserDetailsScreen = () =>
     navigation.dispatch(CommonActions.navigate({name: 'UserDetailsScreen'}));
+
+  const uploadPictureHandler = () => {
+    console.log('upload button clicked');
+  };
+
   return (
     <Fragment>
-      <Box bg={'#1886CA'} height={1000} paddingLeft={10}>
+      <Box bg={'#1886CA'} height={height} paddingLeft={10}>
         <Box
-          paddingTop={200}
+          paddingTop={150}
           _text={{
             fontSize: '3xl',
             fontWeight: 'medium',
@@ -56,7 +64,10 @@ export default function PasscodeScreen() {
           <Text fontSize={'sm'} fontWeight={'medium'} color={'white'} letterSpacing={'lg'}>
             Profile Picture <Text color={'#B1BFCA'}>(Optional)</Text>
           </Text>
-          {/* add image picker */}
+          <TouchableOpacity onPress={uploadPictureHandler} style={styles.uploadPictureButton}>
+            <Upload />
+            <Text style={styles.buttonText}>Upload</Text>
+          </TouchableOpacity>
           <Input
             paddingTop={20}
             variant="underlined"
@@ -65,10 +76,13 @@ export default function PasscodeScreen() {
             onChangeText={(value) => setName(value)}
             value={name}
             style={styles.input}
+            isRequired={true}
+            color={'white'}
+            selectionColor={'white'}
           />
         </Box>
 
-        <Box paddingTop={300} paddingRight={10}>
+        <Box paddingTop={150} paddingRight={10}>
           <Box style={styles.buttonContainer}>
             <Button
               style={styles.buttonStyle}
@@ -77,7 +91,7 @@ export default function PasscodeScreen() {
                   CommonActions.navigate({name: 'UserDetailScr', params: {customer_name: name}})
                 )
               }>
-              <Image alt="Alternate Text" size="xl" />
+              <RightArrow width={25} height={25} style={{marginLeft: 5}} fill={'#fff'} />
             </Button>
           </Box>
         </Box>
@@ -109,5 +123,24 @@ const styles = StyleSheet.create({
   },
   input: {
     color: 'white',
+  },
+  uploadPictureButton: {
+    width: 70,
+    height: 70,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 100,
+    backgroundColor: '#70A3F7',
+    borderWidth: 1,
+    borderColor: '#fafafa',
+    marginTop: 20,
+    // marginLeft: width * 0.1,
+  },
+  buttonText: {
+    color: Colors.white,
+    fontSize: 10,
+    // marginTop: '18%',
+    // fontFamily: HexaTheme.fonts.RobotoSlabBlack,
   },
 });

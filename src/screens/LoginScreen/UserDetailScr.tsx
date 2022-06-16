@@ -1,19 +1,27 @@
-import React, {useState} from 'react';
+import React, {Fragment, useState} from 'react';
 import {Box, Text, Input, Button, Image, Switch} from 'native-base';
 import {StyleSheet, Dimensions} from 'react-native';
 import {RootStackParamList} from '../../navigation/Navigator';
 import {CommonActions, StackActions} from '@react-navigation/native';
+import RightArrow from '../../../assets/images/icon_arrow_right.svg';
 
 const {width, height} = Dimensions.get('window');
 
 export default function Screen2({navigation, route}: {navigation: any; route: any}) {
   const [passcode, setPasscode] = useState('');
-  console.log(route);
+  const [passcodeCharOne, setPasscodeCharOne] = useState('');
+  const [passcodeCharTwo, setPasscodeCharTwo] = useState('');
+  const [passcodeCharThree, setPasscodeCharThree] = useState('');
+  const [passcodeCharFour, setPasscodeCharFour] = useState('');
+
+  const fillPasscodeAndNavigate = () => {
+    setPasscode(passcodeCharOne + passcodeCharTwo + passcodeCharThree + passcodeCharFour);
+    navigation.dispatch(CommonActions.navigate({name: 'SuccessScreen'}));
+  };
 
   return (
-    <>
-      {/* Screen 1 */}
-      <Box bg={'#1886CA'} height={1000} paddingLeft={10}>
+    <Fragment>
+      <Box bg={'#1886CA'} height={height} paddingLeft={10}>
         <Box
           paddingTop={150}
           _text={{
@@ -38,16 +46,60 @@ export default function Screen2({navigation, route}: {navigation: any; route: an
           </Text>
         </Box>
 
-        <Input
-          paddingTop={20}
-          type="password"
-          variant="underlined"
-          placeholder="Enter your passcode"
-          maxW={300}
-          onChangeText={(value) => setPasscode(value)}
-          value={passcode}
-          style={styles.input}
-        />
+        <Box width={300} style={styles.inputPasscode}>
+          <Input
+            type="password"
+            variant="underlined"
+            minW={8}
+            maxW={8}
+            marginRight={2}
+            onChangeText={(value) => setPasscodeCharOne(value)}
+            value={passcodeCharOne}
+            style={styles.input}
+            bg={'white'}
+            borderRadius={5}
+            maxLength={1}
+          />
+          <Input
+            type="password"
+            variant="underlined"
+            minW={8}
+            maxW={8}
+            marginRight={2}
+            onChangeText={(value) => setPasscodeCharTwo(value)}
+            value={passcodeCharTwo}
+            style={styles.input}
+            bg={'white'}
+            borderRadius={5}
+            maxLength={1}
+          />
+          <Input
+            type="password"
+            variant="underlined"
+            minW={8}
+            maxW={8}
+            marginRight={2}
+            onChangeText={(value) => setPasscodeCharThree(value)}
+            value={passcodeCharThree}
+            style={styles.input}
+            bg={'white'}
+            borderRadius={5}
+            maxLength={1}
+          />
+          <Input
+            type="password"
+            variant="underlined"
+            minW={8}
+            maxW={8}
+            marginRight={2}
+            onChangeText={(value) => setPasscodeCharFour(value)}
+            value={passcodeCharFour}
+            h={16}
+            bg={'white'}
+            borderRadius={5}
+            maxLength={1}
+          />
+        </Box>
 
         <Box style={styles.enableFaceId}>
           <Text color={'white'} paddingTop={11}>
@@ -56,23 +108,21 @@ export default function Screen2({navigation, route}: {navigation: any; route: an
           <Switch size="md" marginRight={8} />
         </Box>
 
-        <Box paddingTop={180} paddingRight={10}>
+        <Box paddingTop={150} paddingRight={10}>
           <Box style={styles.buttonContainer}>
-            <Button
-              style={styles.buttonStyle}
-              onPress={() => navigation.dispatch(CommonActions.navigate({name: 'Home'}))}>
-              <Image alt="Alternate Text" size="xl" />
+            <Button style={styles.buttonStyle} onPress={fillPasscodeAndNavigate}>
+              <RightArrow width={25} height={25} style={{marginLeft: 5}} fill={'#fff'} />
             </Button>
           </Box>
         </Box>
       </Box>
-    </>
+    </Fragment>
   );
 }
 
 const styles = StyleSheet.create({
   enableFaceId: {
-    paddingTop: 100,
+    paddingTop: 50,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -99,5 +149,13 @@ const styles = StyleSheet.create({
   },
   input: {
     color: 'white',
+    backgroundColor: 'white',
+    height: 10,
+    width: 10,
+    marginRight: 30,
+  },
+  inputPasscode: {
+    flexDirection: 'row',
+    marginTop: 30,
   },
 });
