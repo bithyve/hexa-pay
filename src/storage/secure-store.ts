@@ -1,99 +1,117 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import * as SecureStore from 'expo-secure-store';
-import RNSecureStorage, {ACCESSIBLE} from 'rn-secure-storage';
-// import config from '../bitcoin/HexaConfig'
+import * as Keychain from 'react-native-keychain';
+// import NodeRSA from 'node-rsa'
+
 const config = {
-  ENC_KEY_STORAGE_IDENTIFIER: 'HEX-PAY-KEY',
+  ENC_KEY_STORAGE_IDENTIFIER: 'HEXAPAY-KEY',
 };
 
-export const store = async (hash, enc_key) => {
+export const store = async (hash: string, enc_key: string) => {
   try {
-    if (await RNSecureStorage.exists(config.ENC_KEY_STORAGE_IDENTIFIER)) {
-      console.log('Old key identified, removing...');
-      await RNSecureStorage.remove(config.ENC_KEY_STORAGE_IDENTIFIER);
-    }
-
-    await RNSecureStorage.set(
+    await Keychain.setGenericPassword(
       config.ENC_KEY_STORAGE_IDENTIFIER,
       JSON.stringify({
         hash,
         enc_key,
       }),
       {
-        accessible: ACCESSIBLE.WHEN_UNLOCKED,
+        accessible: Keychain.ACCESSIBLE.WHEN_UNLOCKED,
       }
     );
-  } catch (err) {
-    console.log(err);
+    return true;
+  } catch (error) {
     return false;
   }
-  return true;
 };
 
-export const fetch = async (hash_current) => {
+export const fetch = async (hash_current: string) => {
   try {
-    let hash: any, enc_key: any;
-    const a = await RNSecureStorage.get(config.ENC_KEY_STORAGE_IDENTIFIER);
-    const value = await SecureStore.getItemAsync(config.ENC_KEY_STORAGE_IDENTIFIER);
-
-    if (value) {
-      ({hash, enc_key} = JSON.parse(value));
-      if (await RNSecureStorage.exists(config.ENC_KEY_STORAGE_IDENTIFIER)) {
-        await RNSecureStorage.remove(config.ENC_KEY_STORAGE_IDENTIFIER);
+    const credentials = await Keychain.getGenericPassword();
+    if (credentials) {
+      const password = JSON.parse(credentials.password);
+      if (hash_current === '') {
+        return password.enc_key;
+      } else if (hash_current !== password.hash) {
+        throw new Error('Incorrect Passcode');
+      } else {
+        return password.enc_key;
       }
-      console.log('upgrading to new version...');
-      await RNSecureStorage.set(
-        config.ENC_KEY_STORAGE_IDENTIFIER,
-        JSON.stringify({
-          hash,
-          enc_key,
-        }),
-        {
-          accessible: ACCESSIBLE.WHEN_UNLOCKED,
-        }
-      );
-
-      await SecureStore.deleteItemAsync(config.ENC_KEY_STORAGE_IDENTIFIER);
-      if (hash_current !== hash) {
-        throw new Error('Incorrect passcode, legacy');
-      } else return enc_key;
+    } else {
+      throw new Error('Password not found');
     }
-
-    let RNValue;
-    if (await RNSecureStorage.exists(config.ENC_KEY_STORAGE_IDENTIFIER)) {
-      RNValue = await RNSecureStorage.get(config.ENC_KEY_STORAGE_IDENTIFIER);
-    }
-
-    if (!value && !RNValue) {
-      throw new Error('Identifier missing');
-    }
-
-    if (RNValue) {
-      ({hash, enc_key} = JSON.parse(RNValue));
-
-      if (hash_current !== hash) {
-        throw new Error('Incorrect Passcode, upgraded');
-      }
-    }
-    return enc_key;
   } catch (err) {
     console.log(err);
     throw err;
   }
 };
 
-export const remove = async (key) => {
+export const hasPin = async () => {
   try {
-    console.log('trying to remove');
-    await SecureStore.deleteItemAsync(key);
-
-    if (await RNSecureStorage.exists(key)) {
-      await RNSecureStorage.remove(key);
+    const credentials = await Keychain.getGenericPassword();
+    if (credentials) {
+      const password = JSON.parse(credentials.password);
+      if (password) {
+        return true;
+      }
+    } else {
+      return false;
     }
+  } catch (err) {
+    return false;
+  }
+};
+
+export const remove = async (key: string) => {
+  try {
+    //
   } catch (err) {
     console.log(err);
     return false;
   }
   return true;
 };
+
+export const storeBiometricPubKey = async (pubKey: string) => {
+  try {
+    const credentials = (await Keychain.getGenericPassword()) as Keychain.UserCredentials;
+    const password = JSON.parse(credentials.password);
+    const reset = await Keychain.resetGenericPassword();
+    const pass = {
+      ...password,
+      pubKey,
+    };
+    await Keychain.setGenericPassword(config.ENC_KEY_STORAGE_IDENTIFIER, JSON.stringify(pass), {
+      accessible: Keychain.ACCESSIBLE.WHEN_UNLOCKED,
+    });
+    return true;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+};
+
+// export const verifyBiometricAuth = async (signature: string, payload: string) => {
+//   try {
+//     const keychain = await Keychain.getGenericPassword();
+//     const credentials = JSON.parse(keychain.password)
+//     const publicKeyBuffer = Buffer.from(credentials.pubKey, 'base64')
+//     const key = new NodeRSA()
+//     const signer = key.importKey(publicKeyBuffer, 'public-der')
+//     const isVerified = signer.verify(Buffer.from(payload), signature, 'utf8', 'base64')
+//     if (isVerified) {
+//       return {
+//         success: true,
+//         encryptedKey: credentials.enc_key,
+//         hash: credentials.hash
+//       }
+//     } else {
+//       return {
+//         success: false,
+//       }
+//     }
+//   } catch (error) {
+//     console.log(error)
+//     return {
+//       success: false
+//     }
+//   }
+// }

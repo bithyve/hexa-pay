@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '~screens/HomeScreen/HomeScreen';
@@ -8,6 +8,7 @@ import ViewTransactionsScreen from '~screens/HomeScreen/ViewTransactionsScreen';
 import SettingsStack from './SettingsStack';
 import QRScreen from '~screens/QRScreen/QRScreen';
 import PasscodeScreen from '~screens/LoginScreen/PasscodeScreen';
+import SuccessScreen from '~screens/LoginScreen/SuccessScreen';
 import UserDetailsScreen from '~screens/LoginScreen/UserDetailsScreen';
 import Scanner from '~screens/Scanner/Scanner';
 import Slider from '~screens/IntroScreen/Slider';
@@ -21,6 +22,7 @@ export type RootStackParamList = {
   IntroScreens: undefined;
   PasscodeScreen: undefined;
   UserDetailsScreen: undefined;
+  UserLoginScreen: undefined;
   SettingStack: undefined;
   AddContact: undefined;
   ViewTransactions: undefined;
@@ -44,12 +46,13 @@ const Navigator = () => {
   return (
     <NavigationContainer theme={defaultTheme}>
       <Stack.Navigator
-        initialRouteName={walletSetupCompleted ? 'UserLoginScreen' : 'InroScreens'}
+        initialRouteName={walletSetupCompleted ? 'UserLoginScreen' : 'IntroScreens'}
         screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
         <Stack.Screen name="IntroScreens" component={Slider} />
         <Stack.Screen name="PasscodeScr" component={PasscodeScr} />
         <Stack.Screen name="UserDetailScr" component={UserDetailScr} />
         <Stack.Screen name="UserDetailsScreen" component={UserDetailsScreen} />
+        <Stack.Screen name="SuccessScreen" component={SuccessScreen} />
         <Stack.Screen name="UserLoginScreen" component={UserLoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="SettingStack" component={SettingsStack} />

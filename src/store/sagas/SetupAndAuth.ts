@@ -11,11 +11,9 @@ import {
   walletSetupCompletedAction,
   walletSetupFailed,
 } from '~store/actions/UserActions/UserActions';
-import * as SecureStore1 from 'expo-secure-store';
-import RNSecureStorage from 'rn-secure-storage';
-import cryptoJS from 'crypto-js';
 
 function* passCodeEncryptionWorker(action: WalletSetupRunning) {
+  console.log(action);
   const hash: string = yield call(Cipher.hash, action.payload.code);
   const AES_KEY: string = yield call(Cipher.generateKey);
   const encryptedKey: string = yield call(Cipher.encrypt, AES_KEY, hash);
@@ -24,7 +22,6 @@ function* passCodeEncryptionWorker(action: WalletSetupRunning) {
   try {
     yield call(dbManager.initDb, uint8array);
     const flag: boolean = yield call(SecureStore.store, hash, encryptedKey);
-    console.log(flag);
     if (!flag) {
       yield call(AsyncStorage.setItem, 'hasCreds', 'false');
       return;
@@ -42,17 +39,11 @@ export function* passCodeEncryptionWatcher() {
 
 function* passCodeVerifyWorker(action: WalletVerify) {
   const hash: string = yield call(Cipher.hash, action.payload.code);
-  // const key: string = yield call(SecureStore.fetch, hash);
-  const k: string = yield RNSecureStorage.get('HEX-PAY-KEY');
-  const h: {enc_key: string; hash: string} = JSON.parse(k);
-  // const key: string = yield call(Cipher.decrypt, h.enc_key, hash);
-  const key = yield call(cryptoJS.AES.decrypt, h.enc_key, hash);
-  // console.log(Cipher.stringToArrayBuffer(key.toString()));
-
   try {
-    const l1 = key.toString(cryptoJS.enc.Utf8);
-    const openKey: Uint8Array = yield call(Cipher.stringToArrayBuffer, l1);
-    yield call(dbManager.initDb, openKey);
+    const enc_key: string = yield call(SecureStore.fetch, hash);
+    const AES_KEY: string = yield call(Cipher.decrypt, enc_key, hash);
+    const key: Uint8Array = yield call(Cipher.stringToArrayBuffer, AES_KEY);
+    yield call(dbManager.initDb, key);
     yield put(loginSuccessfull());
   } catch (er) {
     yield put(loginFailed());

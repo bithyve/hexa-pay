@@ -9,7 +9,7 @@ export const encrypt = (data: string, key: string) => {
 export const decrypt = (ciphertext: string, key: string | cryptoJS.lib.WordArray) => {
   try {
     const bytes = cryptoJS.AES.decrypt(ciphertext, key);
-    const decryptedData = JSON.parse(bytes.toString(cryptoJS.enc.Utf8));
+    const decryptedData = bytes.toString(cryptoJS.enc.Utf8);
     return decryptedData;
   } catch (e) {
     return null;

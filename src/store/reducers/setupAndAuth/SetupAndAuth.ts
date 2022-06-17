@@ -10,13 +10,13 @@ import {ActionTypes} from '~store/types/types';
 const initialState: {
   walletSetupCompleted: boolean;
   walletSetupFailed: boolean;
-  incorrectPasscode: boolean;
-  loginSuccessfull: null | boolean;
+  incorrectPasscode: null | boolean;
+  loginSuccessfull: boolean;
 } = {
   walletSetupCompleted: false,
   walletSetupFailed: false,
-  incorrectPasscode: false,
-  loginSuccessfull: null,
+  incorrectPasscode: null,
+  loginSuccessfull: false,
 };
 
 export const SetupAndAuth: (
