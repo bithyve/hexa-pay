@@ -1,5 +1,8 @@
 import {all} from 'redux-saga/effects';
+import {passCodeEncryptionWatcher, passCodeVerifyWatcher} from './SetupAndAuth';
 
 export default function* rootSaga() {
-  yield all([]);
+  const sagas = [passCodeEncryptionWatcher(), passCodeVerifyWatcher()];
+
+  yield all(sagas);
 }

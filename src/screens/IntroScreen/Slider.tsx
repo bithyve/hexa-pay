@@ -40,7 +40,7 @@ const Slider: React.FC<NativeStackScreenProps<RootStackParamList, 'IntroScreens'
 
   return (
     <>
-      <ToggleDark />
+      {/* <ToggleDark /> */}
       <ScrollView
         ref={scrollV}
         horizontal={true}
@@ -67,11 +67,15 @@ const Slider: React.FC<NativeStackScreenProps<RootStackParamList, 'IntroScreens'
       ) : (
         <></>
       )}
-      <Pressable
-        style={{position: 'absolute', top: 0.042 * height, left: 0.88 * width}}
-        onPress={() => navigation.dispatch(StackActions.replace('PasscodeScr', {prevS: null}))}>
-        <Text color={'white'}>Skip</Text>
-      </Pressable>
+      {page !== 2 ? (
+        <Pressable
+          style={{position: 'absolute', top: 0.042 * height, left: 0.88 * width}}
+          onPress={() => navigation.dispatch(StackActions.replace('PasscodeScr', {prevS: null}))}>
+          <Text color={'white'}>Skip</Text>
+        </Pressable>
+      ) : (
+        <></>
+      )}
       <Box style={styles.boxContainer} _dark={{bg: 'blueGray.900'}} _light={{bg: 'blueGray.50'}}>
         <Box style={styles.paginationWrapper}>
           {Array.from(Array(3).keys()).map((_, index) => (
@@ -80,7 +84,7 @@ const Slider: React.FC<NativeStackScreenProps<RootStackParamList, 'IntroScreens'
           <Box
             style={[
               {
-                left: 0.0001 * width + page * (0.1 * width),
+                left: page * (0.09 * width) - 0.025 * width * page + (page === 0 ? 1 : 0),
               },
               styles.activePageDot,
             ]}
@@ -91,7 +95,7 @@ const Slider: React.FC<NativeStackScreenProps<RootStackParamList, 'IntroScreens'
             <Button
               style={styles.buttonStyle}
               onPress={() => {
-                navigation.dispatch(StackActions.replace('PasscodeScr', {prevS: null}));
+                navigation.dispatch(StackActions.replace('PasscodeScr'));
               }}>
               <RightArrow width={25} height={25} style={{marginLeft: 5}} fill={'#fff'} />
             </Button>
@@ -118,17 +122,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   paginationDots: {
-    height: 10,
-    width: '13.75%',
-    borderRadius: 5,
-    marginLeft: '-2.5%',
-    backgroundColor: '#B5CEFE',
+    height: 14,
+    width: '9%',
+    borderRadius: 50,
+    marginLeft: '-2.25%',
+    backgroundColor: '#FFE09D',
   },
   activePageDot: {
-    height: 5,
-    width: '14%',
-    borderRadius: 5,
-    backgroundColor: '#296BCC',
+    height: 7,
+    width: '8.5%',
+    borderRadius: 50,
+    backgroundColor: '#FABC05',
     position: 'absolute',
     marginLeft: '-1.75%',
     top: '25%',
@@ -150,7 +154,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 50,
     width: 50,
-    backgroundColor: '#4385F6',
+    backgroundColor: '#FABC05',
   },
   buttonConatiner: {
     top: height > 720 ? -25 : -20,
@@ -160,7 +164,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     width: 60,
     height: 60,
-    borderColor: '#4385F6',
+    borderColor: '#FABC05',
   },
 });
 

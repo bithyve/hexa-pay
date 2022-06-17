@@ -24,21 +24,22 @@ const IntroScreen1: React.FC<IIntroScreen1Props> = ({}) => {
       </Box>
       <Box style={{height: 0.6 * height, width}}>
         <Text
-          fontSize={['3xl', '5xl', '6xl']}
+          fontFamily={'RobotoSlab-ExtraBold'}
+          fontSize={['2xl', '3xl']}
           _dark={{color: '#70A7FF'}}
           _light={{color: '#3067BF'}}
           style={{margin: '5%', textAlign: 'center', marginTop: '15%'}}>
-          Secure Your Wallet
+          Connect with family and friends
         </Text>
         <Center>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            Keep your Bitcoin wallet secure by setting
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            Get to connect with your close ones,
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            a pin or enabling your face ID for
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            interact with them, also send and
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            maximum security.
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            request bitcoin from them.
           </Text>
         </Center>
       </Box>

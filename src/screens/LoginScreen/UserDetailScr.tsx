@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
 import {Box, Text, Input, Button, Image, Switch} from 'native-base';
 import {StyleSheet, Dimensions} from 'react-native';
-import {RootStackParamList} from '../../navigation/Navigator';
-import {CommonActions, StackActions} from '@react-navigation/native';
+import {CommonActions} from '@react-navigation/native';
+import {useDispatch} from 'react-redux';
+import {walletSetupAction} from '~store/actions/UserActions/UserActions';
 
 const {width, height} = Dimensions.get('window');
 
 export default function Screen2({navigation, route}: {navigation: any; route: any}) {
   const [passcode, setPasscode] = useState('');
-  console.log(route);
+  // console.log(route);
+  const dispatcher = useDispatch();
 
   return (
     <>
@@ -60,7 +62,10 @@ export default function Screen2({navigation, route}: {navigation: any; route: an
           <Box style={styles.buttonContainer}>
             <Button
               style={styles.buttonStyle}
-              onPress={() => navigation.dispatch(CommonActions.navigate({name: 'Home'}))}>
+              onPress={() => {
+                dispatcher(walletSetupAction(passcode));
+                navigation.dispatch(CommonActions.navigate({name: 'Home'}));
+              }}>
               <Image alt="Alternate Text" size="xl" />
             </Button>
           </Box>

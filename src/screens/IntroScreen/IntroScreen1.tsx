@@ -24,20 +24,21 @@ const IntroScreen1: React.FC<IIntroScreen1Props> = ({}) => {
       </Box>
       <Box style={{height: 0.6 * height, width}}>
         <Text
-          fontSize={['3xl', '5xl', '6xl']}
+          fontFamily={'RobotoSlab-ExtraBold'}
+          fontSize={['2xl', '3xl']}
           _dark={{color: '#70A7FF'}}
           _light={{color: '#3067BF'}}
           style={{margin: '5%', textAlign: 'center', marginTop: '15%'}}>
           Interact using Bitcoin
         </Text>
         <Center>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
             Connecting with friends and family by
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
             exchanging bitcoin and through instant
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
             messaging.
           </Text>
         </Center>

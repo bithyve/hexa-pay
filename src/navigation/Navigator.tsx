@@ -13,6 +13,8 @@ import Scanner from '~screens/Scanner/Scanner';
 import Slider from '~screens/IntroScreen/Slider';
 import PasscodeScr from '~screens/LoginScreen/PasscodeScr';
 import UserDetailScr from '~screens/LoginScreen/UserDetailScr';
+import {UserLoginScreen} from '~screens/LoginScreen/UserLoginScreen';
+import {useSelector} from 'react-redux';
 
 export type RootStackParamList = {
   Home: {prevS: string | null};
@@ -37,13 +39,18 @@ const defaultTheme = {
 const Navigator = () => {
   const Stack = createNativeStackNavigator();
 
+  const walletSetupCompleted = useSelector((state) => state.setupAndAuth.walletSetupCompleted);
+
   return (
     <NavigationContainer theme={defaultTheme}>
-      <Stack.Navigator screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
+      <Stack.Navigator
+        initialRouteName={walletSetupCompleted ? 'UserLoginScreen' : 'InroScreens'}
+        screenOptions={{headerShown: false, animation: 'slide_from_right'}}>
         <Stack.Screen name="IntroScreens" component={Slider} />
         <Stack.Screen name="PasscodeScr" component={PasscodeScr} />
         <Stack.Screen name="UserDetailScr" component={UserDetailScr} />
         <Stack.Screen name="UserDetailsScreen" component={UserDetailsScreen} />
+        <Stack.Screen name="UserLoginScreen" component={UserLoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="SettingStack" component={SettingsStack} />
         <Stack.Screen name="AddContact" component={AddContactScreen} />

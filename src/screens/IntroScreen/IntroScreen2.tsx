@@ -24,28 +24,30 @@ const IntroScreen1: React.FC<IIntroScreen1Props> = ({}) => {
       </Box>
       <Box style={{height: 0.6 * height, width}}>
         <Text
-          fontSize={['3xl', '5xl', '6xl']}
+          fontFamily={'RobotoSlab-ExtraBold'}
+          fontSize={['2xl', '3xl']}
           _dark={{color: '#70A7FF'}}
           _light={{color: '#3067BF'}}
           style={{textAlign: 'center', marginTop: '15%'}}>
-          Easy Backup with
+          Backup and Security
         </Text>
         <Text
-          fontSize={['3xl', '5xl', '6xl']}
+          fontFamily={'RobotoSlab-ExtraBold'}
+          fontSize={['2xl', '3xl']}
           _dark={{color: '#70A7FF'}}
           _light={{color: '#3067BF'}}
           style={{marginBottom: '5%', textAlign: 'center'}}>
-          Cloud Storage
+          made easy
         </Text>
         <Center>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            Only you have access to your seed phrases,
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            Keep your bitcoin wallet secure by
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            which can be stored up to your cloud{' '}
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            enabling maximum security and storing
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            provider.
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            your seed phrases safe
           </Text>
         </Center>
       </Box>
