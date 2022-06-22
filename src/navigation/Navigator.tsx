@@ -1,13 +1,12 @@
 import React, {useEffect} from 'react';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from '~screens/HomeScreen/HomeScreen';
 import BackupScreen from '~screens/Backup/BackupScreen';
 import AddContactScreen from '~screens/HomeScreen/AddContactScreen';
 import ViewTransactionsScreen from '~screens/HomeScreen/ViewTransactionsScreen';
 import SettingsStack from './SettingsStack';
 import QRScreen from '~screens/QRScreen/QRScreen';
-import PasscodeScreen from '~screens/LoginScreen/PasscodeScreen';
+import HomeScr from '~screens/HomeScreen1/HomeScr';
 import SuccessScreen from '~screens/LoginScreen/SuccessScreen';
 import UserDetailsScreen from '~screens/LoginScreen/UserDetailsScreen';
 import Scanner from '~screens/Scanner/Scanner';
@@ -54,7 +53,7 @@ const Navigator = () => {
         <Stack.Screen name="UserDetailsScreen" component={UserDetailsScreen} />
         <Stack.Screen name="SuccessScreen" component={SuccessScreen} />
         <Stack.Screen name="UserLoginScreen" component={UserLoginScreen} />
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Home" component={HomeScr} />
         <Stack.Screen name="SettingStack" component={SettingsStack} />
         <Stack.Screen name="AddContact" component={AddContactScreen} />
         <Stack.Screen name="ViewTransactions" component={ViewTransactionsScreen} />

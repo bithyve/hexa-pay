@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" width="332.802" height="175.015" viewBox="0 0 332.802 175.015">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.437" y1="0.073" x2="0.811" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4d64f6"/>
+      <stop offset="1" stop-color="#084e7b"/>
+    </linearGradient>
+    <filter id="Rectangle_7369" x="0" y="0" width="332.542" height="175.015" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Card" transform="translate(4 -6.171)">
+    <g transform="matrix(1, 0, 0, 1, -4, 6.17)" filter="url(#Rectangle_7369)">
+      <rect id="Rectangle_7369-2" data-name="Rectangle 7369" width="314.542" height="157.015" rx="10" transform="translate(9 5)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_510" data-name="Group 510" transform="translate(11 97.051)">
+      <path id="Path_391" data-name="Path 391" d="M18.478.021C29.534.521,39.216,9.9,40.1,20.968S32.747,40.6,21.691,40.1.952,30.225.065,19.156,7.422-.48,18.478.021Z" transform="matrix(-0.978, 0.208, -0.208, -0.978, 61.08, 65.031)" fill="#fff" opacity="0.33"/>
+      <ellipse id="Ellipse_4" data-name="Ellipse 4" cx="14.139" cy="18.817" rx="14.139" ry="18.817" transform="matrix(-0.978, 0.208, -0.208, -0.978, 35.388, 56.593)" fill="#fff" opacity="0.33"/>
+    </g>
+    <g id="Group_509" data-name="Group 509" transform="translate(214.153 6.806)">
+      <path id="Path_471" data-name="Path 471" d="M37.113-2.314c18.456-2.578,30.231,21.25,26.3,53.222s-22.079,59.981-40.535,62.56-30.231-21.25-26.3-53.222S18.658.264,37.113-2.314Z" transform="matrix(0.848, -0.53, 0.53, 0.848, 0, 39.096)" fill="#fff" opacity="0.36"/>
+      <ellipse id="Ellipse_3" data-name="Ellipse 3" cx="18.139" cy="23.817" rx="18.139" ry="23.817" transform="matrix(0.848, -0.53, 0.53, 0.848, 14.389, 100.996)" fill="#fff" opacity="0.36"/>
+    </g>
+  </g>
+</svg>

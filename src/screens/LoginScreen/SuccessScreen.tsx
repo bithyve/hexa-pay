@@ -1,41 +1,23 @@
 import {StyleSheet, Dimensions, TextInput, TouchableOpacity} from 'react-native';
 import React, {Fragment, useState} from 'react';
-import {
-  VStack,
-  Stack,
-  Text,
-  HStack,
-  Input,
-  FormControl,
-  View,
-  Box,
-  Image,
-  Button,
-} from 'native-base';
-import Backdrop from '~components/Backdrop';
+import {Text, Box, Button} from 'native-base';
 const {height, width} = Dimensions.get('window');
-import Colors from '~theme/Colors';
-import Switch from 'assets/images/switch.svg';
-import Next from 'assets/images/next.svg';
 import {useNavigation} from '@react-navigation/native';
 import {CommonActions} from '@react-navigation/native';
-import {RootStackParamList} from '../../navigation/Navigator';
-import {StackActions} from '@react-navigation/native';
-import Upload from '../../../assets/images/send.svg';
 import RightArrow from '../../../assets/images/icon_arrow_right.svg';
 
 export default function SuccessScreen() {
   const navigation = useNavigation();
   return (
     <Fragment>
-      <Box bg="white" p="12" rounded="lg" height={height}>
-        <Box bg="#1886CA" p="20" rounded="lg" marginTop={16}>
+      <Box flex={1} bg="white" p="12" rounded="lg" marginTop={(height > 685 ? 0.8 : 0.05) * height}>
+        <Box bg="#1886CA" p="20" rounded="lg">
           <Text color={'white'} textAlign={'center'}>
             Success Logo
           </Text>
         </Box>
 
-        <Box p="12" rounded="lg" marginTop={30}>
+        <Box p="12" rounded="lg">
           <Text color={'#1886CA'} fontSize={'3xl'} textAlign={'center'}>
             Success!
           </Text>
@@ -43,15 +25,14 @@ export default function SuccessScreen() {
             Your wallet has been created.
           </Text>
         </Box>
-
-        <Box paddingTop={150}>
-          <Box style={styles.buttonContainer}>
-            <Button
-              style={styles.buttonStyle}
-              onPress={() => navigation.dispatch(CommonActions.navigate({name: 'Home'}))}>
-              <RightArrow width={25} height={25} style={{marginLeft: 5}} fill={'#fff'} />
-            </Button>
-          </Box>
+      </Box>
+      <Box style={styles.boxContainer}>
+        <Box style={styles.buttonContainer}>
+          <Button
+            style={styles.buttonStyle}
+            onPress={() => navigation.dispatch(CommonActions.navigate({name: 'Home'}))}>
+            <RightArrow width={25} height={25} style={{marginLeft: 5}} fill={'#fff'} />
+          </Button>
         </Box>
       </Box>
     </Fragment>
@@ -78,5 +59,15 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderColor: '#FFBC05',
+  },
+  boxContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    padding: '10%',
+    height: height * 0.1,
+    width,
+    backgroundColor: 'white',
   },
 });

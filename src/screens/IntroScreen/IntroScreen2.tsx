@@ -2,7 +2,7 @@ import {Box, Center, Text} from 'native-base';
 import React from 'react';
 import {Dimensions, StyleSheet} from 'react-native';
 import SaveOnCloud from '../../../assets/images/screen2.svg';
-import BGTop from '../../../assets/images/bgTop.svg';
+import BGTop from '../../../assets/images/HomeScrn/bgTop.svg';
 
 export type IIntroScreen1Props = {};
 
@@ -19,7 +19,7 @@ const IntroScreen1: React.FC<IIntroScreen1Props> = ({}) => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <BGTop style={{position: 'absolute', left: 0}} width={width} />
+        <BGTop style={{position: 'absolute', left: 0}} width={width} height={0.55 * height} />
         <SaveOnCloud />
       </Box>
       <Box style={{height: 0.6 * height, width}}>
@@ -28,7 +28,7 @@ const IntroScreen1: React.FC<IIntroScreen1Props> = ({}) => {
           fontSize={['2xl', '3xl']}
           _dark={{color: '#70A7FF'}}
           _light={{color: '#3067BF'}}
-          style={{textAlign: 'center', marginTop: '15%'}}>
+          style={{textAlign: 'center', marginTop: 0.15 * height}}>
           Backup and Security
         </Text>
         <Text
