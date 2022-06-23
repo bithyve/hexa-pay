@@ -10,6 +10,27 @@ const {width, height} = Dimensions.get('window');
 
 type RecentContactsProps = {};
 
+const DATA = [
+  {
+    id: '1',
+    name: 'First',
+    uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    fallBack: 'FI',
+  },
+  {
+    id: '2',
+    name: 'Second',
+    uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    fallBack: 'SE',
+  },
+  {
+    id: '3',
+    name: 'Third',
+    uri: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    fallBack: 'TH',
+  },
+];
+
 const MoreContacts = () => {
   return (
     <Box style={styles.moreButton}>
@@ -38,24 +59,15 @@ const RecentContacts: React.FC<RecentContactsProps> = () => {
             BitBot
           </Text>
         </Box>
-        <Box style={styles.contBox}>
-          <ContactAvatar uri={''} alt={'VM'} />
-          <Text fontSize={['xs', 'md']} marginTop={'10%'} textAlign={'center'}>
-            Vatsal
-          </Text>
-        </Box>
-        <Box style={styles.contBox}>
-          <ContactAvatar uri={''} alt={'VM'} />
-          <Text fontSize={['xs', 'md']} marginTop={'10%'} textAlign={'center'}>
-            Vatsal
-          </Text>
-        </Box>
-        <Box style={styles.contBox}>
-          <ContactAvatar uri={''} alt={'VM'} />
-          <Text fontSize={['xs', 'md']} marginTop={'10%'} textAlign={'center'}>
-            Vatsal
-          </Text>
-        </Box>
+
+        {DATA.map((data) => (
+          <Box key={data.id} style={styles.contBox}>
+            <ContactAvatar uri={data.uri} alt={data.fallBack} />
+            <Text fontSize={['xs', 'md']} marginTop={'10%'} textAlign={'center'}>
+              {data.name}
+            </Text>
+          </Box>
+        ))}
         <MoreContacts />
       </Box>
     </Box>
@@ -71,7 +83,7 @@ const styles = StyleSheet.create({
     width: 0.9 * width,
     height: 0.12 * height,
     marginHorizontal: 0.05 * width,
-    marginTop: 0.0575 * height,
+    marginTop: (height > 685 ? 0.06 : 0.05) * height,
   },
   contactWrapper: {
     display: 'flex',

@@ -10,7 +10,12 @@ export default function SuccessScreen() {
   const navigation = useNavigation();
   return (
     <Fragment>
-      <Box flex={1} bg="white" p="12" rounded="lg" marginTop={(height > 685 ? 0.8 : 0.05) * height}>
+      <Box
+        flex={1}
+        bg="white"
+        p="12"
+        rounded="lg"
+        marginTop={(height > 685 ? 0.08 : 0.05) * height}>
         <Box bg="#1886CA" p="20" rounded="lg">
           <Text color={'white'} textAlign={'center'}>
             Success Logo

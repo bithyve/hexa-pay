@@ -30,9 +30,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingHorizontal: '7%',
     width: width,
-    height: 0.12 * height,
+    height: (height > 685 ? 0.12 : 0.1) * height,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingTop: (height > 685 ? 0 : 0.05) * height,
   },
   nameContainer: {
     flex: 1,

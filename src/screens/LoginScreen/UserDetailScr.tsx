@@ -19,7 +19,9 @@ export default function Screen2({navigation, route}: {navigation: any; route: an
 
   const fillPasscodeAndNavigate = () => {
     setPasscode(passcodeCharOne + passcodeCharTwo + passcodeCharThree + passcodeCharFour);
-    dispatcher(walletSetupAction(passcode));
+    dispatcher(
+      walletSetupAction(passcodeCharOne + passcodeCharTwo + passcodeCharThree + passcodeCharFour)
+    );
     navigation.dispatch(CommonActions.navigate({name: 'SuccessScreen'}));
   };
 

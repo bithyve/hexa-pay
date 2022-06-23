@@ -44,7 +44,7 @@ export default QuickActions;
 
 const styles = StyleSheet.create({
   wrapper: {
-    marginTop: height > 685 ? '15%' : '10%',
+    marginTop: height > 685 ? '15%' : '8%',
     height: 0.35 * height,
     width: 0.9 * width,
     marginHorizontal: 0.05 * width,
