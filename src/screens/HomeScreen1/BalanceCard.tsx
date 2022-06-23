@@ -4,6 +4,7 @@ import {Dimensions, StyleSheet} from 'react-native';
 import EnableEye from '../../../assets/images/HomeScrn/VisibleEye.svg';
 import DisableEye from '../../../assets/images/HomeScrn/InvisibleEye.svg';
 import BalanceBg from '../../../assets/images/HomeScrn/BalanceCardBg.svg';
+import formatMoney from 'accounting';
 
 type BalanceCardProps = {
   backedUp: boolean;
@@ -15,9 +16,7 @@ const {width, height} = Dimensions.get('window');
 const BalanceCard: React.FC<BalanceCardProps> = ({backedUp, balance}) => {
   const [visible, setVisible] = useState<boolean>(true);
 
-  const [amt] = useState<string>(
-    balance.toLocaleString('en-US', {style: 'currency', currency: 'USD'})
-  );
+  const [amt] = useState<string>(formatMoney.formatMoney(balance, {symbol: '$', format: '%s %v'}));
 
   return (
     <Box style={styles.wrapper}>
