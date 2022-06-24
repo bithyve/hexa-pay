@@ -1,24 +1,31 @@
 import {Box, Text} from 'native-base';
 import React from 'react';
-import {Dimensions, StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet, TouchableOpacity} from 'react-native';
 import AddContact from '../../../assets/images/contacts.svg';
+import CreateGrp from '../../../assets/images/group.svg';
+import Gift from '../../../assets/images/gift.svg';
+import Broadcast from '../../../assets/images/broadcast.svg';
+import Bitcoin from '../../../assets/images/bitcoin.svg';
+import PayMerchant from '../../../assets/images/payments.svg';
+import {SvgProps} from 'react-native-svg';
 
 type QuickActionsProps = {};
 
 type TileProps = {
   content: string;
+  Svg: React.FC<SvgProps>;
 };
 
 const {width, height} = Dimensions.get('window');
 
-const ActionTile: React.FC<TileProps> = ({content}) => {
+const ActionTile: React.FC<TileProps> = ({content, Svg}) => {
   return (
-    <Box style={styles.tile}>
-      <AddContact height={0.04 * height} width={0.04 * height} />
+    <TouchableOpacity style={styles.tile}>
+      <Svg height={0.04 * height} width={0.04 * height} />
       <Text fontSize={height > 736 ? (width > 500 ? 'md' : 'sm') : 10} marginY={2}>
         {content}
       </Text>
-    </Box>
+    </TouchableOpacity>
   );
 };
 
@@ -29,12 +36,12 @@ const QuickActions: React.FC<QuickActionsProps> = () => {
         Quick actions
       </Text>
       <Box style={styles.tileWrapper}>
-        <ActionTile content="Add new contact" />
-        <ActionTile content="Create Group" />
-        <ActionTile content="Gifts and Tips" />
-        <ActionTile content="Broadcast Message" />
-        <ActionTile content="Buy Bitcoin" />
-        <ActionTile content="Pay Merchants" />
+        <ActionTile content="Add new contact" Svg={AddContact} />
+        <ActionTile content="Create Group" Svg={CreateGrp} />
+        <ActionTile content="Gifts and Tips" Svg={Gift} />
+        <ActionTile content="Broadcast Message" Svg={Broadcast} />
+        <ActionTile content="Buy Bitcoin" Svg={Bitcoin} />
+        <ActionTile content="Pay Merchants" Svg={PayMerchant} />
       </Box>
     </Box>
   );

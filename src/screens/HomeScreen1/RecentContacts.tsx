@@ -45,11 +45,14 @@ const MoreContacts = () => {
 };
 
 const RecentContacts: React.FC<RecentContactsProps> = () => {
-  const [visible, setVisible] = useState<boolean>(true);
-
   return (
     <Box style={styles.wrapper}>
-      <Text fontSize={0.0175 * height} color={'white'} fontFamily={'RobotoSlab-Bold'}>
+      <Text
+        fontSize={0.0175 * height}
+        color={'white'}
+        fontFamily={'RobotoSlab-Bold'}
+        marginTop={'-1.5%'}
+        marginBottom={'1.5%'}>
         Recent contacts
       </Text>
       <Box style={styles.contactWrapper}>
@@ -83,7 +86,7 @@ const styles = StyleSheet.create({
     width: 0.9 * width,
     height: 0.12 * height,
     marginHorizontal: 0.05 * width,
-    marginTop: (height > 685 ? 0.06 : 0.05) * height,
+    marginTop: (height > 685 ? 0.06 : 0.06) * height,
   },
   contactWrapper: {
     display: 'flex',

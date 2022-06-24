@@ -2,14 +2,14 @@ import {StackActions} from '@react-navigation/native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Box, Center, Text} from 'native-base';
 import React, {useCallback, useEffect, useState} from 'react';
-import {Dimensions, StyleSheet, TouchableOpacity} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {RootStackParamList} from '~navigation/Navigator';
 import {getUserVerified, loginRefresh} from '~store/actions/UserActions/UserActions';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {RFValue} from 'react-native-responsive-fontsize';
-import BackSpace from '../../../assets/images/HomeScrn/backspace.svg';
 import Line from '../../../assets/images/HomeScrn/line.svg';
+import KeyPad from '~components/KeyPad';
 
 export type IUserLoginScreenProps = {};
 
@@ -57,7 +57,6 @@ const UserLoginScreen: React.FC<NativeStackScreenProps<RootStackParamList, 'User
 
   useEffect(() => {
     if (passcode.length === 4) {
-      console.log(passcode);
       dispatcher(getUserVerified(passcode));
     }
   }, [passcode]);
@@ -103,8 +102,10 @@ const UserLoginScreen: React.FC<NativeStackScreenProps<RootStackParamList, 'User
           fontSize={['2xl', '3xl']}
           fontFamily={'RobotoSlab-Bold'}
           color={'white'}>{`Welcome Back ${name},`}</Text>
-        <Text color={'white'} marginY={height > 685 ? 8 : 0.01 * height}>
-          {incorrectPass === true ? 'Incorrect Passcode' : 'Enter your 4-digit pin'}
+        <Text
+          color={incorrectPass === true ? 'red.500' : 'white'}
+          marginY={height > 685 ? 8 : 0.01 * height}>
+          {incorrectPass === true ? 'Incorrect Passcode. Try again' : 'Enter your 4-digit pin'}
         </Text>
         <Box
           style={{
@@ -178,97 +179,7 @@ const UserLoginScreen: React.FC<NativeStackScreenProps<RootStackParamList, 'User
           </Box>
         </Box>
       </Box>
-
-      <Box style={styles.keyPadWrapper}>
-        <Box style={styles.keyPadRow}>
-          <TouchableOpacity
-            onPress={() => onPressNumber('1')}
-            style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}>
-              1
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => onPressNumber('2')}
-            style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}>
-              2
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => onPressNumber('3')}
-            style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}>
-              3
-            </Text>
-          </TouchableOpacity>
-        </Box>
-        <Box style={styles.keyPadRow}>
-          <TouchableOpacity
-            onPress={() => onPressNumber('4')}
-            style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}>
-              4
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => onPressNumber('5')}
-            style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}>
-              5
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => onPressNumber('6')}
-            style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}>
-              6
-            </Text>
-          </TouchableOpacity>
-        </Box>
-        <Box style={styles.keyPadRow}>
-          <TouchableOpacity
-            onPress={() => onPressNumber('7')}
-            style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}>
-              7
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => onPressNumber('8')}
-            style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}>
-              8
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => onPressNumber('9')}
-            style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}>
-              9
-            </Text>
-          </TouchableOpacity>
-        </Box>
-        <Box style={styles.keyPadRow}>
-          <TouchableOpacity onPress={() => onPressNumber('')} style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}></Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => onPressNumber('0')}
-            style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}>
-              0
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => onPressNumber('x')}
-            style={styles.keyPadElementTouchable}>
-            <Text fontSize={RFValue(25)} style={styles.keyPadElementText}>
-              <BackSpace height={0.09 * width} width={0.09 * width} fill={'#fff'} />
-            </Text>
-          </TouchableOpacity>
-        </Box>
-      </Box>
+      <KeyPad onPressNumber={onPressNumber} />
     </Center>
   );
 };
