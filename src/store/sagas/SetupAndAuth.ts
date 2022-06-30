@@ -29,6 +29,7 @@ function* passCodeEncryptionWorker(action: WalletSetupRunning) {
     yield call(AsyncStorage.setItem, 'hasCreds', 'true');
     yield put(walletSetupCompletedAction());
   } catch (e) {
+    console.log(e);
     yield put(walletSetupFailed());
   }
 }

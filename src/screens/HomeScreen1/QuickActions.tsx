@@ -9,8 +9,6 @@ import Bitcoin from '../../../assets/images/bitcoin.svg';
 import PayMerchant from '../../../assets/images/payments.svg';
 import {SvgProps} from 'react-native-svg';
 
-type QuickActionsProps = {};
-
 type TileProps = {
   content: string;
   Svg: React.FC<SvgProps>;
@@ -29,7 +27,7 @@ const ActionTile: React.FC<TileProps> = ({content, Svg}) => {
   );
 };
 
-const QuickActions: React.FC<QuickActionsProps> = () => {
+const QuickActions: React.FC<{}> = ({}) => {
   return (
     <Box style={styles.wrapper}>
       <Text fontSize={['md', 'xl']} height={'10.5%'} fontFamily={'Roboto-Bold'}>

@@ -10,6 +10,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {RFValue} from 'react-native-responsive-fontsize';
 import Line from '../../../assets/images/HomeScrn/line.svg';
 import KeyPad from '~components/KeyPad';
+import {RootState} from '~Providers';
 
 export type IUserLoginScreenProps = {};
 
@@ -30,9 +31,9 @@ const UserLoginScreen: React.FC<NativeStackScreenProps<RootStackParamList, 'User
 
   const [passcode4, setPasscode4] = useState<string>('');
 
-  const incorrectPass = useSelector((state) => state.setupAndAuth.incorrectPasscode);
+  const incorrectPass = useSelector((state: RootState) => state.setupAndAuth.incorrectPasscode);
 
-  const loginSuccessfull = useSelector((state) => state.setupAndAuth.loginSuccessfull);
+  const loginSuccessfull = useSelector((state: RootState) => state.setupAndAuth.loginSuccessfull);
 
   useEffect(() => {
     dispatcher(loginRefresh());

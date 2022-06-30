@@ -103,5 +103,6 @@ const styles = StyleSheet.create({
     height: 0.45 * height,
     width: 0.9 * width,
     marginTop: 'auto',
+    marginBottom: height > 685 ? 0.05 * height : 20,
   },
 });

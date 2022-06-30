@@ -42,6 +42,20 @@ export interface LoginRefreshAction {
   type: typeof LOGIN_REFRESH;
 }
 
+export interface RequestOTPAction {
+  type: string;
+  payload: {
+    num: string;
+  };
+}
+
+export interface VerifyOTPAction {
+  type: string;
+  payload: {
+    otp: string;
+  };
+}
+
 export type ActionTypes =
   | WalletSetupCompleted
   | WalletSetupFailed

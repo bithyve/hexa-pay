@@ -10,11 +10,15 @@ import HomeScr from '~screens/HomeScreen1/HomeScr';
 import SuccessScreen from '~screens/LoginScreen/SuccessScreen';
 import UserDetailsScreen from '~screens/LoginScreen/UserDetailsScreen';
 import Scanner from '~screens/Scanner/Scanner';
+import OTPScreen from '~screens/FnFScreens/OTPScreen';
+import FnFHome from '~screens/FnFScreens/FnFHome';
 import Slider from '~screens/IntroScreen/Slider';
 import PasscodeScr from '~screens/LoginScreen/PasscodeScr';
 import UserDetailScr from '~screens/LoginScreen/UserDetailScr';
 import {UserLoginScreen} from '~screens/LoginScreen/UserLoginScreen';
+import NumberScreen from '~screens/FnFScreens/NumberScreen';
 import {useSelector} from 'react-redux';
+import {RootState} from '~Providers';
 
 export type RootStackParamList = {
   Home: {prevS: string | null};
@@ -22,6 +26,9 @@ export type RootStackParamList = {
   PasscodeScreen: undefined;
   UserDetailsScreen: undefined;
   UserLoginScreen: undefined;
+  PhoneScreen: undefined;
+  OTP: {num: string};
+  FnFHome: undefined;
   SettingStack: undefined;
   AddContact: undefined;
   ViewTransactions: undefined;
@@ -40,7 +47,9 @@ const defaultTheme = {
 const Navigator = () => {
   const Stack = createNativeStackNavigator();
 
-  const walletSetupCompleted = useSelector((state) => state.setupAndAuth.walletSetupCompleted);
+  const walletSetupCompleted = useSelector(
+    (state: RootState) => state.setupAndAuth.walletSetupCompleted
+  );
 
   return (
     <NavigationContainer theme={defaultTheme}>
@@ -54,6 +63,9 @@ const Navigator = () => {
         <Stack.Screen name="SuccessScreen" component={SuccessScreen} />
         <Stack.Screen name="UserLoginScreen" component={UserLoginScreen} />
         <Stack.Screen name="Home" component={HomeScr} />
+        <Stack.Screen name="PhoneScreen" component={NumberScreen} />
+        <Stack.Screen name="FnFHome" component={FnFHome} />
+        <Stack.Screen name="OTP" component={OTPScreen} />
         <Stack.Screen name="SettingStack" component={SettingsStack} />
         <Stack.Screen name="AddContact" component={AddContactScreen} />
         <Stack.Screen name="ViewTransactions" component={ViewTransactionsScreen} />

@@ -52,7 +52,7 @@ const BalanceCard: React.FC<BalanceCardProps> = ({backedUp, balance}) => {
               }
             }}>
             <Box marginRight={2} justifyContent={'center'} alignItems={'center'}>
-              {backedUp ? 'A' : <WarningIcon />}
+              {backedUp ? 'A' : <WarningIcon height={0.035 * width} width={0.035 * width} />}
             </Box>
             <Text color={'white'} fontSize={height > 736 ? 'sm' : 'xs'}>
               Wallet is not backed up

@@ -8,9 +8,11 @@ import MockContext from '~contexts/MockContext';
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import {useColorScheme} from 'react-native';
 
-export default function Providers({children}: {children: JSX.Element}) {
-  const store = configureStore();
+const store = configureStore();
 
+export type RootState = ReturnType<typeof store.getState>;
+
+export default function Providers({children}: {children: JSX.Element}) {
   const isDark = useColorScheme() === 'dark';
 
   return (

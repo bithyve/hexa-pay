@@ -1,14 +1,13 @@
-import {useState} from 'react';
 import {Box, Text} from 'native-base';
 import React from 'react';
-import {Dimensions, StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet, TouchableOpacity} from 'react-native';
 import RightArrow from '../../../assets/images/icon_arrow_right.svg';
 import ContactAvatar from './ContactAvatar';
 import BitBot from './BitBot';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '~navigation/Navigator';
 
 const {width, height} = Dimensions.get('window');
-
-type RecentContactsProps = {};
 
 const DATA = [
   {
@@ -31,20 +30,22 @@ const DATA = [
   },
 ];
 
-const MoreContacts = () => {
+const MoreContacts = ({onPress}: {onPress: () => void}) => {
   return (
-    <Box style={styles.moreButton}>
+    <TouchableOpacity style={styles.moreButton} onPress={onPress}>
       <Box style={styles.whiteCircle}>
         <RightArrow height={'40%'} width={'40%'} fill="#fff" />
       </Box>
       <Text fontSize={['xs', 'md']} marginTop={'15%'} textAlign={'center'} color={'#1185CE'}>
         More
       </Text>
-    </Box>
+    </TouchableOpacity>
   );
 };
 
-const RecentContacts: React.FC<RecentContactsProps> = () => {
+const RecentContacts: React.FC<NativeStackScreenProps<RootStackParamList, 'Home'>> = ({
+  navigation,
+}) => {
   return (
     <Box style={styles.wrapper}>
       <Text
@@ -71,7 +72,11 @@ const RecentContacts: React.FC<RecentContactsProps> = () => {
             </Text>
           </Box>
         ))}
-        <MoreContacts />
+        <MoreContacts
+          onPress={() => {
+            navigation.navigate('FnFHome');
+          }}
+        />
       </Box>
     </Box>
   );
