@@ -14,6 +14,7 @@ import {
   fnfUsedAction,
   notAllowCnctsAction,
 } from '~store/actions/UserActions/UserActions';
+import {RFValue} from 'react-native-responsive-fontsize';
 
 const {width, height} = Dimensions.get('window');
 
@@ -60,7 +61,7 @@ const RecentContacts: React.FC<NativeStackScreenProps<RootStackParamList, 'Home'
 
   const dispatcher = useDispatch();
 
-  const [cntctModal, setcntctModal] = useState(true);
+  const [cntctModal, setcntctModal] = useState(false);
 
   const goToFnf = () => {
     if (newToFnf) {
@@ -146,12 +147,18 @@ const RecentContacts: React.FC<NativeStackScreenProps<RootStackParamList, 'Home'
 
       <Modal isOpen={cntctModal} style={styles.modal} onClose={() => setcntctModal(false)}>
         <Modal.Header borderBottomWidth={0} marginBottom={-2}>
-          <Text textAlign={'center'} fontFamily={'RobotoSlab-Regular'} fontSize={['lg']}>
+          <Text
+            textAlign={'center'}
+            fontFamily={'RobotoSlab-Regular'}
+            fontSize={width > 420 ? RFValue(16) : RFValue(20)}>
             Hexapay would like to access your contacts
           </Text>
         </Modal.Header>
         <Modal.Body>
-          <Text textAlign={'center'} fontFamily={'RobotoSlab-Light'}>
+          <Text
+            textAlign={'center'}
+            fontFamily={'RobotoSlab-Light'}
+            fontSize={width > 420 ? RFValue(11) : RFValue(15)}>
             Access is needed to save your Hexapay friends information to your contacts list
           </Text>
         </Modal.Body>
@@ -231,12 +238,12 @@ const styles = StyleSheet.create({
     marginHorizontal: 0.1 * width,
     backgroundColor: 'white',
     width: 0.8 * width,
-    height: Math.min(0.32 * height, 220),
+    height: (width > 420 ? 0.24 : 0.32) * height,
     top: '50%',
     paddingHorizontal: 10,
     paddingVertical: 5,
     borderRadius: 25,
-    transform: [{translateY: -0.16 * height}],
+    transform: [{translateY: (width > 420 ? -0.12 : -0.16) * height}],
   },
   buttonBox: {
     display: 'flex',
