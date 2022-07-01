@@ -25,6 +25,7 @@ import Back from '../../../assets/images/back.svg';
 import Scan from '../../../assets/images/scan.svg';
 import User from '../../../assets/images/user.svg';
 import {Searcher} from 'fast-fuzzy';
+import {RFValue} from 'react-native-responsive-fontsize';
 //import dbManager from '~storage/realm/dbManager';
 
 const {width, height} = Dimensions.get('window');
@@ -205,19 +206,19 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
             Alert.alert('Coming Soon!!');
           }}>
           <Send height={0.05 * height} width={0.05 * height} />
-          <Text marginY={2} fontSize={height > 736 ? 'sm' : 'xs'}>
+          <Text marginY={2} color={'#505050'} fontSize={width > 420 ? RFValue(8) : RFValue(10)}>
             Add new Contacts
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.tile}>
           <Receive height={0.05 * height} width={0.05 * height} />
-          <Text marginY={2} fontSize={height > 736 ? 'sm' : 'xs'}>
+          <Text marginY={2} color={'#505050'} fontSize={width > 420 ? RFValue(8) : RFValue(10)}>
             Find Nearby
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.tile}>
           <Transaction height={0.05 * height} width={0.05 * height} />
-          <Text marginY={2} fontSize={height > 736 ? 'sm' : 'xs'}>
+          <Text marginY={2} color={'#505050'} fontSize={width > 420 ? RFValue(8) : RFValue(10)}>
             Share QR
           </Text>
         </TouchableOpacity>

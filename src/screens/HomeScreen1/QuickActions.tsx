@@ -8,6 +8,7 @@ import Broadcast from '../../../assets/images/broadcast.svg';
 import Bitcoin from '../../../assets/images/bitcoin.svg';
 import PayMerchant from '../../../assets/images/payments.svg';
 import {SvgProps} from 'react-native-svg';
+import {RFValue} from 'react-native-responsive-fontsize';
 
 type TileProps = {
   content: string;
@@ -20,7 +21,7 @@ const ActionTile: React.FC<TileProps> = ({content, Svg}) => {
   return (
     <TouchableOpacity style={styles.tile}>
       <Svg height={0.04 * height} width={0.04 * height} />
-      <Text fontSize={height > 736 ? (width > 500 ? 'md' : 'sm') : 10} marginY={2}>
+      <Text fontSize={width > 420 ? RFValue(8) : RFValue(10)} marginY={2}>
         {content}
       </Text>
     </TouchableOpacity>

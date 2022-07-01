@@ -60,7 +60,7 @@ const RecentContacts: React.FC<NativeStackScreenProps<RootStackParamList, 'Home'
 
   const dispatcher = useDispatch();
 
-  const [cntctModal, setcntctModal] = useState(false);
+  const [cntctModal, setcntctModal] = useState(true);
 
   const goToFnf = () => {
     if (newToFnf) {
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
     width: 0.9 * width,
     height: 0.12 * height,
     marginHorizontal: 0.05 * width,
-    marginTop: (height > 685 ? 0.06 : 0.06) * height,
+    marginTop: (height > 685 ? 0.04 : 0.06) * height,
   },
   contactWrapper: {
     display: 'flex',
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 0.1 * width,
     backgroundColor: 'white',
     width: 0.8 * width,
-    height: 0.32 * height,
+    height: Math.min(0.32 * height, 220),
     top: '50%',
     paddingHorizontal: 10,
     paddingVertical: 5,

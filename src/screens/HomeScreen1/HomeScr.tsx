@@ -17,7 +17,7 @@ const HomeScr: React.FC<NativeStackScreenProps<RootStackParamList, 'Home'>> = ({
 }) => {
   return (
     <Box>
-      <Backdrop height={height * (height > 685 ? 0.5 : 0.48)} />
+      <Backdrop height={height * (height > 685 ? 0.48 : 0.48)} />
       <TopUserProfile />
       <BalanceCard backedUp={false} balance={4005.0} />
       <RecentContacts navigation={navigation} route={route} />
