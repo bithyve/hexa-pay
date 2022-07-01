@@ -23,7 +23,6 @@ const OTPReducer: (
       };
     }
     case OTP_VERIFIED: {
-      console.log('VERIFIED');
       return {
         ...state,
         lastTime: null,

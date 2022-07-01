@@ -8,3 +8,6 @@ export const LOGIN_REFRESH = 'LOGIN_REFRESH';
 export const REQUEST_OTP = 'REQUEST_OTP';
 export const VERIFY_OTP = 'VERIFY_OTP';
 export const OTP_VERIFIED = 'OTP_VERIFIED';
+export const FNF_USED = 'FNF_USED';
+export const CONTCTS_READ = 'CONTCTS_READ';
+export const CONTCTS_DEND = 'CONTCTS_DEND';

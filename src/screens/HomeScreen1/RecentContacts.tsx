@@ -1,11 +1,19 @@
-import {Box, Text} from 'native-base';
-import React from 'react';
-import {Dimensions, StyleSheet, TouchableOpacity} from 'react-native';
+import {Box, Button, Modal, Text} from 'native-base';
+import React, {useState} from 'react';
+import Contacts from 'react-native-contacts';
+import {Dimensions, PermissionsAndroid, Platform, StyleSheet, TouchableOpacity} from 'react-native';
 import RightArrow from '../../../assets/images/icon_arrow_right.svg';
 import ContactAvatar from './ContactAvatar';
 import BitBot from './BitBot';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '~navigation/Navigator';
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from '~Providers';
+import {
+  allowCnctsAction,
+  fnfUsedAction,
+  notAllowCnctsAction,
+} from '~store/actions/UserActions/UserActions';
 
 const {width, height} = Dimensions.get('window');
 
@@ -46,6 +54,63 @@ const MoreContacts = ({onPress}: {onPress: () => void}) => {
 const RecentContacts: React.FC<NativeStackScreenProps<RootStackParamList, 'Home'>> = ({
   navigation,
 }) => {
+  const newToFnf = useSelector((state: RootState) => state.setupAndAuth.newToFnF);
+
+  const numVerified = useSelector((state: RootState) => state.otp.verified);
+
+  const dispatcher = useDispatch();
+
+  const [cntctModal, setcntctModal] = useState(false);
+
+  const goToFnf = () => {
+    if (newToFnf) {
+      setcntctModal(true);
+    } else {
+      if (numVerified) navigation.navigate('FnFHome');
+      else navigation.navigate('PhoneScreen');
+    }
+  };
+
+  const askAccess = () => {
+    if (Platform.OS === 'ios') {
+      Contacts.checkPermission().then((permission) => {
+        if (permission === 'undefined') {
+          Contacts.requestPermission().then((permission) => {
+            console.log(permission);
+          });
+        }
+        if (permission === 'authorized') {
+          console.log('Allowed');
+          dispatcher(allowCnctsAction());
+        }
+        if (permission === 'denied') {
+          console.log('Denied');
+          dispatcher(notAllowCnctsAction());
+        }
+      });
+    } else {
+      PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS, {
+        title: 'HexaPay',
+        message: 'HexaPay would like to read your contacts',
+        buttonPositive: 'Please accept bare mortal',
+      }).then((res) => {
+        if (res === 'granted') {
+          dispatcher(allowCnctsAction());
+        } else {
+          dispatcher(notAllowCnctsAction());
+        }
+        console.log(res);
+      });
+
+      if (newToFnf) {
+        dispatcher(fnfUsedAction());
+      }
+    }
+
+    setcntctModal(false);
+    navigation.navigate('PhoneScreen');
+  };
+
   return (
     <Box style={styles.wrapper}>
       <Text
@@ -74,10 +139,48 @@ const RecentContacts: React.FC<NativeStackScreenProps<RootStackParamList, 'Home'
         ))}
         <MoreContacts
           onPress={() => {
-            navigation.navigate('FnFHome');
+            goToFnf();
           }}
         />
       </Box>
+
+      <Modal isOpen={cntctModal} style={styles.modal} onClose={() => setcntctModal(false)}>
+        <Modal.Header borderBottomWidth={0} marginBottom={-2}>
+          <Text textAlign={'center'} fontFamily={'RobotoSlab-Regular'} fontSize={['lg']}>
+            Hexapay would like to access your contacts
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <Text textAlign={'center'} fontFamily={'RobotoSlab-Light'}>
+            Access is needed to save your Hexapay friends information to your contacts list
+          </Text>
+        </Modal.Body>
+        <Modal.Footer bg={'white'} borderRadius={25}>
+          <Box style={styles.buttonBox}>
+            <Button variant={'unstyled'}>
+              <Text
+                color={'#525252'}
+                fontFamily={'RobotoSlab-Regular'}
+                onPress={() => {
+                  if (numVerified) navigation.navigate('FnFHome');
+                  else navigation.navigate('PhoneScreen');
+
+                  setcntctModal(false);
+                  dispatcher(fnfUsedAction());
+                  dispatcher(notAllowCnctsAction());
+                }}>
+                Don't Allow
+              </Text>
+            </Button>
+            <Button
+              style={styles.buttonAllow}
+              fontFamily={'RobotoSlab-Regular'}
+              onPress={askAccess}>
+              Ok
+            </Button>
+          </Box>
+        </Modal.Footer>
+      </Modal>
     </Box>
   );
 };
@@ -123,5 +226,28 @@ const styles = StyleSheet.create({
     height: 0.15 * width,
     width: 0.15 * width,
     //padding: 0.0075 * width,
+  },
+  modal: {
+    marginHorizontal: 0.1 * width,
+    backgroundColor: 'white',
+    width: 0.8 * width,
+    height: 0.32 * height,
+    top: '50%',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 25,
+    transform: [{translateY: -0.16 * height}],
+  },
+  buttonBox: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    width: '100%',
+  },
+  buttonAllow: {
+    borderRadius: 25,
+    backgroundColor: '#FABC05',
+    width: 0.2 * width,
   },
 });

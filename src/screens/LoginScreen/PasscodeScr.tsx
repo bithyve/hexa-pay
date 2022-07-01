@@ -43,7 +43,7 @@ export default function PasscodeScreen() {
           Contact Information will be made public
         </Box>
 
-        <Box paddingTop={10}>
+        <Box paddingTop={'5%'}>
           <Text fontSize={'sm'} fontWeight={'medium'} color={'white'} letterSpacing={'lg'}>
             Profile Picture <Text color={'#B1BFCA'}>(Optional)</Text>
           </Text>
@@ -52,10 +52,10 @@ export default function PasscodeScreen() {
             <Text style={styles.buttonText}>Upload</Text>
           </TouchableOpacity>
           <Input
-            paddingTop={20}
+            paddingTop={'5%'}
             variant="underlined"
             placeholder="Your preffered name"
-            maxW={300}
+            maxW={width * 0.6}
             onChangeText={(value) => setName(value)}
             value={name}
             style={styles.input}
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     borderColor: '#FFBC05',
     borderWidth: 3,
     marginLeft: 'auto',
-    top: -0.05 * height,
+    top: -0.01 * height,
     padding: 2,
     borderRadius: 50,
     width: 60,
@@ -112,6 +112,7 @@ const styles = StyleSheet.create({
     height: height * 0.1,
     width,
     backgroundColor: '#1886CA',
+    zIndex: -1,
   },
   input: {
     color: 'white',

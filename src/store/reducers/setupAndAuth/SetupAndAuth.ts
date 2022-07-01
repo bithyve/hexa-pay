@@ -1,5 +1,8 @@
 import {
   COMPLETED_WALLET_SETUP,
+  CONTCTS_DEND,
+  CONTCTS_READ,
+  FNF_USED,
   INCORRECT_PASSCODE,
   LOGIN_REFRESH,
   SUCCESSFULL_LOGIN,
@@ -12,11 +15,15 @@ const initialState: {
   walletSetupFailed: boolean;
   incorrectPasscode: null | boolean;
   loginSuccessfull: boolean;
+  readCncts: boolean;
+  newToFnF: boolean;
 } = {
   walletSetupCompleted: false,
   walletSetupFailed: false,
   incorrectPasscode: null,
   loginSuccessfull: false,
+  readCncts: false,
+  newToFnF: true,
 };
 
 export const SetupAndAuth: (
@@ -55,6 +62,24 @@ export const SetupAndAuth: (
         ...state,
         incorrectPasscode: null,
         loginSuccessfull: false,
+      };
+    }
+    case FNF_USED: {
+      return {
+        ...state,
+        newToFnF: false,
+      };
+    }
+    case CONTCTS_READ: {
+      return {
+        ...state,
+        readCncts: true,
+      };
+    }
+    case CONTCTS_DEND: {
+      return {
+        ...state,
+        readCncts: false,
       };
     }
     default: {

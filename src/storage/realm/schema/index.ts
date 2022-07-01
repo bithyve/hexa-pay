@@ -1,3 +1,3 @@
-import {InitSchema} from './Schema';
+import {InitSchema, Contact} from './Schema';
 
-export default [InitSchema];
+export default [InitSchema, Contact];

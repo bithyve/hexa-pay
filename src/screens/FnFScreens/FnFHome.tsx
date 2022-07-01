@@ -10,8 +10,9 @@ import {
   Text,
   Avatar,
 } from 'native-base';
-import React, {useEffect} from 'react';
-import {Dimensions, StyleSheet, TouchableOpacity} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {Dimensions, StyleSheet, TouchableOpacity, Alert} from 'react-native';
+import Contacts from 'react-native-contacts';
 import {useSelector} from 'react-redux';
 import Backdrop from '~components/Backdrop';
 import {RootStackParamList} from '~navigation/Navigator';
@@ -23,59 +24,97 @@ import Search from '../../../assets/images/search.svg';
 import Back from '../../../assets/images/back.svg';
 import Scan from '../../../assets/images/scan.svg';
 import User from '../../../assets/images/user.svg';
+import {Searcher} from 'fast-fuzzy';
+//import dbManager from '~storage/realm/dbManager';
 
 const {width, height} = Dimensions.get('window');
 
-const data = [
-  {
-    key: 1,
-    name: 'First Person',
-    pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
-  },
-  {
-    key: 2,
-    name: 'Second Person',
-    pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
-  },
-  {
-    key: 3,
-    name: 'Third Person',
-    pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
-  },
-  {
-    key: 4,
-    name: 'Fourth Person',
-    pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
-  },
-  {
-    key: 5,
-    name: 'Fifth Person',
-    pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
-  },
-  {key: 6, name: 'Sixth Person', pic: ''},
-  {key: 7, name: 'Seventh Person', pic: ''},
-  {key: 8, name: 'Eigth Person', pic: ''},
-  {key: 9, name: 'Ninth Person', pic: ''},
-  {key: 10, name: 'Tenth Person', pic: ''},
-];
-
-const SearchButton = () => {
-  return (
-    <Pressable onPress={() => console.log('Search')}>
-      <Search />
-    </Pressable>
-  );
-};
-
 const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> = ({navigation}) => {
   const verified = useSelector((state: RootState) => state.otp.verified);
+
+  const [data, setData] = useState<Array<{key: number; name: string; pic: string}>>(
+    [] as Array<{key: number; name: string; pic: string}>
+  );
+
+  const [toDisplay, setDisplay] = useState<Array<{key: number; name: string; pic: string}>>(
+    [] as Array<{key: number; name: string; pic: string}>
+  );
+
+  const contctPermission = useSelector((state: RootState) => state.setupAndAuth.readCncts);
+
+  const needToAddContacts = false;
+
+  const sampleData = [
+    {
+      key: 1,
+      name: 'First Person',
+      pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
+    },
+    {
+      key: 2,
+      name: 'Second Person',
+      pic: '',
+    },
+    {
+      key: 3,
+      name: 'Third Person',
+      pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
+    },
+    {
+      key: 4,
+      name: 'Fourth Person',
+      pic: '',
+    },
+    {
+      key: 5,
+      name: 'Fifth Person',
+      pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
+    },
+  ];
+
+  // const doOp = async () => {
+  //   try {
+  //     const res = await dbManager.getAllContacts();
+  //     return res;
+  //   } catch (e) {
+  //     console.log(e);
+  //     return false;
+  //   }
+  // };
 
   useEffect(() => {
     if (!verified) {
       navigation.dispatch(StackActions.pop());
       navigation.dispatch(StackActions.push('PhoneScreen'));
     }
+
+    // if (contctPermission && needToAddContacts) {
+    //   Contacts.getAll()
+    //     .then((res) =>
+    //       res.forEach((it) => {
+    //         dbManager.addContact({name: it.displayName, pic: it.thumbnailPath});
+    //       })
+    //     )
+    //     .catch(console.log);
+    // }
+
+    // doOp()
+    //   .then((res) => setData(res))
+    //   .catch(console.log);
   }, []);
+
+  useEffect(() => {
+    if (contctPermission) {
+      Contacts.getAll().then((res) => {
+        const nD = res.map((it, idx) => ({key: idx, name: it.displayName, pic: it.thumbnailPath}));
+        setData(nD);
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    setDisplay(data);
+  }, [data]);
 
   const _renderItem = ({item}: {item: {key: number; name: string; pic: string}}) => (
     <Box key={item.key} style={styles.contact}>
@@ -90,8 +129,32 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
       <Text fontFamily={'RobotoSlab-Regular'} fontSize={['sm', 'lg']} flex={1}>
         {item.name}
       </Text>
+      <TouchableOpacity
+        style={{
+          marginEnd: 15,
+        }}
+        onPress={() => Alert.alert('Coming Soon')}>
+        <Text fontSize={['sm', 'lg']} color={'#4286F5'}>
+          INVITE
+        </Text>
+      </TouchableOpacity>
     </Box>
   );
+
+  const [toSearch, setSearch] = useState<string>('');
+
+  const se = () => {
+    const searcher = new Searcher(data, {keySelector: (obj) => obj.name});
+    setDisplay(searcher.search(toSearch));
+  };
+
+  const SearchButton = () => {
+    return (
+      <Pressable onPress={se} width={'100%'}>
+        <Search />
+      </Pressable>
+    );
+  };
 
   return verified ? (
     <Box style={styles.wrapper}>
@@ -128,13 +191,19 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
             placeholder={'Search Contacts'}
             fontFamily={'RobotoSlab-Regular'}
             placeholderTextColor={'rgba(255, 255, 255, 0.4)'}
+            value={toSearch}
+            onChangeText={setSearch}
             height={height < 685 ? 0.07 * height : 0.06 * height}
             color={'white'}
           />
         </InputGroup>
       </Box>
       <Box style={styles.actionButtons}>
-        <TouchableOpacity style={styles.tile}>
+        <TouchableOpacity
+          style={styles.tile}
+          onPress={() => {
+            Alert.alert('Coming Soon!!');
+          }}>
           <Send height={0.05 * height} width={0.05 * height} />
           <Text marginY={2} fontSize={height > 736 ? 'sm' : 'xs'}>
             Add new Contacts
@@ -153,7 +222,7 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
           </Text>
         </TouchableOpacity>
       </Box>
-      <FlatList style={styles.contactList} data={data} renderItem={_renderItem} />
+      <FlatList style={styles.contactList} data={toDisplay} renderItem={_renderItem} />
     </Box>
   ) : (
     <></>
@@ -224,3 +293,32 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 });
+
+// Sample Data
+// const data = [
+//   {
+//     key: 1,
+//     name: 'First Person',
+//     pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
+//   },
+//   {
+//     key: 2,
+//     name: 'Second Person',
+//     pic: '',
+//   },
+//   {
+//     key: 3,
+//     name: 'Third Person',
+//     pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
+//   },
+//   {
+//     key: 4,
+//     name: 'Fourth Person',
+//     pic: '',
+//   },
+//   {
+//     key: 5,
+//     name: 'Fifth Person',
+//     pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
+//   },
+// ];

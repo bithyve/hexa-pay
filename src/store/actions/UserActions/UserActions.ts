@@ -1,5 +1,8 @@
 import {
   COMPLETED_WALLET_SETUP,
+  CONTCTS_DEND,
+  CONTCTS_READ,
+  FNF_USED,
   INCORRECT_PASSCODE,
   LOGIN_REFRESH,
   SETUP_WALLET,
@@ -53,5 +56,23 @@ export const loginSuccessfull = () => {
 export const loginRefresh = () => {
   return {
     type: LOGIN_REFRESH,
+  };
+};
+
+export const fnfUsedAction = () => {
+  return {
+    type: FNF_USED,
+  };
+};
+
+export const allowCnctsAction = () => {
+  return {
+    type: CONTCTS_READ,
+  };
+};
+
+export const notAllowCnctsAction = () => {
+  return {
+    type: CONTCTS_DEND,
   };
 };

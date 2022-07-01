@@ -6,3 +6,11 @@ export const InitSchema: ObjectSchema = {
     name: 'string',
   },
 };
+
+export const Contact: ObjectSchema = {
+  name: 'contacts',
+  properties: {
+    name: 'string',
+    pic: 'string',
+  },
+};

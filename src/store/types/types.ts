@@ -1,7 +1,11 @@
 import {
   COMPLETED_WALLET_SETUP,
+  CONTCTS_DEND,
+  CONTCTS_READ,
+  FNF_USED,
   INCORRECT_PASSCODE,
   LOGIN_REFRESH,
+  OTP_VERIFIED,
   SETUP_WALLET,
   SUCCESSFULL_LOGIN,
   VERIFY_WALLET,
@@ -56,6 +60,18 @@ export interface VerifyOTPAction {
   };
 }
 
+export interface FnfAccessed {
+  type: typeof FNF_USED;
+}
+
+export interface ContactsAllowed {
+  type: typeof CONTCTS_READ;
+}
+
+export interface ContactsNotAllowed {
+  type: typeof CONTCTS_DEND;
+}
+
 export type ActionTypes =
   | WalletSetupCompleted
   | WalletSetupFailed
@@ -63,4 +79,7 @@ export type ActionTypes =
   | WalletVerify
   | IncorrectPasscode
   | SuccessfulLoginAction
-  | LoginRefreshAction;
+  | LoginRefreshAction
+  | FnfAccessed
+  | ContactsAllowed
+  | ContactsNotAllowed;
