@@ -26,7 +26,6 @@ import Scan from '../../../assets/images/scan.svg';
 import User from '../../../assets/images/user.svg';
 import {Searcher} from 'fast-fuzzy';
 import {RFValue} from 'react-native-responsive-fontsize';
-//import dbManager from '~storage/realm/dbManager';
 
 const {width, height} = Dimensions.get('window');
 
@@ -43,65 +42,11 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
 
   const contctPermission = useSelector((state: RootState) => state.setupAndAuth.readCncts);
 
-  const needToAddContacts = false;
-
-  const sampleData = [
-    {
-      key: 1,
-      name: 'First Person',
-      pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
-    },
-    {
-      key: 2,
-      name: 'Second Person',
-      pic: '',
-    },
-    {
-      key: 3,
-      name: 'Third Person',
-      pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
-    },
-    {
-      key: 4,
-      name: 'Fourth Person',
-      pic: '',
-    },
-    {
-      key: 5,
-      name: 'Fifth Person',
-      pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
-    },
-  ];
-
-  // const doOp = async () => {
-  //   try {
-  //     const res = await dbManager.getAllContacts();
-  //     return res;
-  //   } catch (e) {
-  //     console.log(e);
-  //     return false;
-  //   }
-  // };
-
   useEffect(() => {
     if (!verified) {
       navigation.dispatch(StackActions.pop());
       navigation.dispatch(StackActions.push('PhoneScreen'));
     }
-
-    // if (contctPermission && needToAddContacts) {
-    //   Contacts.getAll()
-    //     .then((res) =>
-    //       res.forEach((it) => {
-    //         dbManager.addContact({name: it.displayName, pic: it.thumbnailPath});
-    //       })
-    //     )
-    //     .catch(console.log);
-    // }
-
-    // doOp()
-    //   .then((res) => setData(res))
-    //   .catch(console.log);
   }, []);
 
   useEffect(() => {
@@ -144,19 +89,6 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
 
   const [toSearch, setSearch] = useState<string>('');
 
-  const se = () => {
-    const searcher = new Searcher(data, {keySelector: (obj) => obj.name});
-    setDisplay(searcher.search(toSearch));
-  };
-
-  const SearchButton = () => {
-    return (
-      <Pressable onPress={se} width={'100%'}>
-        <Search />
-      </Pressable>
-    );
-  };
-
   return verified ? (
     <Box style={styles.wrapper}>
       <Backdrop height={0.32 * height} />
@@ -181,7 +113,7 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
             borderTopRadius={10}
             paddingLeft={5}
             borderBottomLeftRadius={10}
-            children={<SearchButton />}
+            children={<Search />}
           />
           <Input
             variant={'unstyled'}
@@ -193,7 +125,15 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
             fontFamily={'RobotoSlab-Regular'}
             placeholderTextColor={'rgba(255, 255, 255, 0.4)'}
             value={toSearch}
-            onChangeText={setSearch}
+            onChangeText={(e) => {
+              const searcher = new Searcher(data, {keySelector: (obj) => obj.name});
+              if (e === '') {
+                setDisplay(data);
+              } else {
+                setDisplay(searcher.search(e));
+              }
+              setSearch(e);
+            }}
             height={height < 685 ? 0.07 * height : 0.06 * height}
             color={'white'}
           />
@@ -323,3 +263,4 @@ const styles = StyleSheet.create({
 //     pic: 'https://images.unsplash.com/photo-1612311375355-c269c3338b8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80',
 //   },
 // ];
+// const needToAddContacts = false;
