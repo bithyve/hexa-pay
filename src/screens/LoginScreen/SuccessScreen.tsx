@@ -5,25 +5,30 @@ const {height, width} = Dimensions.get('window');
 import {useNavigation} from '@react-navigation/native';
 import {CommonActions} from '@react-navigation/native';
 import RightArrow from '../../../assets/images/icon_arrow_right.svg';
+import SuccessLogo from '../../../assets/images/success.svg';
 
 export default function SuccessScreen() {
   const navigation = useNavigation();
   return (
     <Fragment>
-      <Box
-        flex={1}
-        bg="white"
-        p="12"
-        rounded="lg"
-        marginTop={(height > 685 ? 0.08 : 0.05) * height}>
-        <Box bg="#1886CA" p="20" rounded="lg">
-          <Text color={'white'} textAlign={'center'}>
-            Success Logo
-          </Text>
+      <Box flex={1} bg="white" p="12" marginTop={(height > 685 ? 0.08 : 0.05) * height}>
+        <Box
+          bg="#4286F5"
+          rounded="lg"
+          flexDirection={'row'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          p={'auto'}
+          height={240}>
+          <SuccessLogo />
         </Box>
 
-        <Box p="12" rounded="lg">
-          <Text color={'#1886CA'} fontSize={'3xl'} textAlign={'center'}>
+        <Box p="12">
+          <Text
+            color={'#4286F5'}
+            fontSize={'3xl'}
+            textAlign={'center'}
+            fontFamily={'RobotoSlab-Bold'}>
             Success!
           </Text>
           <Text color={'black'} textAlign={'center'}>

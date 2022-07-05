@@ -1,33 +1,53 @@
-import React, {Fragment, useState} from 'react';
-import {Box, Text, Input, Button, Image, Switch} from 'native-base';
+import React, {Fragment, useEffect, useState} from 'react';
+import {Box, Text, Button, Switch} from 'native-base';
 import {StyleSheet, Dimensions} from 'react-native';
-import {CommonActions, StackActions} from '@react-navigation/native';
+import {CommonActions} from '@react-navigation/native';
 import RightArrow from '../../../assets/images/icon_arrow_right.svg';
 import {useDispatch} from 'react-redux';
 import {walletSetupAction} from '~store/actions/UserActions/UserActions';
+import FourBox from '~components/FourBox';
 
 const {width, height} = Dimensions.get('window');
 
 export default function Screen2({navigation, route}: {navigation: any; route: any}) {
-  const [passcode, setPasscode] = useState('');
-  const [passcodeCharOne, setPasscodeCharOne] = useState('');
-  const [passcodeCharTwo, setPasscodeCharTwo] = useState('');
-  const [passcodeCharThree, setPasscodeCharThree] = useState('');
-  const [passcodeCharFour, setPasscodeCharFour] = useState('');
-
   const dispatcher = useDispatch();
 
-  const fillPasscodeAndNavigate = () => {
-    setPasscode(passcodeCharOne + passcodeCharTwo + passcodeCharThree + passcodeCharFour);
-    dispatcher(
-      walletSetupAction(passcodeCharOne + passcodeCharTwo + passcodeCharThree + passcodeCharFour)
-    );
-    navigation.dispatch(CommonActions.navigate({name: 'SuccessScreen'}));
+  const [ps1, setPS1] = useState<string>('');
+
+  const [inv1, setInv1] = useState<boolean>(false);
+
+  const [inv2, setInv2] = useState<boolean>(false);
+
+  const [ps2, setPS2] = useState<string>('');
+
+  useEffect(() => {
+    if (ps1.length === 4) {
+      setInv1(false);
+    }
+  }, [ps1]);
+
+  const goToNxt = () => {
+    if (ps1.length < 4) {
+      setInv1(true);
+    } else if (ps2.length < 4 || ps2 !== ps1) {
+      setInv2(true);
+    } else {
+      try {
+        dispatcher(walletSetupAction(ps1));
+        navigation.dispatch(CommonActions.navigate({name: 'SuccessScreen'}));
+      } catch (e) {
+        console.log(e);
+      }
+    }
   };
+
+  const [firstSet] = useState<boolean>(true);
+
+  const [secondSet, setSecond] = useState<boolean>(false);
 
   return (
     <Fragment>
-      <Box bg={'#1886CA'} flex={1} paddingLeft={10}>
+      <Box bg={'#4286F5'} flex={1} paddingLeft={10}>
         <Box
           paddingTop={(height > 685 ? 0.15 : 0.1) * height}
           _text={{
@@ -52,60 +72,27 @@ export default function Screen2({navigation, route}: {navigation: any; route: an
           </Text>
         </Box>
 
-        <Box width={300} style={styles.inputPasscode}>
-          <Input
-            type="password"
-            variant="underlined"
-            minW={8}
-            maxW={8}
-            marginRight={2}
-            onChangeText={(value) => setPasscodeCharOne(value)}
-            value={passcodeCharOne}
-            style={styles.input}
-            bg={'white'}
-            borderRadius={5}
-            maxLength={1}
-          />
-          <Input
-            type="password"
-            variant="underlined"
-            minW={8}
-            maxW={8}
-            marginRight={2}
-            onChangeText={(value) => setPasscodeCharTwo(value)}
-            value={passcodeCharTwo}
-            style={styles.input}
-            bg={'white'}
-            borderRadius={5}
-            maxLength={1}
-          />
-          <Input
-            type="password"
-            variant="underlined"
-            minW={8}
-            maxW={8}
-            marginRight={2}
-            onChangeText={(value) => setPasscodeCharThree(value)}
-            value={passcodeCharThree}
-            style={styles.input}
-            bg={'white'}
-            borderRadius={5}
-            maxLength={1}
-          />
-          <Input
-            type="password"
-            variant="underlined"
-            minW={8}
-            maxW={8}
-            marginRight={2}
-            onChangeText={(value) => setPasscodeCharFour(value)}
-            value={passcodeCharFour}
-            h={16}
-            bg={'white'}
-            borderRadius={5}
-            maxLength={1}
-          />
-        </Box>
+        <FourBox
+          visible={firstSet}
+          setSecond={setSecond}
+          goToSucced={undefined}
+          setPS={setPS1}
+          erMsg={'Please enter a 4 digit numeric Passcode.'}
+          inv={inv1}
+        />
+
+        <Text fontSize={'xs'} color={'white'} display={secondSet ? 'flex' : 'none'}>
+          Please re-enter the passcode again
+        </Text>
+
+        <FourBox
+          visible={secondSet}
+          setSecond={undefined}
+          goToSucced={goToNxt}
+          setPS={setPS2}
+          erMsg={'Passcodes does not match.'}
+          inv={inv2}
+        />
 
         <Box style={styles.enableFaceId}>
           <Text color={'white'} paddingTop={11}>
@@ -114,12 +101,10 @@ export default function Screen2({navigation, route}: {navigation: any; route: an
           <Switch size="md" marginRight={8} />
         </Box>
       </Box>
-      <Box style={styles.boxContainer}>
-        <Box style={styles.buttonContainer}>
-          <Button style={styles.buttonStyle} onPress={fillPasscodeAndNavigate}>
-            <RightArrow width={25} height={25} style={{marginLeft: 5}} fill={'#fff'} />
-          </Button>
-        </Box>
+      <Box style={styles.buttonContainer}>
+        <Button style={styles.buttonStyle} onPress={goToNxt}>
+          <RightArrow width={25} height={25} style={{marginLeft: 5}} fill={'#fff'} />
+        </Button>
       </Box>
     </Fragment>
   );
@@ -127,7 +112,7 @@ export default function Screen2({navigation, route}: {navigation: any; route: an
 
 const styles = StyleSheet.create({
   enableFaceId: {
-    paddingTop: 50,
+    paddingTop: '1%',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -150,18 +135,19 @@ const styles = StyleSheet.create({
     padding: '10%',
     height: height * 0.1,
     width,
-    backgroundColor: '#1886CA',
-    zIndex: -1,
+    backgroundColor: '#4286F5',
   },
   buttonContainer: {
+    position: 'absolute',
     borderColor: '#FFBC05',
     borderWidth: 3,
     marginLeft: 'auto',
-    top: -0.01 * height,
     padding: 2,
     borderRadius: 50,
     width: 60,
     height: 60,
+    top: 0.83 * height,
+    left: 0.75 * width,
   },
   input: {
     color: 'white',
@@ -173,5 +159,7 @@ const styles = StyleSheet.create({
   inputPasscode: {
     flexDirection: 'row',
     marginTop: 30,
+    justifyContent: 'space-between',
+    width: 0.55 * width,
   },
 });

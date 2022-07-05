@@ -1,15 +1,18 @@
 import {StyleSheet, Dimensions, TouchableOpacity} from 'react-native';
 import React, {Fragment, useState} from 'react';
-import {Text, Input, Box, Button} from 'native-base';
+import {Text, Input, Box, Button, FormControl, WarningOutlineIcon} from 'native-base';
 const {height, width} = Dimensions.get('window');
 import Colors from '~theme/Colors';
 import {useNavigation} from '@react-navigation/native';
 import {CommonActions} from '@react-navigation/native';
 import Upload from '../../../assets/images/send.svg';
+import {RFValue} from 'react-native-responsive-fontsize';
 import RightArrow from '../../../assets/images/icon_arrow_right.svg';
 
 export default function PasscodeScreen() {
   const [name, setName] = useState('');
+
+  const [isInvalid, setInvalid] = useState<boolean>(false);
 
   const navigation = useNavigation();
   const goToUserDetailsScreen = () =>
@@ -19,9 +22,18 @@ export default function PasscodeScreen() {
     console.log('upload button clicked');
   };
 
+  const checkUserName = () => {
+    if (name === '') {
+      setInvalid(true);
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   return (
     <Fragment>
-      <Box bg={'#1886CA'} flex={1} paddingLeft={10}>
+      <Box bg={'#4286F5'} height={height} paddingLeft={10}>
         <Box
           paddingTop={(height > 685 ? 0.15 : 0.1) * height}
           _text={{
@@ -51,32 +63,41 @@ export default function PasscodeScreen() {
             <Upload />
             <Text style={styles.buttonText}>Upload</Text>
           </TouchableOpacity>
-          <Input
-            paddingTop={'5%'}
-            variant="underlined"
-            placeholder="Your preffered name"
-            maxW={width * 0.6}
-            onChangeText={(value) => setName(value)}
-            value={name}
-            style={styles.input}
-            isRequired={true}
-            color={'white'}
-            selectionColor={'white'}
-          />
+          <FormControl isInvalid={isInvalid}>
+            <Input
+              paddingTop={'15%'}
+              variant="underlined"
+              placeholder="Username"
+              fontSize={RFValue(20)}
+              maxW={width * 0.6}
+              onChangeText={(value) => setName(value)}
+              placeholderTextColor={'rgba(255, 255, 255, 0.3)'}
+              fontFamily={'RobotoSlab-Regular'}
+              value={name}
+              style={styles.input}
+              isRequired={true}
+              color={'white'}
+              borderBottomColor={'white'}
+              selectionColor={'white'}
+            />
+            <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>
+              <Text color={'red.500'}>Username cannot be empty.</Text>
+            </FormControl.ErrorMessage>
+          </FormControl>
         </Box>
       </Box>
-      <Box style={styles.boxContainer}>
-        <Box style={styles.buttonContainer}>
-          <Button
-            style={styles.buttonStyle}
-            onPress={() =>
+      <Box style={styles.buttonContainer}>
+        <Button
+          style={styles.buttonStyle}
+          onPress={() => {
+            if (checkUserName()) {
               navigation.dispatch(
                 CommonActions.navigate({name: 'UserDetailScr', params: {customer_name: name}})
-              )
-            }>
-            <RightArrow width={25} height={25} style={{marginLeft: 5}} fill={'#fff'} />
-          </Button>
-        </Box>
+              );
+            }
+          }}>
+          <RightArrow width={25} height={25} style={{marginLeft: 5}} fill={'#fff'} />
+        </Button>
       </Box>
     </Fragment>
   );
@@ -94,14 +115,16 @@ const styles = StyleSheet.create({
     width: 50,
   },
   buttonContainer: {
+    position: 'absolute',
     borderColor: '#FFBC05',
     borderWidth: 3,
     marginLeft: 'auto',
-    top: -0.01 * height,
     padding: 2,
     borderRadius: 50,
     width: 60,
     height: 60,
+    top: 0.83 * height,
+    left: 0.75 * width,
   },
   boxContainer: {
     display: 'flex',
@@ -111,8 +134,7 @@ const styles = StyleSheet.create({
     padding: '10%',
     height: height * 0.1,
     width,
-    backgroundColor: '#1886CA',
-    zIndex: -1,
+    backgroundColor: '#4286F5',
   },
   input: {
     color: 'white',
