@@ -45,7 +45,12 @@ const MoreContacts = ({onPress}: {onPress: () => void}) => {
       <Box style={styles.whiteCircle}>
         <RightArrow height={'40%'} width={'40%'} fill="#fff" />
       </Box>
-      <Text fontSize={['xs', 'md']} marginTop={'15%'} textAlign={'center'} color={'#1185CE'}>
+      <Text
+        fontFamily={'RobotoSlab-Regular'}
+        fontSize={['xs', 'md']}
+        marginTop={'15%'}
+        textAlign={'center'}
+        color={'#1185CE'}>
         More
       </Text>
     </TouchableOpacity>
@@ -125,7 +130,12 @@ const RecentContacts: React.FC<NativeStackScreenProps<RootStackParamList, 'Home'
       <Box style={styles.contactWrapper}>
         <Box style={styles.contBox}>
           <BitBot />
-          <Text fontSize={['xs', 'md']} marginTop={'10%'} textAlign={'center'} color={'#138DD1'}>
+          <Text
+            fontFamily={'RobotoSlab-Regular'}
+            fontSize={['xs', 'md']}
+            marginTop={'10%'}
+            textAlign={'center'}
+            color={'#138DD1'}>
             BitBot
           </Text>
         </Box>
@@ -133,7 +143,11 @@ const RecentContacts: React.FC<NativeStackScreenProps<RootStackParamList, 'Home'
         {DATA.map((data) => (
           <Box key={data.id} style={styles.contBox}>
             <ContactAvatar uri={data.uri} alt={data.fallBack} />
-            <Text fontSize={['xs', 'md']} marginTop={'10%'} textAlign={'center'}>
+            <Text
+              fontFamily={'RobotoSlab-Regular'}
+              fontSize={['xs', 'md']}
+              marginTop={'10%'}
+              textAlign={'center'}>
               {data.name}
             </Text>
           </Box>

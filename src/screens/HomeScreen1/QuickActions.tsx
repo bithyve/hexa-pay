@@ -21,7 +21,10 @@ const ActionTile: React.FC<TileProps> = ({content, Svg}) => {
   return (
     <TouchableOpacity style={styles.tile}>
       <Svg height={0.04 * height} width={0.04 * height} />
-      <Text fontSize={width > 420 ? RFValue(8) : RFValue(10)} marginY={2}>
+      <Text
+        fontFamily={'RobotoSlab-Regular'}
+        fontSize={width > 420 ? RFValue(8) : RFValue(10)}
+        marginY={2}>
         {content}
       </Text>
     </TouchableOpacity>

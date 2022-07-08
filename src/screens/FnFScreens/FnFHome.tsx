@@ -80,7 +80,7 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
           marginEnd: 15,
         }}
         onPress={() => Alert.alert('Coming Soon')}>
-        <Text fontSize={['sm', 'lg']} color={'#4286F5'}>
+        <Text fontFamily={'RobotoSlab-Regular'} fontSize={['sm', 'lg']} color={'#4286F5'}>
           INVITE
         </Text>
       </TouchableOpacity>
@@ -97,7 +97,12 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
           <TouchableOpacity onPress={() => navigation.dispatch(StackActions.pop())}>
             <Back />
           </TouchableOpacity>
-          <Text flex={1} fontSize={['xl', '2xl']} paddingX={'7%'} color={'white'}>
+          <Text
+            flex={1}
+            fontFamily={'RobotoSlab-Regular'}
+            fontSize={['xl', '2xl']}
+            paddingX={'7%'}
+            color={'white'}>
             Contacts
           </Text>
           <TouchableOpacity onPress={() => navigation.navigate('QrScanner')}>
@@ -146,19 +151,31 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
             Alert.alert('Coming Soon!!');
           }}>
           <Send height={0.05 * height} width={0.05 * height} />
-          <Text marginY={2} color={'#505050'} fontSize={width > 420 ? RFValue(8) : RFValue(10)}>
+          <Text
+            fontFamily={'RobotoSlab-Regular'}
+            marginY={2}
+            color={'#505050'}
+            fontSize={width > 420 ? RFValue(8) : RFValue(10)}>
             Add new Contacts
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.tile}>
           <Receive height={0.05 * height} width={0.05 * height} />
-          <Text marginY={2} color={'#505050'} fontSize={width > 420 ? RFValue(8) : RFValue(10)}>
+          <Text
+            fontFamily={'RobotoSlab-Regular'}
+            marginY={2}
+            color={'#505050'}
+            fontSize={width > 420 ? RFValue(8) : RFValue(10)}>
             Find Nearby
           </Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.tile}>
           <Transaction height={0.05 * height} width={0.05 * height} />
-          <Text marginY={2} color={'#505050'} fontSize={width > 420 ? RFValue(8) : RFValue(10)}>
+          <Text
+            fontFamily={'RobotoSlab-Regular'}
+            marginY={2}
+            color={'#505050'}
+            fontSize={width > 420 ? RFValue(8) : RFValue(10)}>
             Share QR
           </Text>
         </TouchableOpacity>

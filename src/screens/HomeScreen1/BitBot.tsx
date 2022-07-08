@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Text} from 'native-base';
+import {Box} from 'native-base';
 import {Dimensions, StyleSheet} from 'react-native';
 import Bitbot from '../../../assets/images/HomeScrn/Bitbot.svg';
 

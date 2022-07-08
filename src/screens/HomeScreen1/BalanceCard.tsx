@@ -38,7 +38,10 @@ const BalanceCard: React.FC<BalanceCardProps> = ({backedUp, balance}) => {
           elevation: 4,
         }}>
         <Box style={styles.content}>
-          <Text color={'white'} fontSize={height > 736 ? 'sm' : 'xs'}>
+          <Text
+            fontFamily={'RobotoSlab-Regular'}
+            color={'white'}
+            fontSize={height > 736 ? 'sm' : 'xs'}>
             Your Wallet Balance
           </Text>
           <Text fontFamily={'RobotoSlab-Bold'} color={'white'} fontSize={['3xl', '4xl']}>
@@ -54,7 +57,10 @@ const BalanceCard: React.FC<BalanceCardProps> = ({backedUp, balance}) => {
             <Box marginRight={2} justifyContent={'center'} alignItems={'center'}>
               {backedUp ? 'A' : <WarningIcon height={0.035 * width} width={0.035 * width} />}
             </Box>
-            <Text color={'white'} fontSize={height > 736 ? 'sm' : 'xs'}>
+            <Text
+              fontFamily={'RobotoSlab-Regular'}
+              color={'white'}
+              fontSize={height > 736 ? 'sm' : 'xs'}>
               Wallet is not backed up
             </Text>
           </TouchableOpacity>
@@ -74,7 +80,7 @@ const BalanceCard: React.FC<BalanceCardProps> = ({backedUp, balance}) => {
         style={styles.modalStyle}>
         <Modal.Content>
           <Modal.Body style={{display: 'flex', flexDirection: 'row'}}>
-            <Text fontSize={[11, 'md']} width={'90%'}>
+            <Text fontFamily={'RobotoSlab-Regular'} fontSize={[11, 'md']} width={'90%'}>
               Welcome! Look for me in the contacts to learn more about me.
             </Text>
             <TouchableOpacity

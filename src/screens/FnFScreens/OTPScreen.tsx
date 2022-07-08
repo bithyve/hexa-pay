@@ -137,7 +137,7 @@ const OTPScreen: React.FC<NativeStackScreenProps<RootStackParamList, 'OTP'>> = (
         </Box>
         <Box style={styles.boxesWrapper}>
           <Box style={styles.box}>
-            <Text fontSize={0.08 * width}>
+            <Text fontFamily={'RobotoSlab-Bold'} fontSize={0.08 * width}>
               {passcode.length == 0 ? (
                 <Line height={0.075 * width} width={0.075 * width} />
               ) : (
@@ -146,7 +146,7 @@ const OTPScreen: React.FC<NativeStackScreenProps<RootStackParamList, 'OTP'>> = (
             </Text>
           </Box>
           <Box style={styles.box}>
-            <Text fontSize={0.08 * width}>
+            <Text fontFamily={'RobotoSlab-Bold'} fontSize={0.08 * width}>
               {passcode.length == 1 ? (
                 <Line height={0.075 * width} width={0.075 * width} />
               ) : (
@@ -155,7 +155,7 @@ const OTPScreen: React.FC<NativeStackScreenProps<RootStackParamList, 'OTP'>> = (
             </Text>
           </Box>
           <Box style={styles.box}>
-            <Text fontSize={0.08 * width}>
+            <Text fontFamily={'RobotoSlab-Bold'} fontSize={0.08 * width}>
               {passcode.length == 2 ? (
                 <Line height={0.075 * width} width={0.075 * width} />
               ) : (
@@ -164,7 +164,7 @@ const OTPScreen: React.FC<NativeStackScreenProps<RootStackParamList, 'OTP'>> = (
             </Text>
           </Box>
           <Box style={styles.box}>
-            <Text fontSize={0.08 * width}>
+            <Text fontFamily={'RobotoSlab-Bold'} fontSize={0.08 * width}>
               {passcode.length == 3 ? (
                 <Line height={0.075 * width} width={0.075 * width} />
               ) : (
