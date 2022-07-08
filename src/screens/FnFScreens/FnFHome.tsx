@@ -52,7 +52,10 @@ const FnFHome: React.FC<NativeStackScreenProps<RootStackParamList, 'FnFHome'>> =
   useEffect(() => {
     if (contctPermission) {
       Contacts.getAll().then((res) => {
-        const nD = res.map((it, idx) => ({key: idx, name: it.displayName, pic: it.thumbnailPath}));
+        const nD = res.map((it, idx) => {
+          const name = it.givenName + ' ' + it.familyName;
+          return {key: idx, name, pic: it.thumbnailPath};
+        });
         setData(nD);
       });
     }
