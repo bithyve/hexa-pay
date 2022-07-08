@@ -4,7 +4,7 @@ import {Box} from 'native-base';
 const {width, height: screenHeight} = Dimensions.get('window');
 
 const Backdrop: React.FunctionComponent<{height: number}> = ({height = screenHeight}) => {
-  return <Box style={[styles.backdrop, {height}]} _light={{bg: 'light.blue'}} />;
+  return <Box style={[styles.backdrop, {height}]} _light={{bg: '#4D6AF6'}} />;
 };
 
 export default Backdrop;

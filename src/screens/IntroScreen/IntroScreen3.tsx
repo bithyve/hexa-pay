@@ -2,7 +2,7 @@ import {Box, Center, Text} from 'native-base';
 import React from 'react';
 import {Dimensions, StyleSheet} from 'react-native';
 import ProtectWallet from '../../../assets/images/screen3.svg';
-import BGTop from '../../../assets/images/bgTop.svg';
+import BGTop from '../../../assets/images/HomeScrn/bgTop.svg';
 
 export type IIntroScreen1Props = {};
 
@@ -19,26 +19,27 @@ const IntroScreen1: React.FC<IIntroScreen1Props> = ({}) => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <BGTop style={{position: 'absolute', left: 0}} width={width} />
+        <BGTop style={{position: 'absolute', left: 0}} width={width} height={0.55 * height} />
         <ProtectWallet />
       </Box>
       <Box style={{height: 0.6 * height, width}}>
         <Text
-          fontSize={['3xl', '5xl', '6xl']}
+          fontFamily={'RobotoSlab-ExtraBold'}
+          fontSize={['2xl', '3xl']}
           _dark={{color: '#70A7FF'}}
           _light={{color: '#3067BF'}}
-          style={{margin: '5%', textAlign: 'center', marginTop: '15%'}}>
-          Secure Your Wallet
+          style={{margin: '5%', textAlign: 'center', marginTop: 0.15 * height}}>
+          Connect with family and friends
         </Text>
         <Center>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            Keep your Bitcoin wallet secure by setting
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            Get to connect with your close ones,
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            a pin or enabling your face ID for
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            interact with them, also send and
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            maximum security.
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            request bitcoin from them.
           </Text>
         </Center>
       </Box>

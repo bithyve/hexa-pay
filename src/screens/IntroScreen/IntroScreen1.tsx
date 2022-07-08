@@ -2,7 +2,7 @@ import {Box, Center, Text} from 'native-base';
 import React from 'react';
 import {Dimensions, StyleSheet} from 'react-native';
 import InteractBitcoin from '../../../assets/images/interaction with bitcoin.svg';
-import BGTop from '../../../assets/images/bgTop.svg';
+import BGTop from '../../../assets/images/HomeScrn/bgTop.svg';
 
 export type IIntroScreen1Props = {};
 
@@ -19,25 +19,26 @@ const IntroScreen1: React.FC<IIntroScreen1Props> = ({}) => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <BGTop style={{position: 'absolute', left: 0}} width={width} />
+        <BGTop style={{position: 'absolute', left: 0}} height={0.55 * height} width={width} />
         <InteractBitcoin />
       </Box>
       <Box style={{height: 0.6 * height, width}}>
         <Text
-          fontSize={['3xl', '5xl', '6xl']}
+          fontFamily={'RobotoSlab-ExtraBold'}
+          fontSize={['2xl', '3xl']}
           _dark={{color: '#70A7FF'}}
           _light={{color: '#3067BF'}}
-          style={{margin: '5%', textAlign: 'center', marginTop: '15%'}}>
+          style={{margin: '5%', textAlign: 'center', marginTop: 0.15 * height}}>
           Interact using Bitcoin
         </Text>
         <Center>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
             Connecting with friends and family by
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
             exchanging bitcoin and through instant
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
             messaging.
           </Text>
         </Center>

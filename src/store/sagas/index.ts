@@ -1,5 +1,14 @@
 import {all} from 'redux-saga/effects';
+import {requestOTPWatcher, verifyOTPWatcher} from './OTP';
+import {passCodeEncryptionWatcher, passCodeVerifyWatcher} from './SetupAndAuth';
 
 export default function* rootSaga() {
-  yield all([]);
+  const sagas = [
+    passCodeEncryptionWatcher(),
+    passCodeVerifyWatcher(),
+    requestOTPWatcher(),
+    verifyOTPWatcher(),
+  ];
+
+  yield all(sagas);
 }

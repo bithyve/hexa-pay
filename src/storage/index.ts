@@ -9,9 +9,9 @@ export const setItem = (key: string, value: string | number | boolean): void =>
 
 export const getString = (key: string): string | undefined => Storage.getString(key);
 
-export const getNumber = (key: string): number => Storage.getNumber(key);
+export const getNumber = (key: string): number | undefined => Storage.getNumber(key);
 
-export const getBoolean = (key: string): boolean => Storage.getBoolean(key);
+export const getBoolean = (key: string): boolean | undefined => Storage.getBoolean(key);
 
 export const getEverything = (): string[] => Storage.getAllKeys();
 

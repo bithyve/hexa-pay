@@ -2,7 +2,7 @@ import {Box, Center, Text} from 'native-base';
 import React from 'react';
 import {Dimensions, StyleSheet} from 'react-native';
 import SaveOnCloud from '../../../assets/images/screen2.svg';
-import BGTop from '../../../assets/images/bgTop.svg';
+import BGTop from '../../../assets/images/HomeScrn/bgTop.svg';
 
 export type IIntroScreen1Props = {};
 
@@ -19,33 +19,35 @@ const IntroScreen1: React.FC<IIntroScreen1Props> = ({}) => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <BGTop style={{position: 'absolute', left: 0}} width={width} />
+        <BGTop style={{position: 'absolute', left: 0}} width={width} height={0.55 * height} />
         <SaveOnCloud />
       </Box>
       <Box style={{height: 0.6 * height, width}}>
         <Text
-          fontSize={['3xl', '5xl', '6xl']}
+          fontFamily={'RobotoSlab-ExtraBold'}
+          fontSize={['2xl', '3xl']}
           _dark={{color: '#70A7FF'}}
           _light={{color: '#3067BF'}}
-          style={{textAlign: 'center', marginTop: '15%'}}>
-          Easy Backup with
+          style={{textAlign: 'center', marginTop: 0.15 * height}}>
+          Backup and Security
         </Text>
         <Text
-          fontSize={['3xl', '5xl', '6xl']}
+          fontFamily={'RobotoSlab-ExtraBold'}
+          fontSize={['2xl', '3xl']}
           _dark={{color: '#70A7FF'}}
           _light={{color: '#3067BF'}}
           style={{marginBottom: '5%', textAlign: 'center'}}>
-          Cloud Storage
+          made easy
         </Text>
         <Center>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            Only you have access to your seed phrases,
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            Keep your bitcoin wallet secure by
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            which can be stored up to your cloud{' '}
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            enabling maximum security and storing
           </Text>
-          <Text fontSize={['md', '2xl', '3xl']} textAlign="center">
-            provider.
+          <Text fontSize={['md', 'xl', '2xl']} textAlign="center">
+            your seed phrases safe
           </Text>
         </Center>
       </Box>
